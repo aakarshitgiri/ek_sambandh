@@ -1,0 +1,179 @@
+@import '../../../assets/scss/varibles.scss';
+
+.login-component {
+    padding: 1em;
+    margin: 1em;
+
+    .login-flex-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+
+        .left {
+            text-align: center;
+            width: 50%;
+
+            .img-container {
+                img {
+                    width: 42em;
+                    animation: zoom-in-zoom-out 6s ease-out infinite;
+                }
+
+                @keyframes zoom-in-zoom-out {
+                    0% {
+                        transform: scale(1, 1);
+                    }
+
+                    50% {
+                        transform: scale(1.1, 1.2);
+                    }
+
+                    100% {
+                        transform: scale(1, 1);
+                    }
+                }
+            }
+        }
+
+        .right {
+            width: 50%;
+            text-align: -webkit-center;
+            padding: 2em;
+
+            .login-form {
+                padding: 2em 1em;
+                margin: 2em;
+                width: 32em;
+                background-color: #fff;
+                border-radius: 15px;
+                box-shadow: 0 0 15px rgb(146, 140, 140);
+
+                .title {
+                    .login {
+                        font-size: 2.5em;
+                        font-family: $cr-font;
+                        font-style: normal;
+                        letter-spacing: 0.08em;
+                        font-weight: bold;
+                        text-align: center;
+                        color: #ab1e43;
+                    }
+                }
+
+                .form-fields {
+                    .input-container {
+                        width: 20em;
+                        display: flex;
+                        flex-direction: column;
+                        margin: 2em 1em;
+
+                        label {
+                            text-align: left;
+                            font-family: $cr-font;
+                            font-style: normal;
+                            letter-spacing: 0.08em;
+                            font-weight: 600;
+                            margin: 5px 0px;
+                            color: #ab1e43;
+                        }
+
+                        input {
+                            font-family: $cr-font;
+                            font-style: normal;
+                            letter-spacing: 0.08em;
+                            padding: 0.5em;
+                            font-size: 1em;
+                            background-color: #fff;
+                            border-radius: 5px;
+                            border: none;
+                            box-shadow: 0 0 10px rgb(146, 140, 140);
+                        }
+
+                        input:focus-visible {
+                            outline: none;
+                            box-shadow: 0 0 5px #ab1e43;
+                        }
+                    }
+
+                    .login-btn {
+                        .btn {
+                            border: none;
+                            background-color: #ab1e43;
+                            padding: 10px 15px;
+                            border-radius: 10px;
+                            color: white;
+                            font-size: 1.2em;
+                            font-family: $cr-font;
+                            font-style: normal;
+                            letter-spacing: 0.08em;
+                            box-shadow: 0 0 5px #ab1e43;
+                            border: 1px solid white;
+                            font-weight: 600;
+                            margin: 1em;
+                            width: 17em;
+                            cursor: pointer;
+                        }
+
+                        .btn:hover {
+                            box-shadow: 0 0 10px #ab1e43;
+                            border: 2px solid white;
+                            background-color: #cc1344;
+                        }
+
+
+                    }
+
+                    .forgot-pass {
+                        width: 20em;
+
+                        .forgot-pass-link {
+                            text-align: left;
+                            font-size: 0.85em;
+                            font-family: $cr-font;
+                            font-style: normal;
+                            letter-spacing: 0.08em;
+                            font-weight: 600;
+                            margin: 5px 0px;
+
+                            a {
+                                color: #ab1e43;
+                                text-decoration: none;
+                                cursor: pointer;
+                            }
+                        }
+                    }
+
+                    .signup-option {
+                        .signup-title {
+                            font-size: 1em;
+                            font-family: $cr-font;
+                            font-style: normal;
+                            letter-spacing: 0.08em;
+                            font-weight: 600;
+                            margin: 5px 0px;
+                            color: #000000;
+                        }
+
+                        .link {
+                            font-size: 1.5em;
+                            font-family: $cr-font;
+                            font-style: normal;
+                            letter-spacing: 0.08em;
+                            font-weight: 600;
+                            margin: 5px 0px;
+                            color: #ab1e43;
+
+                            a {
+                                color: #ab1e43;
+                                text-decoration: none;
+                                cursor: pointer;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

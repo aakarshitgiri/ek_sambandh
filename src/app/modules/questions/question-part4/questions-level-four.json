@@ -1,0 +1,116 @@
+[
+    {
+        "index": 31,
+        "name": "questions31",
+        "question": "Do you prefer an urban or rural setting to raise your family?",
+        "options": [
+            {
+                "answer": "Urban living: safe ,affordable,mix of nationalities and get along and work together",
+                "ansType": "Positive"
+            },
+            {
+                "answer": "Rural Life: Fresh air and food, physical activities(Farming, animal rearing), Free from the hustle",
+                "ansType": "Negetive"
+            },
+            {
+                "answer": "I would love to experience both",
+                "ansType": "Neutral"
+            }
+        ]
+    },
+    {
+        "index": 32,
+        "name": "questions32",
+        "question": "How you will rate your partner's decision-making skills?",
+        "options": [
+            {
+                "answer": "I always support my partner's choices",
+                "ansType": "Positive"
+            },
+            {
+                "answer": "it is good but sometimes we are just stuck while making any decision",
+                "ansType": "Negetive"
+            },
+            {
+                "answer": "we both talk and undersatnd each other's priority and make decisions accordingly",
+                "ansType": "Neutral"
+            }
+        ]
+    },
+    {
+        "index": 33,
+        "name": "questions33",
+        "question": "How willing are you to balance and make an effort to win over your partner?",
+        "options": [
+            {
+                "answer": "We should Accept Disagreement  and respect each other's privacy",
+                "ansType": "Positive"
+            },
+            {
+                "answer": "Commit but don't compromise",
+                "ansType": "Negetive"
+            },
+            {
+                "answer": "Relationship with no set bar, go with the flow",
+                "ansType": "Neutral"
+            }
+        ]
+    },
+    {
+        "index": 34,
+        "name": "questions34",
+        "question": "Do you think you are spending enough Quality time with your partner",
+        "options": [
+            {
+                "answer": "Yes",
+                "ansType": "Positive"
+            },
+            {
+                "answer": "No",
+                "ansType": "Negetive"
+            },
+            {
+                "answer": "Neutral",
+                "ansType": "Neutral"
+            }
+        ]
+    },
+    {
+        "index": 35,
+        "name": "questions35",
+        "question": "Do you partner shows emotional availability and maturity",
+        "options": [
+            {
+                "answer": "Yes",
+                "ansType": "Positive"
+            },
+            {
+                "answer": "No",
+                "ansType": "Negetive"
+            },
+            {
+                "answer": "Neutral",
+                "ansType": "Neutral"
+            }
+        ]
+    },
+    {
+        "index": 36,
+        "name": "questions36",
+        "question": "Do you think couples finance should be together or separate?",
+        "options": [
+            {
+                "answer": "Yes",
+                "ansType": "Positive"
+            },
+            {
+                "answer": "No",
+                "ansType": "Negetive"
+            },
+            {
+                "answer": "Your funds are mine, and vice versa.",
+                "ansType": "Neutral"
+            }
+        ]
+    }
+]

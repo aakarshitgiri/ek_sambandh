@@ -1,0 +1,32 @@
+<div class="questions-container">
+    <div class="question-box">
+        <div class="title">
+            <h1>
+                Level 3
+            </h1>
+        </div>
+        <div class="questions-answer" [formGroup]="questionsPart3">
+            <div class="question-form" *ngFor="let questions of questionsLevel3">
+                <div class="question">
+                    <label><span>{{questions.index}}.</span>{{questions.question}}</label>
+                    <div *ngFor="let answers of questions.options">
+                        <div class="btns">
+                            <p-radioButton name="{{questions.name}}" value="{{answers.ansType}}"
+                                [label]="answers.answer" inputId="{{questions.name}}"
+                                [formControlName]="questions.name"></p-radioButton>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="bottom">
+                <div class="next-btn">
+                    <button (click)="submitForm3()">Back</button>
+                </div>
+                <div class="next-btn">
+                    <button (click)="submitForm3()">Next</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

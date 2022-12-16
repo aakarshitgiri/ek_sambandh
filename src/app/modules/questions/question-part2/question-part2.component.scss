@@ -1,0 +1,128 @@
+@import '../../../../assets/scss/varibles.scss';
+
+.questions-container {
+    margin: 1em;
+    padding: 1em;
+
+    .question-box {
+        padding: 1em;
+
+        .title {
+            text-align: left;
+
+            h1 {
+                font-size: 1.5em;
+                font-family: $cr-font;
+                font-style: normal;
+                letter-spacing: 0.08em;
+                font-weight: bold;
+                color: #ab1e43;
+                margin: 0px;
+            }
+        }
+
+        .questions-answer {
+            padding: 1em;
+            margin-top: 1em;
+
+            .question-form {
+                margin: 3em 2em;
+
+                .question {
+                    text-align: left;
+                    display: flex;
+                    flex-direction: column;
+
+                    label {
+                        font-size: 1em;
+                        font-family: $cr-font;
+                        font-style: normal;
+                        letter-spacing: 0.08em;
+                        font-weight: bold;
+                        color: #ab1e43;
+                        margin: 0px;
+
+                        span {
+                            margin: 0px 5px;
+                        }
+                    }
+
+                    .btns {
+                        margin: 1em;
+                    }
+                }
+            }
+        }
+
+        .bottom {
+            width: 100%;
+            padding: 1em;
+            margin-top: 1em;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+
+            .next-btn {
+                button {
+                    border: none;
+                    background-color: #ab1e43;
+                    padding: 5px 5px;
+                    border-radius: 10px;
+                    color: white;
+                    font-size: 0.85em;
+                    font-family: $cr-font;
+                    font-style: normal;
+                    letter-spacing: 0.08em;
+                    box-shadow: 0 0 5px #ab1e43;
+                    border: 1px solid white;
+                    font-weight: 600;
+                    width: 15em;
+                    cursor: pointer;
+                }
+
+                button:hover {
+                    box-shadow: 0 0 10px #ab1e43;
+                    border: 2px solid white;
+                    background-color: #cc1344;
+                }
+            }
+
+        }
+    }
+}
+
+:host ::ng-deep {
+    .p-radiobutton-label {
+        font-size: 1em;
+        font-family: $cr-font;
+        font-style: normal;
+        letter-spacing: 0.08em;
+        font-weight: bold;
+    }
+
+    .p-radiobutton .p-radiobutton-box:not(.p-disabled):not(.p-highlight):hover {
+        border-color: #ab1e43;
+    }
+
+    .p-radiobutton .p-radiobutton-box:not(.p-disabled).p-focus {
+        box-shadow: none;
+    }
+
+    .p-radiobutton .p-radiobutton-box.p-highlight:not(.p-disabled):hover {
+        border-color: #ab1e43;
+        background: #ab1e43;
+    }
+
+    .p-radiobutton .p-radiobutton-box.p-highlight {
+        border-color: #ab1e43;
+        background: #ab1e43;
+    }
+
+    .p-radiobutton-label-active {
+        color: #ab1e43;
+    }
+
+    .p-radiobutton-label-focus {
+        color: #ab1e43;
+    }
+}

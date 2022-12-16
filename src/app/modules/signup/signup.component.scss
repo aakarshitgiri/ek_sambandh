@@ -1,0 +1,210 @@
+@import '../../../assets/scss/varibles.scss';
+
+.signup-container {
+    padding: 1em;
+    margin: 1em;
+    text-align: -webkit-center;
+
+    .signup-box {
+        padding: 2em;
+        background-color: #fff;
+        width: 60em;
+        border-radius: 15px;
+        box-shadow: 0 0 15px rgb(146, 140, 140);
+
+        .signup-form {
+            .signup-title {
+                h1 {
+                    font-size: 2.5em;
+                    font-family: $cr-font;
+                    font-style: normal;
+                    letter-spacing: 0.08em;
+                    font-weight: bold;
+                    text-align: center;
+                    color: #ab1e43;
+                }
+            }
+
+            .flex-box {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+
+                .input-container {
+                    width: 20em;
+                    display: flex;
+                    flex-direction: column;
+
+                    margin: 2em 1em;
+
+                    label {
+                        text-align: left;
+                        font-family: $cr-font;
+                        font-style: normal;
+                        letter-spacing: 0.08em;
+                        font-weight: 600;
+                        margin: 5px 0px;
+                        color: #ab1e43;
+                    }
+
+                    input {
+                        font-family: $cr-font;
+                        font-style: normal;
+                        letter-spacing: 0.08em;
+                        padding: 0.5em;
+                        font-size: 1em;
+                        background-color: #fff;
+                        border-radius: 5px;
+                        border: none;
+                        box-shadow: 0 0 10px rgb(146, 140, 140);
+
+                    }
+
+                    input:focus-visible {
+                        outline: none;
+                        box-shadow: 0 0 5px #ab1e43;
+                    }
+                }
+
+                .email-verify {
+                    margin-top: 2.6em;
+
+                    button {
+                        border: none;
+                        background-color: #ab1e43;
+                        padding: 10px 15px;
+                        border-radius: 10px;
+                        color: white;
+                        font-size: 1em;
+                        font-family: $cr-font;
+                        font-style: normal;
+                        letter-spacing: 0.08em;
+                        box-shadow: 0 0 5px #ab1e43;
+                        border: 1px solid white;
+                        font-weight: 600;
+                        margin: 1em;
+                        width: 20em;
+                        cursor: pointer;
+                    }
+
+                    button:hover {
+                        box-shadow: 0 0 10px #ab1e43;
+                        border: 2px solid white;
+                        background-color: #cc1344;
+                    }
+                }
+
+                .partneremail {
+                    margin: 1em 1em !important;
+                }
+
+                .checkbox {
+                    margin: 0.2em 1em !important;
+                }
+
+
+            }
+
+            .submit-btn {
+                button {
+                    border: none;
+                    background-color: #ab1e43;
+                    padding: 10px 15px;
+                    border-radius: 10px;
+                    color: white;
+                    font-size: 1em;
+                    font-family: $cr-font;
+                    font-style: normal;
+                    letter-spacing: 0.08em;
+                    box-shadow: 0 0 5px #ab1e43;
+                    border: 1px solid white;
+                    font-weight: 600;
+                    margin: 1em;
+                    width: 20em;
+                    cursor: pointer;
+                }
+
+                button:hover {
+                    box-shadow: 0 0 10px #ab1e43;
+                    border: 2px solid white;
+                    background-color: #cc1344;
+                }
+            }
+
+
+            .login-text {
+                .text1 {
+                    font-size: 1em;
+                    font-family: $cr-font;
+                    font-style: normal;
+                    letter-spacing: 0.08em;
+                    font-weight: 600;
+                    margin: 5px 0px;
+                    color: #000000;
+                }
+
+                .text2 {
+                    font-size: 1.5em;
+                    font-family: $cr-font;
+                    font-style: normal;
+                    letter-spacing: 0.08em;
+                    font-weight: 600;
+                    margin: 5px 0px;
+                    color: #ab1e43;
+
+                    a {
+                        color: #ab1e43;
+                        text-decoration: none;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.error-box {
+    text-align: left;
+    margin: 10px 5px;
+    font-size: 0.75em;
+    font-family: $cr-font;
+    font-style: normal;
+    letter-spacing: 0.08em;
+    font-weight: 600;
+    color: red;
+}
+
+
+:host ::ng-deep {
+    .p-checkbox-label {
+
+        font-family: $cr-font;
+        font-style: normal;
+        letter-spacing: 0.08em;
+        font-weight: 600;
+        margin: 5px 10px;
+        color: #ab1e43;
+    }
+
+    .p-checkbox .p-checkbox-box {
+        border: 2px solid #ab1e43;
+        box-shadow: none;
+    }
+
+    .p-checkbox:not(.p-checkbox-disabled) .p-checkbox-box:hover {
+        border-color: #ab1e43;
+        box-shadow: none;
+    }
+
+    .p-checkbox:not(.p-checkbox-disabled) .p-checkbox-box.p-highlight:hover {
+        border-color: #ab1e43;
+        background: #ab1e43;
+        box-shadow: none;
+    }
+
+    .p-checkbox .p-checkbox-box.p-highlight {
+        border-color: #ab1e43;
+        background: #ab1e43;
+        box-shadow: none;
+    }
+}

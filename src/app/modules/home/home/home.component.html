@@ -1,0 +1,137 @@
+<div id="home" class="home-container">
+    <div class="home-container-left">
+        <h1>"DON’T LEAVE LOVE TO CHANCE, LEAVE IT TO CONSISTENCY IF EXPLORING NEW"</h1>
+        <p>Ek Sambandh is a <b style="color: #ab1e43;">Romantic</b> compatibility test intended<br> to strengthen the
+            bonds in your partnership.</p>
+        <!--  <p>Even more, Ek-Sambandh enables you to take charge of your destiny, giving personalized advice on how to make
+            decisions and establish relationships based on the life you desire</p>
+ -->
+        <button>Take Test Now!</button>
+        <div class="heart-bg">
+            <svg class="heart" viewBox="0 0 32 29.6">
+                <path d="M23.6,0c-3.4,0-6.3,2.7-7.6,5.6C14.7,2.7,11.8,0,8.4,0C3.8,0,0,3.8,0,8.4c0,9.4,9.5,11.9,16,21.2
+              c6.1-9.3,16-12.1,16-21.2C32,3.8,28.2,0,23.6,0z" />
+            </svg>
+            <svg class="heart" viewBox="0 0 32 29.6">
+                <path d="M23.6,0c-3.4,0-6.3,2.7-7.6,5.6C14.7,2.7,11.8,0,8.4,0C3.8,0,0,3.8,0,8.4c0,9.4,9.5,11.9,16,21.2
+              c6.1-9.3,16-12.1,16-21.2C32,3.8,28.2,0,23.6,0z" />
+            </svg>
+            <svg class="heart" viewBox="0 0 32 29.6">
+                <path d="M23.6,0c-3.4,0-6.3,2.7-7.6,5.6C14.7,2.7,11.8,0,8.4,0C3.8,0,0,3.8,0,8.4c0,9.4,9.5,11.9,16,21.2
+              c6.1-9.3,16-12.1,16-21.2C32,3.8,28.2,0,23.6,0z" />
+            </svg>
+            <svg class="heart" viewBox="0 0 32 29.6">
+                <path d="M23.6,0c-3.4,0-6.3,2.7-7.6,5.6C14.7,2.7,11.8,0,8.4,0C3.8,0,0,3.8,0,8.4c0,9.4,9.5,11.9,16,21.2
+              c6.1-9.3,16-12.1,16-21.2C32,3.8,28.2,0,23.6,0z" />
+            </svg>
+            <svg class="heart" viewBox="0 0 32 29.6">
+                <path d="M23.6,0c-3.4,0-6.3,2.7-7.6,5.6C14.7,2.7,11.8,0,8.4,0C3.8,0,0,3.8,0,8.4c0,9.4,9.5,11.9,16,21.2
+              c6.1-9.3,16-12.1,16-21.2C32,3.8,28.2,0,23.6,0z" />
+            </svg>
+        </div>
+    </div>
+
+    <div class="home-container-right">
+        <div class="img">
+            <img src="../../../../assets/images/banner/01.png" alt="">
+        </div>
+
+    </div>
+</div>
+<div id="about" class="home-container-1">
+    <h1>About Us</h1>
+    <div class="flex">
+        <div class="left">
+            <div class="img">
+                <img class="verticalImg" src="../../../../assets/images/about/01.png" alt="">
+            </div>
+        </div>
+        <div class="right">
+            <div class="text">
+                <p>Ek Sambandh is a <b style="color: #ab1e43;">Romantic</b> compatibility test intended to
+                    strengthen thebonds in your partnership. Even more, Ek-Sambandh enables you to take charge of your
+                    destiny, giving personalized advice on how to make decisions and establish relationships based on
+                    the life you desire. The secret to a fruitful, long, and content relationship is compatibility.
+                </p>
+
+
+                <p> Compatibility comes up with a lot of factors :</p>
+                <div class="list">
+                    <p class="chip">Mutual interests</p>
+                    <p class="chip">Personal perspectives on a relationship</p>
+                    <p class="chip">Preferences</p>
+                    <p class="chip">Views from the social, intellectual, and other spheres</p>
+
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+</div>
+<div id="howitworks" class="home-container-1">
+    <h1>How it works?</h1>
+    <div class="flex">
+
+        <div class="right">
+            <p-timeline [value]="events1" align="alternate">
+                <ng-template pTemplate="marker" let-event>
+                    <span class="custom-marker p-shadow-2" [style.backgroundColor]="event.color">
+                        <i [ngClass]="event.icon"></i>
+                    </span>
+                </ng-template>
+                <ng-template pTemplate="content" let-event>
+                    {{event.status}}
+                </ng-template>
+            </p-timeline>
+        </div>
+        <div class="left">
+            <div class="img">
+                <img class="verticalImg2" src="../../../../assets/images/bg-2.png" alt="">
+            </div>
+        </div>
+    </div>
+</div>
+<div id="team" class="home-container-teams">
+    <h1 class="section-title">Our Team</h1>
+    <div class="team-head glowing">
+        <h1 class="title">Dr. Vikas Ranjan Mani Tripathi</h1>
+        <p class="subtitle">(M.Phil and Ph.D)</p>
+        <p class="about">Psychological Counsellor in Indian Air Force and Pariwar Paramarsh Kendra (Mahila Thana),
+            Gorakhpur.</p>
+    </div>
+    <div class="team-section">
+        <div class="team-head glowing" *ngFor="let team of team">
+            <h1 class="title">{{team.name}}</h1>
+            <p class="about">{{team.about}}</p>
+        </div>
+    </div>
+</div>
+<div id="faq" class="home-container-faq">
+    <h1 class="section-title">FAQ</h1>
+    <p-accordion>
+        <p-accordionTab header="Are these claims true or verified?" [selected]="true">
+            <p>Yes, a psychologist has validated these claims.</p>
+        </p-accordionTab>
+        <p-accordionTab header="How are you calculating the outcome, and what formula are you using?">
+            <p> In order to publish findings, a special algorithm is used to identify each question based on positive,
+                negative, and neutral responses.</p>
+        </p-accordionTab>
+        <p-accordionTab header="How should I proceed with the test?">
+            <p>Follow the directions above; this is highly user-friendly in design.</p>
+        </p-accordionTab>
+        <p-accordionTab header="Who is the proper party to handle the inquiries?">
+            <p>Drop us a mail at <b>contact@eksambandh.in</b></p>
+        </p-accordionTab>
+        <p-accordionTab
+            header="After making the purchase, my website page collapsed and is now requesting payment once more. To whom should I connect for this? ">
+            <p>Please drop us a mail at <b>contact@eksambandh.in</b></p>
+        </p-accordionTab>
+        <p-accordionTab header="Whom to connect for collaboration with Ek-Sambandh? ">
+            <p>Please drop us a mail at <b>contact@eksambandh.in</b></p>
+        </p-accordionTab>
+        <p-accordionTab header=" Is bringing a companion required for this test?">
+            <p>Yes, this test is for partners only.</p>
+        </p-accordionTab>
+    </p-accordion>
+</div>

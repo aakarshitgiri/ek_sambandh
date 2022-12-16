@@ -1,0 +1,192 @@
+[
+    {
+        "index": 1,
+        "name": "questions1",
+        "question": "What steps do you take to manage stress?",
+        "options": [
+            {
+                "answer": "I need some time alone",
+                "ansType": "Negetive"
+            },
+            {
+                "answer": "I will talk to my partner about it",
+                "ansType": "Positive"
+            },
+            {
+                "answer": "I'll not let my stress to take over my happiness",
+                "ansType": "Neutral"
+            }
+        ]
+    },
+    {
+        "index": 2,
+        "name": "questions2",
+        "question": "Who will resolve a dispute first?",
+        "options": [
+            {
+                "answer": "Myself",
+                "ansType": "Positive"
+            },
+            {
+                "answer": "My Partner",
+                "ansType": "Negetive"
+            },
+            {
+                "answer": "Ignore the argument and move on.",
+                "ansType": "Neutral"
+            }
+        ]
+    },
+    {
+        "index": 3,
+        "name": "questions3",
+        "question": "Would you sacrifice your happiness in order for the relationship to succeed?",
+        "options": [
+            {
+                "answer": "Both are different, hence we cannot compare the two situations.",
+                "ansType": "Neutral"
+            },
+            {
+                "answer": "Undoubtedly, yes",
+                "ansType": "Positive"
+            },
+            {
+                "answer": "Absolutely not",
+                "ansType": "Negetive"
+            }
+        ]
+    },
+    {
+        "index": 4,
+        "name": "questions4",
+        "question": "If you are an attention seeker and if you are not getting it, how it will impact your relationship?",
+        "options": [
+            {
+                "answer": "I will accept this fact that my partner is not giving me attention and i will not expect it again",
+                "ansType": "Negetive"
+            },
+            {
+                "answer": "I'm annoyed by this, and I need my partner to know that I want his complete attention.",
+                "ansType": "Positive"
+            },
+            {
+                "answer": "I don't seek attention.",
+                "ansType": "Neutral"
+            }
+        ]
+    },
+    {
+        "index": 5,
+        "name": "questions5",
+        "question": "Which of these characteristics would you find most attractive in a potential partner?",
+        "options": [
+            {
+                "answer": "Fitnees freak",
+                "ansType": "Neutral"
+            },
+            {
+                "answer": "Financial stability",
+                "ansType": "Positive"
+            },
+            {
+                "answer": "willingness to take risks",
+                "ansType": "Negetive"
+            }
+        ]
+    },
+    {
+        "index": 6,
+        "name": "questions6",
+        "question": "Do you refuse to apologise when you are wrong because of your ego?",
+        "options": [
+            {
+                "answer": "Yes",
+                "ansType": "Positive"
+            },
+            {
+                "answer": "I will ask my partner to switch the shoes and try to rethink the situation again",
+                "ansType": "Neutral"
+            },
+            {
+                "answer": "No",
+                "ansType": "Negetive"
+            }
+        ]
+    },
+    {
+        "index": 7,
+        "name": "questions7",
+        "question": "How comfortable are you sharing things with your partner?",
+        "options": [
+            {
+                "answer": "I believe he is my closest friend and secret keeper.",
+                "ansType": "Positive"
+            },
+            {
+                "answer": " I believe it is best to hide few things.",
+                "ansType": "Negetive"
+            },
+            {
+                "answer": "I don't believe this is really comfy for me.",
+                "ansType": "Neutral"
+            }
+        ]
+    },
+    {
+        "index": 8,
+        "name": "questions8",
+        "question": "What emotions do you experience with your partner?",
+        "options": [
+            {
+                "answer": "There are somdays when i love my relationship and there are somedays when i don't feel it that way",
+                "ansType": "Negetive"
+            },
+            {
+                "answer": "I love my partner's company 'apple of my eye'",
+                "ansType": "Positive"
+            },
+            {
+                "answer": "It is routine and easygoing.",
+                "ansType": "Neutral"
+            }
+        ]
+    },
+    {
+        "index": 9,
+        "name": "questions9",
+        "question": "How would you react if you discovered something wrong with your partner?",
+        "options": [
+            {
+                "answer": "I will leave my partner",
+                "ansType": "Negetive"
+            },
+            {
+                "answer": "If my partner is accepting the mistake i will give them another chance (Human is a mannequin of mistakes)",
+                "ansType": "Neutral"
+            },
+            {
+                "answer": "I will talk with my partner and understand their point of view",
+                "ansType": "Positive"
+            }
+        ]
+    },
+    {
+        "index": 10,
+        "name": "questions10",
+        "question": "Do you talk to new people at social gatherings or stick with people you know?",
+        "options": [
+            {
+                "answer": "I love to connect with people with different personality/I love to make new friend",
+                "ansType": "Positive"
+            },
+            {
+                "answer": "I am Neutral, It depends on my mood ",
+                "ansType": "Neutral"
+            },
+            {
+                "answer": "I stick with people I know ",
+                "ansType": "Negetive"
+            }
+        ]
+    }
+]

@@ -1,0 +1,78 @@
+@import '../../../assets/scss/varibles.scss';
+
+.question-container {
+    margin: 2em 1em;
+    padding: 1em;
+    text-align: -webkit-center;
+    min-height: 80vh;
+
+    .question-box {
+        background-color: #fff;
+        padding: 1em 2em;
+        border-radius: 15px;
+        width: 85%;
+        box-shadow: 0 0 15px rgb(146, 140, 140);
+    }
+
+    .stepper {
+        margin: 2em;
+    }
+
+    .title {
+        margin: 2em 0.5em;
+
+        h1 {
+            font-size: 1.8em;
+            font-family: $cr-font;
+            font-style: normal;
+            letter-spacing: 0.08em;
+            font-weight: bold;
+            color: #ab1e43;
+            margin: 0px;
+        }
+
+        p {
+            font-size: 1.2em;
+            font-family: $cr-font;
+            font-style: normal;
+            letter-spacing: 0.08em;
+            font-weight: bold;
+            margin: 2px;
+
+            span {
+                color: #ab1e43
+            }
+        }
+    }
+}
+
+:host ::ng-deep {
+    .p-steps .p-steps-item .p-menuitem-link:not(.p-disabled):focus {
+        box-shadow: none;
+    }
+
+    .p-steps .p-steps-item.p-highlight .p-steps-number {
+        background: #ab1e43;
+        color: #fff;
+    }
+
+    .p-steps .p-steps-item.p-highlight .p-steps-title {
+        font-family: $cr-font;
+        font-style: normal;
+        letter-spacing: 0.08em;
+        font-weight: bold;
+        color: #ab1e43;
+    }
+
+    .p-steps .p-steps-item .p-menuitem-link .p-steps-number {
+        font-family: $cr-font;
+        font-style: normal;
+        letter-spacing: 0.08em;
+    }
+
+    .p-steps .p-steps-item .p-menuitem-link .p-steps-title {
+        font-family: $cr-font;
+        font-style: normal;
+        letter-spacing: 0.08em;
+    }
+}

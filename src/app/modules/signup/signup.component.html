@@ -1,0 +1,119 @@
+<div class="signup-container">
+    <div class="signup-box">
+        <div class="signup-form" [formGroup]="signupform">
+            <div class="signup-title">
+                <h1>Create Your Account</h1>
+            </div>
+            <div class="flex-box">
+                <div class="input-container">
+                    <label for="email">Email*</label>
+                    <input type="email" name="email" formControlName="email" pattern="^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$"
+                        [readOnly]="emailDisable">
+                    <span class="error-box"
+                        *ngIf="submitEmail && this.signupform.controls['email'].hasError('required')">Please enter
+                        email</span>
+                    <span class="error-box"
+                        *ngIf="submitEmail && this.signupform.controls['email'].hasError('pattern')">Please enter
+                        valid
+                        email</span>
+                </div>
+                <div class="email-verify" *ngIf="!emailVerified">
+                    <button (click)="sendOtp()" *ngIf="!hideSendBtn">Send OTP</button>
+                    <button (click)="sendOtp()" *ngIf="hideSendBtn" [disabled]="disablebtn()">Resend {{ (timeLeft
+                        !== 0) ? ('after ' + timeLeft) : ''}}</button>
+                </div>
+            </div>
+            <div class="flex-box" *ngIf="hideSendBtn && !emailVerified">
+                <div class="input-container">
+                    <label for="otp">Enter OTP*</label>
+                    <input type="text" name="otp" formControlName="otp">
+                </div>
+                <div class="email-verify">
+                    <button (click)="verifyOtp()">Verify Email</button>
+                </div>
+            </div>
+            <div class="flex-box">
+                <div class="input-container">
+                    <label for="fullname">Full Name*</label>
+                    <input type="text" name="fullname" formControlName="fullname">
+                    <span class="error-box"
+                        *ngIf="submitForm && this.signupform.controls['fullname'].hasError('required')">Please enter
+                        your full name</span>
+                </div>
+                <div class="input-container">
+                    <label for="mobile">Mobile</label>
+                    <input type="text" name="mobile" formControlName="mobile">
+                </div>
+            </div>
+            <div class="flex-box">
+                <div class="input-container">
+                    <label for="password">Password*</label>
+                    <input type="password" name="password" formControlName="password" minlength="8" maxlength="16"
+                        pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$">
+                    <span class="error-box"
+                        *ngIf="submitForm && this.signupform.controls['password'].hasError('required')">Please enter
+                        password</span>
+                    <span class="error-box"
+                        *ngIf="submitForm && this.signupform.controls['password'].hasError('minlength')">Password min
+                        length is 8</span>
+                    <span class="error-box"
+                        *ngIf="submitForm && this.signupform.controls['password'].hasError('pattern')">Password should
+                        contain at least one uppercase letter, one lowercase letter, one number and one special
+                        character</span>
+                </div>
+                <div class="input-container">
+                    <label for="repassword">Re-Password*</label>
+                    <input type="password" name="repassword" formControlName="repassword">
+                    <span class="error-box"
+                        *ngIf="submitForm && this.signupform.controls['repassword'].hasError('required')">Please enter
+                        password</span>
+                    <span class="error-box"
+                        *ngIf="submitForm && this.signupform.controls['repassword'].hasError('minlength')">Password min
+                        length is 8</span>
+                    <span class="error-box"
+                        *ngIf="submitForm && !checkpasswordMatch() && this.signupform.controls['repassword'].value">Password
+                        did not match</span>
+                    <span class="error-box"
+                        *ngIf="submitForm && this.signupform.controls['repassword'].hasError('pattern')">Password should
+                        contain at least one uppercase letter, one lowercase letter, one number and one special
+                        character</span>
+                </div>
+            </div>
+            <div class="flex-box" *ngIf="signupform.controls['isPartner'].value">
+                <div class="input-container partneremail">
+                    <label for="partneremail">Partner Email*</label>
+                    <input type="email" name="partneremail" formControlName="partneremail">
+                    <span class="error-box"
+                        *ngIf="submitForm && this.signupform.controls['partneremail'].hasError('required')">Please enter
+                        partner email</span>
+                    <span class="error-box"
+                        *ngIf="submitForm && !validateEmail() &&  this.signupform.controls['partneremail'].value">Partner
+                        email needs to be different</span>
+                </div>
+
+            </div>
+            <div class="flex-box">
+                <div class="input-container checkbox">
+                    <p-checkbox name="invitepartner" [binary]="true" label="Invite Partner" formControlName="isPartner"
+                        (onChange)="partnerCheckbox($event)"></p-checkbox>
+                </div>
+            </div>
+
+            <div class="flex-box">
+                <div class="input-container checkbox">
+                    <p-checkbox name="termsandcondition" [binary]="true" label="Accept Terms & Condition"
+                        formControlName="termsandcondition"></p-checkbox>
+                </div>
+            </div>
+
+            <div class="submit-btn">
+                <button (click)="signup()">Create Account</button>
+            </div>
+
+            <div class="login-text">
+                <h1 class="text1">Already have a account?</h1>
+                <h1 class="text2"><a routerLink="/login">Login with Your Account</a></h1>
+            </div>
+        </div>
+    </div>
+</div>

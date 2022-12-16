@@ -1,0 +1,232 @@
+@import '../../../assets/scss/varibles.scss';
+
+.dashboard-component {
+    margin: 1em;
+    padding: 1em;
+    text-align: -webkit-center;
+    min-height: 80vh;
+
+    .welcom-title {
+        h1 {
+            font-size: 2.5em;
+            font-family: $cr-font;
+            font-style: normal;
+            letter-spacing: 0.08em;
+            font-weight: bold;
+            text-align: center;
+            color: #ab1e43;
+        }
+    }
+
+    .dashboard-table {
+        background-color: #fff;
+        padding: 1em;
+        border-radius: 15px;
+        width: 85%;
+        box-shadow: 0 0 15px rgb(146, 140, 140);
+
+        .table-top-feature {
+            .table-title {
+                text-align: left;
+                margin: 0.5em 0em;
+
+                h1 {
+                    font-size: 1.5em;
+                    font-family: $cr-font;
+                    font-style: normal;
+                    letter-spacing: 0.08em;
+                    font-weight: bold;
+                    color: #ab1e43;
+                }
+            }
+
+            .flex-box {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+
+                .left {
+                    display: table;
+
+                    .add-sample-btn {
+                        display: table-cell;
+                        vertical-align: middle;
+
+                        button {
+                            border: none;
+                            background-color: #ab1e43;
+                            padding: 5px 5px;
+                            border-radius: 10px;
+                            color: white;
+                            font-size: 0.85em;
+                            font-family: $cr-font;
+                            font-style: normal;
+                            letter-spacing: 0.08em;
+                            box-shadow: 0 0 5px #ab1e43;
+                            border: 1px solid white;
+                            font-weight: 600;
+                            width: 15em;
+                            cursor: pointer;
+                        }
+
+                        button:hover {
+                            box-shadow: 0 0 10px #ab1e43;
+                            border: 2px solid white;
+                            background-color: #cc1344;
+                        }
+                    }
+
+                }
+
+                .right {
+                    display: flex;
+                    flex-direction: row;
+                    margin: 1em 0em;
+
+                    .search-filter {
+                        input {
+                            font-family: $cr-font;
+                            font-style: normal;
+                            letter-spacing: 0.08em;
+                            padding: 0.5em;
+                            font-size: 0.75em;
+                            background-color: #fff;
+                            border-radius: 5px;
+                            border: none;
+                            margin: 0em 1em;
+                            width: 18em;
+                            box-shadow: 0 0 10px rgb(146, 140, 140);
+                        }
+
+                        input:focus-visible {
+                            outline: none;
+                            box-shadow: 0 0 5px #ab1e43;
+                        }
+                    }
+
+                    .add-partner-btn {
+                        button {
+                            border: none;
+                            background-color: #ab1e43;
+                            padding: 5px 5px;
+                            border-radius: 10px;
+                            color: white;
+                            font-size: 0.85em;
+                            font-family: $cr-font;
+                            font-style: normal;
+                            letter-spacing: 0.08em;
+                            box-shadow: 0 0 5px #ab1e43;
+                            border: 1px solid white;
+                            font-weight: 600;
+                            width: 15em;
+                            cursor: pointer;
+                        }
+
+                        button:hover {
+                            box-shadow: 0 0 10px #ab1e43;
+                            border: 2px solid white;
+                            background-color: #cc1344;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.flex-box {
+    .status-btn {
+        margin: 0.5em;
+
+        button {
+            border: none;
+            background-color: #ab1e43;
+            padding: 5px 5px;
+            border-radius: 10px;
+            color: white;
+            font-size: 0.85em;
+            font-family: $cr-font;
+            font-style: normal;
+            letter-spacing: 0.08em;
+            box-shadow: 0 0 5px #ab1e43;
+            border: 1px solid white;
+            font-weight: 600;
+            width: 15em;
+            cursor: pointer;
+        }
+
+        button:hover {
+            box-shadow: 0 0 10px #ab1e43;
+            border: 2px solid white;
+            background-color: #cc1344;
+        }
+    }
+
+    .delete-btn {
+        margin: 0.5em;
+
+        button {
+            border: none;
+            background-color: #fff;
+            padding: 5px 5px;
+            border-radius: 10px;
+            color: #ab1e43;
+            font-size: 0.85em;
+            font-family: $cr-font;
+            font-style: normal;
+            letter-spacing: 0.08em;
+
+            font-weight: 600;
+            width: 15em;
+            cursor: pointer;
+        }
+
+        button:hover {
+
+            color: #fff;
+            background-color: #cc1344;
+        }
+    }
+}
+
+:host ::ng-deep {
+    .p-datatable .p-datatable-thead>tr>th {
+        font-family: $cr-font;
+        font-style: normal;
+        letter-spacing: 0.08em;
+    }
+
+    .p-datatable .p-datatable-tbody>tr>td {
+        font-family: $cr-font;
+        font-style: normal;
+        letter-spacing: 0.08em;
+    }
+
+    .p-paginator .p-paginator-pages .p-paginator-page.p-highlight {
+        color: #fff;
+        background: #ab1e43;
+        border: #cc1344;
+    }
+
+    .p-link:focus {
+        box-shadow: none;
+    }
+
+    .p-dropdown:not(.p-disabled):hover {
+        border-color: #ab1e43;
+    }
+
+    .p-dropdown:not(.p-disabled).p-focus {
+        box-shadow: none;
+        border-color: #ab1e43;
+    }
+
+    :focus-visible {
+        outline: none;
+    }
+
+    .p-dropdown-panel .p-dropdown-items .p-dropdown-item.p-highlight {
+        color: #fff;
+        background: #ab1e43;
+    }
+}
