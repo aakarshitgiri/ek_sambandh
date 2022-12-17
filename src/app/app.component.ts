@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { MessageService } from 'primeng/api';
 import { IDisposable, IToast, ToastType } from './models/notification-model';
 import { NotificationService } from './services/notifications.service';
+import { DataStorageService } from './services/data-storage.service';
 
 @Component({
   selector: 'app-root',
@@ -13,10 +14,12 @@ export class AppComponent {
   showLoader: boolean = false;
   private loaderRegistration: IDisposable;
   private toastRegistration: IDisposable;
+  userData: any;
   constructor(
     private readonly notificationService: NotificationService,
     private router: Router,
     private messageService: MessageService,
+    private datastorage: DataStorageService
   ) {
     this.loaderRegistration = this.notificationService.registerLoaderTrigger(
       this.handleLoader.bind(this)
@@ -25,6 +28,16 @@ export class AppComponent {
     this.toastRegistration = this.notificationService.registerToastTrigger(
       this.handleToast.bind(this)
     );
+
+    this.datastorage.userData.subscribe(data => {
+      this.userData = data;
+    });
+
+    if (!this.userData?._id) {
+      this.datastorage.setUser(JSON.parse(sessionStorage?.getItem('userData') || '{}'))
+    }
+
+    console.log(this.userData)
   }
 
   private handleLoader(show: boolean) {

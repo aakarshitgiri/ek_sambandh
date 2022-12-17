@@ -1,6 +1,6 @@
 <div class="dashboard-component">
     <div class="welcom-title">
-        <h1>Welcome Aakarshit</h1>
+        <h1>Welcome {{userData.fullname}}</h1>
     </div>
     <div class="dashboard-table">
         <div class="table-top-feature">
@@ -25,7 +25,7 @@
 
         </div>
         <div class="table-relationship">
-            <p-table [value]="userData" responsiveLayout="scroll" [responsive]="true">
+            <p-table [value]="data" responsiveLayout="scroll" [responsive]="true">
                 <ng-template pTemplate="header">
                     <tr>
                         <th>Partner's Name</th>
@@ -34,21 +34,22 @@
                         <th>Action</th>
                     </tr>
                 </ng-template>
-                <ng-template pTemplate="body" let-userData>
+                <ng-template pTemplate="body" let-data>
                     <tr>
-                        <td>{{userData.partnerName}}</td>
-                        <td>{{userData.partnerEmail}}</td>
-                        <td>{{userData.relationshipID}}</td>
+                        <td>{{data.partnerName}}</td>
+                        <td>{{data.partnerEmail}}</td>
+                        <td>{{data.relationshipID}}</td>
                         <td>
                             <div class="flex-box">
                                 <div class="status-btn">
-                                    <button>{{userData.relationshipStatus ? (userData.feeStatus ? (userData.formStatus ?
-                                        (userData.partnerFormStatus ? 'View Results': 'Reminds Partner') :
+                                    <button (click)="tableButton(data)">{{data.relationshipStatus ? (data.feeStatus ?
+                                        (data.formStatus ?
+                                        (data.partnerFormStatus ? 'View Results': 'Reminds Partner') :
                                         'Take Test') : 'Pay Fees')
                                         : 'Resent Invitation'}}</button>
                                 </div>
                                 <div class="delete-btn">
-                                    <button>Delete</button>
+                                    <button (click)="delete(data)">Delete</button>
                                 </div>
                             </div>
                         </td>

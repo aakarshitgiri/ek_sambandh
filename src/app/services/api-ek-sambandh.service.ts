@@ -35,10 +35,10 @@ export class ApiEkSambandhService {
     return httpResponse;
   }
 
-  public login(obj: any): Observable<any> {
+  public login(email: string, password: string): Observable<any> {
     const url: string = `${environment.apiUrl.ekSambandhUrl}/login`;
 
-    const httpResponse: any = this.http.post<any>(url, { obj, observe: 'response' });
+    const httpResponse: any = this.http.post<any>(url, { email, password, observe: 'response' });
     return httpResponse;
   }
 

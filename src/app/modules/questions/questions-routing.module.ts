@@ -13,6 +13,11 @@ const routes: Routes = [
     component: QuestionsComponent,
     children: [
       {
+        path: '',
+        pathMatch: 'full',
+        redirectTo: 'level-1'
+      },
+      {
         path: 'level-1',
         component: QuestionPart1Component
       },

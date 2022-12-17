@@ -18,10 +18,15 @@
 
     <div class="nav-links">
         <a class="link" routerLink="/home">Home</a>
-        <a class="link" routerLink="/home" fragment="about">About Us</a>
-        <a class="link" routerLink="/home" fragment="howitworks">How it works?</a>
-        <a class="link" routerLink="/home" fragment="team">Teams</a>
-        <a class="link" routerLink="/home" fragment="faq">FAQ</a>
-        <a class="nav-btn" routerLink="/login">Login</a>
+        <a class="link" routerLink="/home" fragment="about" *ngIf="!userData?._id">About Us</a>
+        <a class="link" routerLink="/home" fragment="howitworks" *ngIf="!userData?._id">How it works?</a>
+        <a class="link" routerLink="/home" fragment="team" *ngIf="!userData?._id">Teams</a>
+        <a class="link" routerLink="/home" fragment="faq" *ngIf="!userData?._id">FAQ</a>
+        <a class="nav-btn" routerLink="/login" *ngIf="!userData?._id">Login</a>
+
+        <a class="link" routerLink="/dashboard" *ngIf="userData?._id">Dashboard</a>
+        <a class="link" routerLink="/profile" *ngIf="userData?._id">Profile</a>
+        <a class="link" routerLink="/payments" *ngIf="userData?._id">Payments</a>
+        <a class="nav-btn" (click)="logout()" *ngIf="userData?._id">Logout</a>
     </div>
 </div>

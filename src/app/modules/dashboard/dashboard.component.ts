@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { UrlCollection } from 'src/app/models/urlcollection';
+import { DataStorageService } from 'src/app/services/data-storage.service';
 
 @Component({
   selector: 'app-dashboard',
@@ -6,7 +9,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./dashboard.component.scss']
 })
 export class DashboardComponent implements OnInit {
-  userData: any = [
+  userData: any
+  data: any = [
     {
       'fullname': 'Aakarshit Giri',
       'partnerName': 'Deepika Padukone',
@@ -178,9 +182,55 @@ export class DashboardComponent implements OnInit {
       }
     }
   ]
-  constructor() { }
+  constructor(
+    private datastorge: DataStorageService,
+    private router: Router
+  ) {
+    this.datastorge.userData.subscribe(data => {
+      this.userData = data;
+    })
+  }
 
-  ngOnInit(): void {
+  ngOnInit() {
+  }
+
+
+  tableButton(data: any) {
+    if (data.relationshipStatus) {
+      if (data.feeStatus) {
+        if (data.formStatus) {
+          if (data.partnerFormStatus) {
+            this.router.navigate([UrlCollection.Result]);
+          } else {
+            this.remindsPartner(data);
+          }
+        } else {
+          this.router.navigate([UrlCollection.LoveTest]);
+        }
+      } else {
+        this.payFees(data);
+      }
+    } else {
+      this.resentInvite(data);
+    }
+  }
+
+
+  remindsPartner(data: any) {
+
+  }
+
+  payFees(data: any) {
+    window.location.href = 'https://rzp.io/l/5dl5FVcHP';
+
+  }
+
+  resentInvite(data: any) {
+
+  }
+
+  delete(data: any) {
+
   }
 
 }
