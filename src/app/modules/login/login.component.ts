@@ -44,8 +44,9 @@ export class LoginComponent implements OnInit {
         if (res) {
           this.userData = res.user;
           this.datastorage.setUser(this.userData);
-          this.datastorage.setToken(res.token)
-          this.router.navigate([UrlCollection.Dashboard])
+          this.datastorage.setToken(res.token);
+          this.router.navigate([UrlCollection.Dashboard]);
+          this.notificationservice.showToast({ type: ToastType.Info, message: "Login Successfully" });
           this.notificationservice.hideLoader();
         }
       } catch (error: any) {

@@ -23,6 +23,7 @@ import { ToastModule } from 'primeng/toast';
 import { MessageService } from 'primeng/api';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { WindowRef } from './services/windows-ref';
 
 
 @NgModule({
@@ -55,7 +56,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     FormsModule
   ],
   providers: [
-    MessageService
+    MessageService,
+    WindowRef
   ],
   bootstrap: [AppComponent]
 })

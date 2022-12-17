@@ -1,7 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, NgZone } from '@angular/core';
 import { Router } from '@angular/router';
+import { ToastType } from 'src/app/models/notification-model';
 import { UrlCollection } from 'src/app/models/urlcollection';
 import { DataStorageService } from 'src/app/services/data-storage.service';
+import { NotificationService } from 'src/app/services/notifications.service';
+import { WindowRef } from 'src/app/services/windows-ref';
+
+
 
 @Component({
   selector: 'app-dashboard',
@@ -10,6 +15,7 @@ import { DataStorageService } from 'src/app/services/data-storage.service';
 })
 export class DashboardComponent implements OnInit {
   userData: any
+
   data: any = [
     {
       'fullname': 'Aakarshit Giri',
@@ -181,10 +187,49 @@ export class DashboardComponent implements OnInit {
         ]
       }
     }
-  ]
+  ];
+
+
+  options = {
+    "key": "rzp_test_Ey6vrOQSuNtqJM",
+    "name": 'Ek Sambandh',
+    "description": 'Romantic Compatibility Test',
+    "amount": 9900,
+    "image": "../../../assets/images/logo-1.png",
+    "prefill": {
+      "name": "",
+      "email": ""
+    },
+    "notes": {
+      "contact": "contact@eksambandh.in",
+      "relationshipId": "",
+      "userId": "",
+      "partnerId": ""
+    },
+    "theme": {
+      "color": '#ab1e43'
+    },
+    "handler": this.paymentHandler.bind(this),
+    "modal": {
+      ondismiss: (() => {
+        this.zone.run(() => {
+          this.notificationservice.showToast({ type: ToastType.Error, message: "Payment Failed" });
+          // add current page routing if payment fails
+        })
+      })
+    }
+  };
+
+
+
+
+
   constructor(
     private datastorge: DataStorageService,
-    private router: Router
+    private router: Router,
+    private winRef: WindowRef,
+    private zone: NgZone,
+    private notificationservice: NotificationService,
   ) {
     this.datastorge.userData.subscribe(data => {
       this.userData = data;
@@ -221,8 +266,19 @@ export class DashboardComponent implements OnInit {
   }
 
   payFees(data: any) {
-    window.location.href = 'https://rzp.io/l/5dl5FVcHP';
+    let rzp1 = new this.winRef.nativeWindow.Razorpay(this.options);
+    rzp1.open()
 
+  }
+
+
+  paymentHandler(res: any) {
+    this.zone.run(() => {
+      // add API call here
+      if (res.razorpay_payment_id) {
+
+      }
+    });
   }
 
   resentInvite(data: any) {
@@ -232,5 +288,9 @@ export class DashboardComponent implements OnInit {
   delete(data: any) {
 
   }
+
+
+
+
 
 }
