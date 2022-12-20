@@ -6,69 +6,129 @@
             </div>
             <div class="edit-profile-btn">
                 <div class="cell">
-                    <button>Edit Profile</button>
+                    <button (click)="showProfileModal()">Edit Profile</button>
+                </div>
+                <div class="cell">
+                    <button (click)="showPassModal()">Change Password</button>
                 </div>
 
             </div>
         </div>
         <div class="profile-details">
-            <div class="profile-form">
+            <div class="profile-form" [formGroup]="userDetails">
                 <div class="form-box">
                     <div class="input-container">
                         <label for="fullname">Full Name*</label>
-                        <input type="text" name="fullname">
+                        <input type="text" name="fullname" formControlName="fullname" [readOnly]="true">
                     </div>
                 </div>
                 <div class="form-box">
                     <div class="input-container">
                         <label for="mobile">Mobile*</label>
-                        <input type="text" name="mobile">
+                        <input type="text" name="mobile" formControlName="mobile" [readOnly]="true">
                     </div>
                 </div>
                 <div class="form-box">
                     <div class="input-container">
                         <label for="email">Email*</label>
-                        <input type="email" name="email">
-                    </div>
-                </div>
-                <div class="form-box">
-                    <div class="input-container">
-                        <div class="verify-email">
-                            <button>Send OTP</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="form-box">
-                    <div class="input-container">
-                        <label for="otp">OTP*</label>
-                        <input type="text" name="otp">
-                    </div>
-                </div>
-                <div class="form-box">
-                    <div class="input-container">
-                        <div class="verify-email">
-                            <button>Verify OTP</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="form-box">
-                    <div class="input-container">
-                        <label for="password">Password*</label>
-                        <input type="password" name="password">
-                    </div>
-                </div>
-                <div class="form-box">
-                    <div class="input-container">
-                        <label for="repassword">Re Password*</label>
-                        <input type="password" name="repassword">
-                    </div>
-                </div>
-                <div class="bottom-box">
-                    <div class="update-btn">
-                        <button>UPDATE</button>
+                        <input type="email" name="email" formControlName="email" [readOnly]="true">
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
+
+
+
+<p-dialog header="Change Password" [(visible)]="updatePassword" [breakpoints]="{'960px': '75vw'}"
+    [style]="{width: '50vw'}" [baseZIndex]="10000">
+    <div class="help-support">
+        <div class="form-help" [formGroup]="password">
+            <div class="input-container">
+                <label for="current">Current Password*</label>
+                <input type="password" name="current" formControlName="current" minlength="8" maxlength="16"
+                    pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$">
+                <span class="error-box"
+                    *ngIf="passSubmit && this.password.controls['current'].hasError('required')">Please
+                    enter your current password</span>
+                <span class="error-box"
+                    *ngIf="passSubmit && this.password.controls['current'].hasError('minlength')">Password
+                    min
+                    length is 8</span>
+                <span class="error-box"
+                    *ngIf="passSubmit && this.password.controls['current'].hasError('pattern')">Password
+                    should
+                    contain at least one uppercase letter, one lowercase letter, one number and one special
+                    character</span>
+            </div>
+            <div class="input-container">
+                <label for="newPass">New Password*</label>
+                <input type="password" name="newPass" formControlName="newPass" minlength="8" maxlength="16"
+                    pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$">
+                <span class="error-box"
+                    *ngIf="passSubmit && this.password.controls['newPass'].hasError('required')">Please
+                    enter your new password</span>
+                <span class="error-box"
+                    *ngIf="passSubmit && this.password.controls['newPass'].hasError('minlength')">Password
+                    min
+                    length is 8</span>
+                <span class="error-box"
+                    *ngIf="passSubmit && this.password.controls['newPass'].hasError('pattern')">Password
+                    should
+                    contain at least one uppercase letter, one lowercase letter, one number and one special
+                    character</span>
+            </div>
+            <div class="input-container">
+                <label for="reNewPass">Re-New Password*</label>
+                <input type="password" name="reNewPass" formControlName="reNewPass" minlength="8" maxlength="16"
+                    pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$">
+                <span class="error-box"
+                    *ngIf="passSubmit && this.password.controls['reNewPass'].hasError('required')">Please
+                    re enter your new password</span>
+                <span class="error-box"
+                    *ngIf="passSubmit && this.password.controls['reNewPass'].hasError('minlength')">Password
+                    min
+                    length is 8</span>
+                <span class="error-box"
+                    *ngIf="passSubmit && !checkpasswordMatch() && this.password.controls['reNewPass'].value">Password
+                    did not match</span>
+                <span class="error-box"
+                    *ngIf="passSubmit && this.password.controls['reNewPass'].hasError('pattern')">Password
+                    should
+                    contain at least one uppercase letter, one lowercase letter, one number and one special
+                    character</span>
+            </div>
+        </div>
+    </div>
+    <ng-template pTemplate="footer" class="footer-modal">
+        <button (click)="updatePassword=false" class="cancel">Cancel</button>
+        <button (click)="updatePass()" class="btn">Change Password</button>
+    </ng-template>
+</p-dialog>
+
+<p-dialog header="Update Profile" [(visible)]="updateUserProfile" [breakpoints]="{'960px': '75vw'}"
+    [style]="{width: '50vw'}" [baseZIndex]="10000">
+    <div class="help-support">
+        <div class="form-help" [formGroup]="profile">
+            <div class="input-container">
+                <label for="fullname">Full Name*</label>
+                <input type="text" name="fullname" formControlName="fullname">
+                <span class="error-box"
+                    *ngIf="profileSubmit && this.profile.controls['fullname'].hasError('required')">Please
+                    enter your full name</span>
+            </div>
+            <div class="input-container">
+                <label for="mobile">Mobile*</label>
+                <input type="text" name="mobile" formControlName="mobile">
+                <span class="error-box"
+                    *ngIf="profileSubmit && this.profile.controls['mobile'].hasError('required')">Please
+                    enter contact number</span>
+            </div>
+        </div>
+    </div>
+    <ng-template pTemplate="footer" class="footer-modal">
+        <button (click)="updateUserProfile=false" class="cancel">Cancel</button>
+        <button (click)="updateProfile()" class="btn">Update Profile</button>
+    </ng-template>
+</p-dialog>

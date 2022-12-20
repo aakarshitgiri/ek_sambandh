@@ -18,7 +18,7 @@
                         valid
                         email</span>
                 </div>
-                <div class="email-verify" *ngIf="!emailVerified">
+                <div class="email-verify" *ngIf="!emailVerified && !isPartnerLogin">
                     <button (click)="sendOtp()" *ngIf="!hideSendBtn">Send OTP</button>
                     <button (click)="sendOtp()" *ngIf="hideSendBtn" [disabled]="disablebtn()">Resend {{ (timeLeft
                         !== 0) ? ('after ' + timeLeft) : ''}}</button>
@@ -93,7 +93,7 @@
                 </div>
 
             </div>
-            <div class="flex-box">
+            <div class="flex-box" *ngIf="!isPartnerLogin">
                 <div class="input-container checkbox">
                     <p-checkbox name="invitepartner" [binary]="true" label="Invite Partner" formControlName="isPartner"
                         (onChange)="partnerCheckbox($event)"></p-checkbox>

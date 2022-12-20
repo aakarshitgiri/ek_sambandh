@@ -8,7 +8,8 @@ export enum UrlCollection {
     SignUp = "/signup",
     Login = "/login",
     SetPass = "/set-password",
-    ForgotPass = "/forgot-password"
+    ForgotPass = "/forgot-password",
+    relationshipAccept = "/relationship/accept"
 }
 
 export enum UrlCollectionName {
@@ -21,5 +22,6 @@ export enum UrlCollectionName {
     SignUp = "signup",
     Login = "login",
     SetPass = "set-password",
-    ForgotPass = "forgot-password"
+    ForgotPass = "forgot-password",
+    relationshipAccept = "relationship/accept"
 }

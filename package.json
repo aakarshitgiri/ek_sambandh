@@ -18,6 +18,7 @@
     "@angular/platform-browser": "^14.1.0",
     "@angular/platform-browser-dynamic": "^14.1.0",
     "@angular/router": "^14.1.0",
+    "@ng-idle/keepalive": "^11.0.3",
     "html2canvas": "^1.4.1",
     "primeicons": "^5.0.0",
     "primeng": "^14.0.0",

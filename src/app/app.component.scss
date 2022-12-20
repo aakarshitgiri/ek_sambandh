@@ -1,3 +1,5 @@
+@import '../assets/scss/varibles.scss';
+
 .pluswrap {
     position: fixed;
     width: 100%;
@@ -13,4 +15,20 @@
 .plus {
     display: flex;
     margin: 0 auto;
+}
+
+:host ::ng-deep {
+    .p-toast .p-toast-message.p-toast-message-info {
+        background: #ffffff;
+        border: solid #ab1e43;
+        border-width: 1px 1px 1px 6px;
+        color: #ab1e43;
+        font-family: $cr-font;
+        font-weight: 600;
+    }
+
+    .p-toast .p-toast-message.p-toast-message-info .p-toast-message-icon,
+    .p-toast .p-toast-message.p-toast-message-info .p-toast-icon-close {
+        color: #ab1e43;
+    }
 }

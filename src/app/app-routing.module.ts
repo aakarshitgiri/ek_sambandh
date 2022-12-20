@@ -11,6 +11,7 @@ import { ResultsComponent } from './modules/results/results.component';
 import { SetPasswordComponent } from './modules/set-password/set-password.component';
 import { SignupComponent } from './modules/signup/signup.component';
 import { TransactionsComponent } from './modules/transactions/transactions.component';
+import { RelationshipSuccessComponent } from './modules/relationship-success/relationship-success.component';
 const routerOptions: ExtraOptions = {
   scrollPositionRestoration: 'enabled',
   anchorScrolling: 'enabled',
@@ -21,6 +22,7 @@ const routerOptions: ExtraOptions = {
 const routes: Routes = [
   {
     path: '',
+    pathMatch: 'full',
     component: HomeComponent
   },
   {
@@ -34,6 +36,10 @@ const routes: Routes = [
   {
     path: UrlCollectionName.Dashboard,
     component: DashboardComponent
+  },
+  {
+    path: UrlCollectionName.relationshipAccept,
+    component: RelationshipSuccessComponent
   },
   {
     path: UrlCollectionName.Result,

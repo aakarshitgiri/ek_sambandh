@@ -24,6 +24,9 @@ import { MessageService } from 'primeng/api';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { WindowRef } from './services/windows-ref';
+import { NgIdleKeepaliveModule } from '@ng-idle/keepalive';
+import { RelationshipSuccessComponent } from './modules/relationship-success/relationship-success.component';
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 
 
 @NgModule({
@@ -39,6 +42,7 @@ import { WindowRef } from './services/windows-ref';
     ResultsComponent,
     ProfileComponent,
     TransactionsComponent,
+    RelationshipSuccessComponent,
 
   ],
   imports: [
@@ -53,7 +57,8 @@ import { WindowRef } from './services/windows-ref';
     ToastModule,
     HttpClientModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    NgIdleKeepaliveModule.forRoot()
   ],
   providers: [
     MessageService,

@@ -2,9 +2,11 @@ import { Component, OnInit, NgZone } from '@angular/core';
 import { Router } from '@angular/router';
 import { ToastType } from 'src/app/models/notification-model';
 import { UrlCollection } from 'src/app/models/urlcollection';
+import { ApiEkSambandhService } from 'src/app/services/api-ek-sambandh.service';
 import { DataStorageService } from 'src/app/services/data-storage.service';
 import { NotificationService } from 'src/app/services/notifications.service';
 import { WindowRef } from 'src/app/services/windows-ref';
+
 
 
 
@@ -15,210 +17,18 @@ import { WindowRef } from 'src/app/services/windows-ref';
 })
 export class DashboardComponent implements OnInit {
   userData: any
+  data: any;
+  tableHeader: any[] = [
+    { "field": "fullname", 'header': 'Partner Name' },
+    { "field": "email", 'header': 'Partner Email' },
+    { "field": "relationshipId", 'header': 'Relationship ID ' },
+    { "field": "action", 'header': 'Action' }
+  ]
 
-  data: any = [
-    {
-      'fullname': 'Aakarshit Giri',
-      'partnerName': 'Deepika Padukone',
-      'Email': 'aakarshitgiri@mailinator.com',
-      'partnerEmail': 'deepikapadukone@mailinator.com',
-      'relationshipStatus': true,
-      'relationshipID': 'Relationship-01',
-      'feeStatus': true,
-      'formStatus': true,
-      'partnerFormStatus': true,
-      'relationshipForm': {
-        0: [
-          {
-            'question': 'qwertyui jfiuehfie hueiwfr huier hduiehfowe',
-            'answer': 'yes',
-            'score': '100%'
-          }
-        ],
-        1: [
-          {
-            'question': 'qwertyui jfiuehfie hueiwfr huier hduiehfowe',
-            'answer': 'yes',
-            'score': '100%'
-          }
-        ],
-        2: [
-          {
-            'question': 'qwertyui jfiuehfie hueiwfr huier hduiehfowe',
-            'answer': 'yes',
-            'score': '100%'
-          }
-        ]
-      }
-    },
-    {
-      'fullname': 'Aakarshit Giri',
-      'partnerName': 'Kriti Sonon',
-      'Email': 'aakarshitgiri@mailinator.com',
-      'partnerEmail': 'kritisonon@mailinator.com',
-      'relationshipStatus': false,
-      'relationshipID': 'Relationship-02',
-      'feeStatus': true,
-      'formStatus': true,
-      'partnerFormStatus': true,
-      'relationshipForm': {
-        0: [
-          {
-            'question': 'qwertyui jfiuehfie hueiwfr huier hduiehfowe',
-            'answer': 'yes',
-            'score': '100%'
-          }
-        ],
-        1: [
-          {
-            'question': 'qwertyui jfiuehfie hueiwfr huier hduiehfowe',
-            'answer': 'yes',
-            'score': '100%'
-          }
-        ],
-        2: [
-          {
-            'question': 'qwertyui jfiuehfie hueiwfr huier hduiehfowe',
-            'answer': 'yes',
-            'score': '100%'
-          }
-        ]
-      }
-    },
-    {
-      'fullname': 'Aakarshit Giri',
-      'partnerName': 'Alia Bhatt',
-      'Email': 'aakarshitgiri@mailinator.com',
-      'partnerEmail': 'aliabhatt@mailinator.com',
-      'relationshipStatus': true,
-      'relationshipID': 'Relationship-03',
-      'feeStatus': false,
-      'formStatus': true,
-      'partnerFormStatus': true,
-      'relationshipForm': {
-        0: [
-          {
-            'question': 'qwertyui jfiuehfie hueiwfr huier hduiehfowe',
-            'answer': 'yes',
-            'score': '100%'
-          }
-        ],
-        1: [
-          {
-            'question': 'qwertyui jfiuehfie hueiwfr huier hduiehfowe',
-            'answer': 'yes',
-            'score': '100%'
-          }
-        ],
-        2: [
-          {
-            'question': 'qwertyui jfiuehfie hueiwfr huier hduiehfowe',
-            'answer': 'yes',
-            'score': '100%'
-          }
-        ]
-      }
-    },
-    {
-      'fullname': 'Aakarshit Giri',
-      'partnerName': 'Scarlett Johansson',
-      'Email': 'aakarshitgiri@mailinator.com',
-      'partnerEmail': 'scarletjohansson@mailinator.com',
-      'relationshipStatus': true,
-      'relationshipID': 'Relationship-04',
-      'feeStatus': true,
-      'formStatus': false,
-      'partnerFormStatus': true,
-      'relationshipForm': {
-        0: [
-          {
-            'question': 'qwertyui jfiuehfie hueiwfr huier hduiehfowe',
-            'answer': 'yes',
-            'score': '100%'
-          }
-        ],
-        1: [
-          {
-            'question': 'qwertyui jfiuehfie hueiwfr huier hduiehfowe',
-            'answer': 'yes',
-            'score': '100%'
-          }
-        ],
-        2: [
-          {
-            'question': 'qwertyui jfiuehfie hueiwfr huier hduiehfowe',
-            'answer': 'yes',
-            'score': '100%'
-          }
-        ]
-      }
-    },
-    {
-      'fullname': 'Aakarshit Giri',
-      'partnerName': 'Alexandra Daddario',
-      'Email': 'aakarshitgiri@mailinator.com',
-      'partnerEmail': 'alexandradaddario@mailinator.com',
-      'relationshipStatus': true,
-      'relationshipID': 'Relationship-05',
-      'feeStatus': true,
-      'formStatus': true,
-      'partnerFormStatus': false,
-      'relationshipForm': {
-        0: [
-          {
-            'question': 'qwertyui jfiuehfie hueiwfr huier hduiehfowe',
-            'answer': 'yes',
-            'score': '100%'
-          }
-        ],
-        1: [
-          {
-            'question': 'qwertyui jfiuehfie hueiwfr huier hduiehfowe',
-            'answer': 'yes',
-            'score': '100%'
-          }
-        ],
-        2: [
-          {
-            'question': 'qwertyui jfiuehfie hueiwfr huier hduiehfowe',
-            'answer': 'yes',
-            'score': '100%'
-          }
-        ]
-      }
-    }
-  ];
-
-
-  options = {
-    "key": "rzp_test_Ey6vrOQSuNtqJM",
-    "name": 'Ek Sambandh',
-    "description": 'Romantic Compatibility Test',
-    "amount": 9900,
-    "image": "../../../assets/images/logo-1.png",
-    "prefill": {
-      "name": "",
-      "email": ""
-    },
-    "notes": {
-      "contact": "contact@eksambandh.in",
-      "relationshipId": "",
-      "userId": "",
-      "partnerId": ""
-    },
-    "theme": {
-      "color": '#ab1e43'
-    },
-    "handler": this.paymentHandler.bind(this),
-    "modal": {
-      ondismiss: (() => {
-        this.zone.run(() => {
-          this.notificationservice.showToast({ type: ToastType.Error, message: "Payment Failed" });
-          // add current page routing if payment fails
-        })
-      })
-    }
-  };
+  options: any;
+  relationshipId: any;
+  partnerName: any;
+  readableId: string;
 
 
 
@@ -229,6 +39,7 @@ export class DashboardComponent implements OnInit {
     private router: Router,
     private winRef: WindowRef,
     private zone: NgZone,
+    private apiService: ApiEkSambandhService,
     private notificationservice: NotificationService,
   ) {
     this.datastorge.userData.subscribe(data => {
@@ -237,10 +48,50 @@ export class DashboardComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.options = {
+      "key": "rzp_test_Ey6vrOQSuNtqJM",
+      "name": 'Ek Sambandh',
+      "description": 'Romantic Compatibility Test',
+      "amount": 9900,
+      "image": "../../../assets/images/logo-1.png",
+      "prefill": {
+        "name": this.userData.fullname,
+        "email": this.userData.email,
+        "contact": this.userData.mobile,
+      },
+      "notes": {
+        "contact": "contact@eksambandh.in",
+        "relationshipId": this.relationshipId,
+        "partnerName": this.partnerName,
+      },
+      "theme": {
+        "color": '#ab1e43'
+      },
+      "handler": this.paymentHandler.bind(this),
+      "modal": {
+        ondismiss: (() => {
+          this.zone.run(() => {
+            let readableId = this.readableId;
+            let transactionId = " ";
+            let paymentStatus = "Failed";
+            let amount = 99;
+            let relationshipId = this.relationshipId;
+            this.apiService.paymentUpdate(transactionId, paymentStatus, amount, relationshipId, readableId).subscribe((res: any) => {
+              this.notificationservice.showToast({ type: ToastType.Error, message: "Payment Failed" });
+            })
+
+            // add current page routing if payment fails
+          })
+        })
+      }
+    };
+    this.apiService.getRelationship().subscribe((res: any) => {
+      this.data = res.relationships;
+    })
   }
 
 
-  tableButton(data: any) {
+  tableButton(data: any, id: string) {
     if (data.relationshipStatus) {
       if (data.feeStatus) {
         if (data.formStatus) {
@@ -253,7 +104,7 @@ export class DashboardComponent implements OnInit {
           this.router.navigate([UrlCollection.LoveTest]);
         }
       } else {
-        this.payFees(data);
+        this.payFees(data, id);
       }
     } else {
       this.resentInvite(data);
@@ -265,7 +116,10 @@ export class DashboardComponent implements OnInit {
 
   }
 
-  payFees(data: any) {
+  payFees(data: any, id: string) {
+    this.readableId = id
+    this.relationshipId = data.relationshipId;
+    this.partnerName = data.partner.fullname
     let rzp1 = new this.winRef.nativeWindow.Razorpay(this.options);
     rzp1.open()
 
@@ -276,7 +130,14 @@ export class DashboardComponent implements OnInit {
     this.zone.run(() => {
       // add API call here
       if (res.razorpay_payment_id) {
-
+        let readableId = this.readableId;
+        let transactionId = res.razorpay_payment_id;
+        let paymentStatus = "Success";
+        let amount = 99;
+        let relationshipId = this.relationshipId;
+        this.apiService.paymentUpdate(transactionId, paymentStatus, amount, relationshipId, readableId).subscribe((res: any) => {
+          this.notificationservice.showToast({ type: ToastType.Info, message: "Payment Successfull" });
+        })
       }
     });
   }

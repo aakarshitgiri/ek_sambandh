@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { firstValueFrom } from 'rxjs';
 import { ToastType } from 'src/app/models/notification-model';
 import { UrlCollection } from 'src/app/models/urlcollection';
@@ -22,15 +22,21 @@ export class SignupComponent implements OnInit {
   timeLeft: number = 60;
   interval: any;
   btnvisble: boolean = false;
+  isPartnerLogin: boolean = false;
+  relationshipId: any;
 
   constructor(
     private formbuilder: FormBuilder,
     private apiService: ApiEkSambandhService,
     private notificationservice: NotificationService,
-    private router: Router
+    private router: Router,
+    private _activateroute: ActivatedRoute,
   ) { }
 
   ngOnInit() {
+    const verifyPartnerToken = this._activateroute.snapshot.queryParams['token'];
+    const verifyPartnerEmail = this._activateroute.snapshot.queryParams['email'];
+
     this.signupform = this.formbuilder.group({
       email: new FormControl('', [Validators.required]),
       otp: new FormControl('', [Validators.required]),
@@ -50,6 +56,22 @@ export class SignupComponent implements OnInit {
     this.signupform.controls['partneremail'].disable();
     this.signupform.controls['isPartner'].disable();
     this.signupform.controls['termsandcondition'].disable();
+
+    if (verifyPartnerToken) {
+      this.apiService.verifyToken(verifyPartnerToken).subscribe((res: any) => {
+        this.isPartnerLogin = true;
+        this.emailDisable = true;
+        this.signupform.controls['email'].setValue(verifyPartnerEmail)
+        let email = verifyPartnerEmail;
+        this.relationshipId = res.relationshipId;
+        this.signupform.controls['otp'].disable();
+        this.signupform.controls['fullname'].enable();
+        this.signupform.controls['mobile'].enable();
+        this.signupform.controls['password'].enable();
+        this.signupform.controls['repassword'].enable();
+        this.signupform.controls['termsandcondition'].enable();
+      })
+    }
   }
 
   enableForm() {
@@ -173,7 +195,7 @@ export class SignupComponent implements OnInit {
     this.notificationservice.showLoader();
     this.submitForm = true;
     console.log(this.signupform.valid, this.signupform.value)
-    if (this.signupform.valid && this.checkpasswordMatch() && this.validateEmail()) {
+    if (this.signupform.valid && this.checkpasswordMatch() && this.validateEmail() && !this.isPartnerLogin) {
       let email = this.signupform.value.email;
       let fullname = this.signupform.value.fullname;
       let mobile = this.signupform.value.mobile;
@@ -186,7 +208,6 @@ export class SignupComponent implements OnInit {
         console.log(res)
         if (res) {
           this.notificationservice.showToast({ type: ToastType.Info, message: "Account created Successfully !" });
-          this.notificationservice.showToast({ type: ToastType.Info, message: res.message });
           this.router.navigate([UrlCollection.Login]);
         }
 
@@ -195,6 +216,18 @@ export class SignupComponent implements OnInit {
         this.notificationservice.showToast({ type: ToastType.Error, message: error.error.message });
       }
 
+    } else if (this.isPartnerLogin && this.signupform.valid && this.checkpasswordMatch()) {
+      let fullname = this.signupform.value.fullname;
+      let email = this.signupform.value.email;
+      let password = this.signupform.value.password;
+      let mobile = this.signupform.value.mobile;
+      let relationshipId = this.relationshipId;
+      let res = await firstValueFrom(this.apiService.createPartner(fullname, email, password, relationshipId, mobile));
+      this.notificationservice.hideLoader();
+      if (res) {
+        this.notificationservice.showToast({ type: ToastType.Info, message: "Account created Successfully !" });
+        this.router.navigate([UrlCollection.Login]);
+      }
     } else {
       this.notificationservice.hideLoader();
       this.notificationservice.showToast({ type: ToastType.Error, message: 'Complete form first!' });

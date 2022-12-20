@@ -7,7 +7,7 @@ import { BehaviorSubject } from 'rxjs';
 export class DataStorageService {
 
   public userData: BehaviorSubject<any> = new BehaviorSubject<any>(null);
-  public token: BehaviorSubject<any> = new BehaviorSubject<any>(null);
+  token: string;
   constructor() { }
 
   public setUser(userData: any) {
@@ -16,13 +16,19 @@ export class DataStorageService {
   }
 
   public setToken(token: string) {
-    this.token?.next(token);
+    this.token = token;
+    sessionStorage.setItem('token', JSON.stringify(token));
   }
+
+  /*  public getToken() {
+     sessionStorage.setItem('token', JSON.stringify(this.token));
+     return this.token;
+   } */
 
   public clear() {
     sessionStorage.clear();
     this.userData?.next(null);
-    this.token?.next(null);
+    this.token = '';
   }
 
 

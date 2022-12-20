@@ -1,9 +1,6 @@
 <div class="footer-container">
     <div class="left-items">
-        <div class="footer-left">
-            <div class="link" (click)="showContactModal()"><a>Contact Us</a></div>
 
-        </div>
         <div class="footer-left">
             <div class="link" (click)="showHelpModal()"><a>Help & Support</a></div>
         </div>
@@ -30,56 +27,43 @@
 <p-dialog header="Help & Support" [(visible)]="helpModal" [breakpoints]="{'960px': '75vw'}" [style]="{width: '50vw'}"
     [baseZIndex]="10000">
     <div class="help-support">
-        <div class="form-help">
+        <div class="form-help" [formGroup]="helpSupport">
             <div class="input-container">
                 <label for="fullname">Full Name*</label>
-                <input type="text" name="fullname">
+                <input type="text" name="fullname" formControlName="fullname" [readOnly]="isUser">
+                <span class="error-box"
+                    *ngIf="submit && this.helpSupport.controls['fullname'].hasError('required')">Please enter
+                    your full name</span>
             </div>
             <div class="input-container">
                 <label for="email">Email*</label>
-                <input type="email" name="email">
+                <input type="email" name="email" formControlName="email" [readOnly]="isUser">
+                <span class="error-box" *ngIf="submit && this.helpSupport.controls['email'].hasError('required')">Please
+                    enter
+                    email</span>
+                <span class="error-box" *ngIf="submit && this.helpSupport.controls['email'].hasError('pattern')">Please
+                    enter
+                    valid
+                    email</span>
             </div>
             <div class="input-container">
                 <label for="contact">Contact*</label>
-                <input type="text" name="contact">
+                <input type="text" name="contact" formControlName="contact" [readOnly]="isUser">
+                <span class="error-box"
+                    *ngIf="submit && this.helpSupport.controls['contact'].hasError('required')">Please enter
+                    your contact number</span>
             </div>
             <div class="input-container">
                 <label for="reason">Specify Reason*</label>
-                <textarea type="text" name="reason"></textarea>
+                <textarea type="text" name="reason" formControlName="reason"></textarea>
+                <span class="error-box"
+                    *ngIf="submit && this.helpSupport.controls['reason'].hasError('required')">Please enter
+                    your reason</span>
             </div>
         </div>
     </div>
     <ng-template pTemplate="footer" class="footer-modal">
         <button (click)="helpModal=false" class="cancel">Cancel</button>
-        <button (click)="helpModal=false" class="btn">Send</button>
-    </ng-template>
-</p-dialog>
-
-
-<p-dialog header="Contact Us" [(visible)]="contactModal" [breakpoints]="{'960px': '75vw'}" [style]="{width: '50vw'}"
-    [baseZIndex]="10000">
-    <div class="help-support">
-        <div class="form-help">
-            <div class="input-container">
-                <label for="fullname">Full Name*</label>
-                <input type="text" name="fullname">
-            </div>
-            <div class="input-container">
-                <label for="email">Email*</label>
-                <input type="email" name="email">
-            </div>
-            <div class="input-container">
-                <label for="contact">Contact*</label>
-                <input type="text" name="contact">
-            </div>
-            <div class="input-container">
-                <label for="reason">Specify Reason*</label>
-                <textarea type="text" name="reason"></textarea>
-            </div>
-        </div>
-    </div>
-    <ng-template pTemplate="footer" class="footer-modal">
-        <button (click)="helpModal=false" class="cancel">Cancel</button>
-        <button (click)="helpModal=false" class="btn">Send</button>
+        <button (click)="send()" class="btn">Send</button>
     </ng-template>
 </p-dialog>

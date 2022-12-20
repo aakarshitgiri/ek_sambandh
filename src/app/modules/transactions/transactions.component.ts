@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ApiEkSambandhService } from 'src/app/services/api-ek-sambandh.service';
 
 @Component({
   selector: 'app-transactions',
@@ -15,9 +16,14 @@ export class TransactionsComponent implements OnInit {
       'status': 'Success'
     }
   ]
-  constructor() { }
+  constructor(
+    private apiService: ApiEkSambandhService
+  ) { }
 
-  ngOnInit(): void {
+  ngOnInit() {
+    this.apiService.getPaymentDetails().subscribe((data: any) => {
+      console.log(data, 'payments')
+    })
   }
 
 }
