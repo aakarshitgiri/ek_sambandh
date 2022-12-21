@@ -7,22 +7,16 @@ import { ApiEkSambandhService } from 'src/app/services/api-ek-sambandh.service';
   styleUrls: ['./transactions.component.scss']
 })
 export class TransactionsComponent implements OnInit {
-  payment: any[] = [
-    {
-      'id': ' qwju12343445656665677',
-      'date': '10/12/2022',
-      'relationshipID': 'Relationship-01',
-      'amount': '99',
-      'status': 'Success'
-    }
-  ]
+  payment: any[];
+
   constructor(
     private apiService: ApiEkSambandhService
   ) { }
 
   ngOnInit() {
     this.apiService.getPaymentDetails().subscribe((data: any) => {
-      console.log(data, 'payments')
+      console.log(data, 'payments');
+      this.payment = data.payment
     })
   }
 

@@ -135,6 +135,24 @@
     }
 }
 
+.Success {
+    background-color: #2aa821;
+    color: #fff;
+    text-align: center;
+    width: 8em;
+    padding: 5px 10px;
+    border-radius: 6px;
+}
+
+.Failed {
+    background-color: #cc1344;
+    color: #fff;
+    text-align: center;
+    width: 8em;
+    padding: 5px 10px;
+    border-radius: 6px;
+}
+
 .flex-box {
     .status-btn {
         margin: 0.5em;

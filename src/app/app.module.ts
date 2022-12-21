@@ -27,6 +27,7 @@ import { WindowRef } from './services/windows-ref';
 import { NgIdleKeepaliveModule } from '@ng-idle/keepalive';
 import { RelationshipSuccessComponent } from './modules/relationship-success/relationship-success.component';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
+import { RadioButtonModule } from 'primeng/radiobutton';
 
 
 @NgModule({
@@ -58,6 +59,7 @@ import { HashLocationStrategy, LocationStrategy } from '@angular/common';
     HttpClientModule,
     ReactiveFormsModule,
     FormsModule,
+    RadioButtonModule,
     NgIdleKeepaliveModule.forRoot()
   ],
   providers: [

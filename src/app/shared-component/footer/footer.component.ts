@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { AfterViewInit, ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { PrimeNGConfig } from 'primeng/api';
 import { ToastType } from 'src/app/models/notification-model';
@@ -24,13 +24,18 @@ export class FooterComponent implements OnInit {
     private apiService: ApiEkSambandhService,
     private datastorge: DataStorageService,
     private notificationservice: NotificationService,
+    private cdr: ChangeDetectorRef
   ) {
     this.datastorge.userData.subscribe(data => {
       this.userData = data;
-    })
+    });
+
+
   }
 
   ngOnInit() {
+
+
     this.primengConfig.ripple = true;
     this.helpSupport = this.formBuilder.group({
       fullname: new FormControl('', [Validators.required]),
@@ -47,6 +52,8 @@ export class FooterComponent implements OnInit {
     }
 
   }
+
+
 
 
 

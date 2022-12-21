@@ -27,7 +27,7 @@ export class DataStorageService {
 
   public clear() {
     sessionStorage.clear();
-    this.userData?.next(null);
+    this.userData?.next({});
     this.token = '';
   }
 

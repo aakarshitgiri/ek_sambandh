@@ -139,4 +139,41 @@ export class ApiEkSambandhService {
     return httpResponse;
   }
 
+  public verifyForgetToken(token: string): Observable<any> {
+    const url: string = `${environment.apiUrl.ekSambandhUrl}/reset-password/${token}`;
+
+    const httpResponse: any = this.http.post<any>(url, {});
+    return httpResponse;
+  }
+
+  public settPass(newPassword: string, userid: any): Observable<any> {
+    const url: string = `${environment.apiUrl.ekSambandhUrl}/set-password/${userid}`;
+
+    const httpResponse: any = this.http.post<any>(url, { newPassword });
+    return httpResponse;
+  }
+
+  public addPartner(email: string,): Observable<any> {
+    const url: string = `${environment.apiUrl.ekSambandhUrl}/user/relationship/requestRelationship`;
+    const headers = {
+      "Content-Type": "application/json",
+      "Authorization": "Bearer " + JSON.parse(sessionStorage?.getItem('token') as string),
+    }
+    const httpResponse: any = this.http.post<any>(url, { email }, { headers });
+    return httpResponse;
+  }
+
+
+  public deleteRelationship(relationshipId: string): Observable<any> {
+    const url: string = `${environment.apiUrl.ekSambandhUrl}/user/relationship/delete/${relationshipId}`;
+    const headers = {
+      "Content-Type": "application/json",
+      "Authorization": "Bearer " + JSON.parse(sessionStorage?.getItem('token') as string),
+    }
+    const httpResponse: any = this.http.delete<any>(url, { headers });
+    return httpResponse;
+  }
+
+
+
 }

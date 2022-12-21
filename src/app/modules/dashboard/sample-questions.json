@@ -1,0 +1,97 @@
+[
+    {
+        "index": 1,
+        "name": "questions2",
+        "question": "Who will resolve a dispute first?",
+        "options": [
+            {
+                "answer": "Myself",
+                "ansType": "Positive"
+            },
+            {
+                "answer": "My Partner",
+                "ansType": "Negetive"
+            },
+            {
+                "answer": "Ignore the argument and move on.",
+                "ansType": "Neutral"
+            }
+        ]
+    },
+    {
+        "index": 2,
+        "name": "questions3",
+        "question": "Would you sacrifice your happiness in order for the relationship to succeed?",
+        "options": [
+            {
+                "answer": "Both are different, hence we cannot compare the two situations.",
+                "ansType": "Neutral"
+            },
+            {
+                "answer": "Undoubtedly, yes",
+                "ansType": "Positive"
+            },
+            {
+                "answer": "Absolutely not",
+                "ansType": "Negetive"
+            }
+        ]
+    },
+    {
+        "index": 3,
+        "name": "questions7",
+        "question": "How comfortable are you sharing things with your partner?",
+        "options": [
+            {
+                "answer": "I believe he is my closest friend and secret keeper.",
+                "ansType": "Positive"
+            },
+            {
+                "answer": " I believe it is best to hide few things.",
+                "ansType": "Negetive"
+            },
+            {
+                "answer": "I don't believe this is really comfy for me.",
+                "ansType": "Neutral"
+            }
+        ]
+    },
+    {
+        "index": 4,
+        "name": "questions3",
+        "question": "Would you sacrifice your happiness in order for the relationship to succeed?",
+        "options": [
+            {
+                "answer": "Both are different, hence we cannot compare the two situations.",
+                "ansType": "Neutral"
+            },
+            {
+                "answer": "Undoubtedly, yes",
+                "ansType": "Positive"
+            },
+            {
+                "answer": "Absolutely not",
+                "ansType": "Negetive"
+            }
+        ]
+    },
+    {
+        "index": 5,
+        "name": "questions2",
+        "question": "Who will resolve a dispute first?",
+        "options": [
+            {
+                "answer": "Myself",
+                "ansType": "Positive"
+            },
+            {
+                "answer": "My Partner",
+                "ansType": "Negetive"
+            },
+            {
+                "answer": "Ignore the argument and move on.",
+                "ansType": "Neutral"
+            }
+        ]
+    }
+]

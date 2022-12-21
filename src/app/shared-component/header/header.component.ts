@@ -25,6 +25,7 @@ export class HeaderComponent implements OnInit {
 
   logout() {
     this.datastorage.clear();
+    this.datastorage.userData.next({})
     this.router.navigate([UrlCollection.Home])
   }
 
