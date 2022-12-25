@@ -11,7 +11,7 @@
     border-top: 1px solid #ab1e43;
 
 
-    @include phone-landscape {
+    /*  @include phone-landscape {
         flex-direction: column;
     }
 
@@ -25,12 +25,12 @@
 
     @include small-phone-portrait {
         flex-direction: column;
-    }
+    } */
 
     .left-items {
         display: flex;
         flex-direction: row;
-        justify-content: center;
+        justify-content: left;
 
         .footer-left {
             display: table;
@@ -45,6 +45,22 @@
                 display: table-cell;
                 vertical-align: middle;
                 cursor: pointer;
+
+                @include phone-landscape {
+                    font-size: 0.8em;
+                }
+
+                @include small-phone-landscape {
+                    font-size: 0.8em;
+                }
+
+                @include phone-portrait {
+                    font-size: 0.8em;
+                }
+
+                @include small-phone-portrait {
+                    font-size: 0.8em;
+                }
 
             }
 
