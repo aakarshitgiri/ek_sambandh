@@ -41,7 +41,7 @@ export class SignupComponent implements OnInit {
       email: new FormControl('', [Validators.required]),
       otp: new FormControl('', [Validators.required]),
       fullname: new FormControl('', [Validators.required]),
-      mobile: new FormControl(''),
+      mobile: new FormControl('', [Validators.required]),
       password: new FormControl('', [Validators.required]),
       repassword: new FormControl('', [Validators.required]),
       partneremail: new FormControl(''),
