@@ -4,6 +4,9 @@ import { MessageService } from 'primeng/api';
 import { ToastType } from 'src/app/models/notification-model';
 import { NotificationService } from 'src/app/services/notifications.service';
 import * as AOS from 'aos';
+import { Router } from '@angular/router';
+import { DataStorageService } from 'src/app/services/data-storage.service';
+import { UrlCollection } from 'src/app/models/urlcollection';
 
 @Component({
   selector: 'app-home',
@@ -27,10 +30,16 @@ export class HomeComponent implements OnInit {
       'name': 'Shubham Bhatia M.com(Hons.)', 'about': "Accounting and Finance. A working professional with commercial, branding, accounting, and investment banking expertise. Aside from my employment, I have a strong desire to play cricket. He has an easy time communicating effectively and learning new things."
     }
   ]
+  userData: any;
   constructor(
     private readonly notificationService: NotificationService,
+    private router: Router,
+    private datastorge: DataStorageService,
+    private notificationservice: NotificationService
   ) {
-
+    this.datastorge.currentUser.subscribe(data => {
+      this.userData = data;
+    })
   }
 
   ngOnInit() {
@@ -75,6 +84,13 @@ export class HomeComponent implements OnInit {
     ];
   }
 
-
+  takeTestNow() {
+    if (this.userData?._id) {
+      this.router.navigate([UrlCollection.Dashboard])
+    } else {
+      this.router.navigate([UrlCollection.Login]);
+      this.notificationservice.showToast({ type: ToastType.Info, message: "Please login first!" });
+    }
+  }
 
 }
