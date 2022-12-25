@@ -3,6 +3,7 @@ import { PrimeIcons } from 'primeng/api';
 import { MessageService } from 'primeng/api';
 import { ToastType } from 'src/app/models/notification-model';
 import { NotificationService } from 'src/app/services/notifications.service';
+import * as AOS from 'aos';
 
 @Component({
   selector: 'app-home',
@@ -28,9 +29,12 @@ export class HomeComponent implements OnInit {
   ]
   constructor(
     private readonly notificationService: NotificationService,
-  ) { }
+  ) {
+
+  }
 
   ngOnInit() {
+    AOS.init();
     this.events1 = [
       {
         status: 'Creat Account with Ek Sambandh',
