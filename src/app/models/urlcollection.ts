@@ -9,7 +9,12 @@ export enum UrlCollection {
     Login = "/login",
     SetPass = "/set-password",
     ForgotPass = "/forgot-password",
-    relationshipAccept = "/relationship/accept"
+    relationshipAccept = "/relationship/accept",
+    Level1 = "/love-test/level-1",
+    Level2 = "/love-test/level-2",
+    Level3 = "/love-test/level-3",
+    Level4 = "/love-test/level-4",
+    Level5 = "/love-test/level-5",
 }
 
 export enum UrlCollectionName {
@@ -23,5 +28,10 @@ export enum UrlCollectionName {
     Login = "login",
     SetPass = "set-password",
     ForgotPass = "forgot-password",
-    relationshipAccept = "relationship/accept"
+    relationshipAccept = "relationship/accept",
+    Level1 = "level-1",
+    Level2 = "level-2",
+    Level3 = "level-3",
+    Level4 = "level-4",
+    Level5 = "level-5",
 }

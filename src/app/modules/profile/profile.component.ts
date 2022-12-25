@@ -27,7 +27,7 @@ export class ProfileComponent implements OnInit {
     private datastorge: DataStorageService,
     private notificationservice: NotificationService,
   ) {
-    this.datastorge.userData.subscribe(data => {
+    this.datastorge.currentUser.subscribe(data => {
       this.userData = data;
     })
   }

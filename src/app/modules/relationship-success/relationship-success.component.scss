@@ -1,0 +1,40 @@
+@import '../../../assets/scss/varibles.scss';
+@import url('https://fonts.googleapis.com/css2?family=Dancing Script');
+
+.relationship-success {
+    margin: 2em 1em;
+    padding: 1em;
+    text-align: -webkit-center;
+    min-height: 80vh;
+
+    .success-messege {
+        padding: 2em;
+
+        h1 {
+            font-size: 6em;
+            font-family: 'Dancing Script', sans-serif;
+            font-style: normal;
+            letter-spacing: 0.08em;
+            font-weight: bold;
+            color: #ab1e43;
+        }
+
+        h2 {
+            font-size: 3em;
+            font-family: 'Dancing Script', sans-serif;
+            font-style: normal;
+            letter-spacing: 0.08em;
+            font-weight: 500;
+            color: #ab1e43;
+        }
+
+        p {
+            font-size: 1em;
+            font-family: $cr-font;
+            font-style: normal;
+            letter-spacing: 0.08em;
+            font-weight: bold;
+            color: #000000;
+        }
+    }
+}

@@ -28,6 +28,8 @@ import { NgIdleKeepaliveModule } from '@ng-idle/keepalive';
 import { RelationshipSuccessComponent } from './modules/relationship-success/relationship-success.component';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 import { RadioButtonModule } from 'primeng/radiobutton';
+import { DataStorageService } from './services/data-storage.service';
+
 
 
 @NgModule({

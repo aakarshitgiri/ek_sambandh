@@ -4,7 +4,6 @@ import { QuestionPart1Component } from './question-part1/question-part1.componen
 import { QuestionPart2Component } from './question-part2/question-part2.component';
 import { QuestionPart3Component } from './question-part3/question-part3.component';
 import { QuestionPart4Component } from './question-part4/question-part4.component';
-import { QuestionPart5Component } from './question-part5/question-part5.component';
 import { QuestionsComponent } from './questions.component';
 
 const routes: Routes = [
@@ -32,11 +31,7 @@ const routes: Routes = [
       {
         path: 'level-4',
         component: QuestionPart4Component
-      },
-      /*  {
-         path: 'level-5',
-         component: QuestionPart5Component
-       } */
+      }
     ]
   }
 ];

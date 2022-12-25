@@ -34,12 +34,10 @@ export class ForgotPasswordComponent implements OnInit {
       let email = this.forgetPass.value.email;
       try {
         this.apiService.forgetPass(email).subscribe((res) => {
-          console.log(res);
           this.notificationservice.hideLoader();
           this.notificationservice.showToast({ type: ToastType.Info, message: res.message });
         })
       } catch (error: any) {
-        console.log(error)
         this, this.notificationservice.hideLoader();
         this.notificationservice.showToast({ type: ToastType.Error, message: error.error.error });
       }

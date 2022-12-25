@@ -2,6 +2,7 @@
     {
         "index": 31,
         "name": "questions31",
+        "type": "text",
         "question": "Do you prefer an urban or rural setting to raise your family?",
         "options": [
             {
@@ -10,7 +11,7 @@
             },
             {
                 "answer": "Rural Life: Fresh air and food, physical activities(Farming, animal rearing), Free from the hustle",
-                "ansType": "Negetive"
+                "ansType": "Negative"
             },
             {
                 "answer": "I would love to experience both",
@@ -21,6 +22,7 @@
     {
         "index": 32,
         "name": "questions32",
+        "type": "text",
         "question": "How you will rate your partner's decision-making skills?",
         "options": [
             {
@@ -29,7 +31,7 @@
             },
             {
                 "answer": "it is good but sometimes we are just stuck while making any decision",
-                "ansType": "Negetive"
+                "ansType": "Negative"
             },
             {
                 "answer": "we both talk and undersatnd each other's priority and make decisions accordingly",
@@ -40,6 +42,7 @@
     {
         "index": 33,
         "name": "questions33",
+        "type": "text",
         "question": "How willing are you to balance and make an effort to win over your partner?",
         "options": [
             {
@@ -48,7 +51,7 @@
             },
             {
                 "answer": "Commit but don't compromise",
-                "ansType": "Negetive"
+                "ansType": "Negative"
             },
             {
                 "answer": "Relationship with no set bar, go with the flow",
@@ -59,6 +62,7 @@
     {
         "index": 34,
         "name": "questions34",
+        "type": "text",
         "question": "Do you think you are spending enough Quality time with your partner",
         "options": [
             {
@@ -67,7 +71,7 @@
             },
             {
                 "answer": "No",
-                "ansType": "Negetive"
+                "ansType": "Negative"
             },
             {
                 "answer": "Neutral",
@@ -78,6 +82,7 @@
     {
         "index": 35,
         "name": "questions35",
+        "type": "text",
         "question": "Do you partner shows emotional availability and maturity",
         "options": [
             {
@@ -86,7 +91,7 @@
             },
             {
                 "answer": "No",
-                "ansType": "Negetive"
+                "ansType": "Negative"
             },
             {
                 "answer": "Neutral",
@@ -97,6 +102,7 @@
     {
         "index": 36,
         "name": "questions36",
+        "type": "text",
         "question": "Do you think couples finance should be together or separate?",
         "options": [
             {
@@ -105,11 +111,134 @@
             },
             {
                 "answer": "No",
-                "ansType": "Negetive"
+                "ansType": "Negative"
             },
             {
                 "answer": "Your funds are mine, and vice versa.",
                 "ansType": "Neutral"
+            }
+        ]
+    },
+    {
+        "index": 37,
+        "name": "questions37",
+        "type": "img",
+        "question": "Where do you believe you must go on holiday and travel?",
+        "options": [
+            {
+                "answer": "../../../../assets/images/answers/question37/img1.jpg",
+                "ansType": "img1"
+            },
+            {
+                "answer": "../../../../assets/images/answers/question37/img2.jpg",
+                "ansType": "img2"
+            },
+            {
+                "answer": "../../../../assets/images/answers/question37/img3.jpg",
+                "ansType": "img3"
+            }
+        ]
+    },
+    {
+        "index": 38,
+        "name": "questions38",
+        "type": "img",
+        "question": "What kind of cuisine do you prefer?",
+        "options": [
+            {
+                "answer": "../../../../assets/images/answers/question38/img1.jpg",
+                "ansType": "img1"
+            },
+            {
+                "answer": "../../../../assets/images/answers/question38/img2.jpg",
+                "ansType": "img2"
+            },
+            {
+                "answer": "../../../../assets/images/answers/question38/img3.jpg",
+                "ansType": "img3"
+            }
+        ]
+    },
+    {
+        "index": 39,
+        "name": "questions39",
+        "type": "img",
+        "question": "Do you have a pet that you adore?",
+        "options": [
+            {
+                "answer": "../../../../assets/images/answers/question39/img1.jpg",
+                "ansType": "img1",
+                "title": "Go with the flow and get married"
+            },
+            {
+                "answer": "../../../../assets/images/answers/question39/img2.jpg",
+                "ansType": "img2",
+                "title": "Friendship"
+            },
+            {
+                "answer": "../../../../assets/images/answers/question39/img3.jpg",
+                "ansType": "img3",
+                "title": "It’s complicated to answer this"
+            }
+        ]
+    },
+    {
+        "index": 40,
+        "name": "questions40",
+        "type": "img",
+        "question": "What type of connection do you prefer?",
+        "options": [
+            {
+                "answer": "../../../../assets/images/answers/question40/img1.jpg",
+                "ansType": "img1"
+            },
+            {
+                "answer": "../../../../assets/images/answers/question40/img2.jpg",
+                "ansType": "img2"
+            },
+            {
+                "answer": "../../../../assets/images/answers/question40/img3.jpg",
+                "ansType": "img3"
+            }
+        ]
+    },
+    {
+        "index": 41,
+        "name": "questions41",
+        "type": "img",
+        "question": "What kind of house you'd love to build together as your dream home?",
+        "options": [
+            {
+                "answer": "../../../../assets/images/answers/question41/img1.jpg",
+                "ansType": "img1"
+            },
+            {
+                "answer": "../../../../assets/images/answers/question41/img2.jpg",
+                "ansType": "img2"
+            },
+            {
+                "answer": "../../../../assets/images/answers/question41/img3.jpg",
+                "ansType": "img3"
+            }
+        ]
+    },
+    {
+        "index": 42,
+        "name": "questions42",
+        "type": "img",
+        "question": "What do you prefer to engage in when you are hanging out with your companion?",
+        "options": [
+            {
+                "answer": "../../../../assets/images/answers/question42/img1.jpg",
+                "ansType": "img1"
+            },
+            {
+                "answer": "../../../../assets/images/answers/question42/img2.jpg",
+                "ansType": "img2"
+            },
+            {
+                "answer": "../../../../assets/images/answers/question42/img3.jpg",
+                "ansType": "img3"
             }
         ]
     }

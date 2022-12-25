@@ -15,7 +15,6 @@ export class TransactionsComponent implements OnInit {
 
   ngOnInit() {
     this.apiService.getPaymentDetails().subscribe((data: any) => {
-      console.log(data, 'payments');
       this.payment = data.payment
     })
   }

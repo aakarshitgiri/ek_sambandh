@@ -3,7 +3,7 @@ import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms'
 import { PrimeNGConfig } from 'primeng/api';
 import { ToastType } from 'src/app/models/notification-model';
 import { ApiEkSambandhService } from 'src/app/services/api-ek-sambandh.service';
-import { DataStorageService } from 'src/app/services/data-storage.service';
+import { DataStorageService } from '../../services/data-storage.service';
 import { NotificationService } from 'src/app/services/notifications.service';
 
 @Component({
@@ -23,13 +23,22 @@ export class FooterComponent implements OnInit {
     private formBuilder: FormBuilder,
     private apiService: ApiEkSambandhService,
     private datastorge: DataStorageService,
-    private notificationservice: NotificationService,
-    private cdr: ChangeDetectorRef
+    private notificationservice: NotificationService
   ) {
-    this.datastorge.userData.subscribe(data => {
+    this.datastorge.currentUser.subscribe(data => {
       this.userData = data;
+      if (this.userData?._id) {
+        this.helpSupport.controls['fullname'].setValue(this.userData.fullname);
+        this.helpSupport.controls['email'].setValue(this.userData.email);
+        this.helpSupport.controls['contact'].setValue(this.userData.mobile);
+        this.isUser = true;
+      } else {
+        this.helpSupport.controls['fullname'].reset();
+        this.helpSupport.controls['email'].reset();
+        this.helpSupport.controls['contact'].reset();
+        this.isUser = false;
+      }
     });
-
 
   }
 
@@ -44,12 +53,7 @@ export class FooterComponent implements OnInit {
       reason: new FormControl('', [Validators.required])
     });
 
-    if (this.userData?._id) {
-      this.helpSupport.controls['fullname'].setValue(this.userData.fullname);
-      this.helpSupport.controls['email'].setValue(this.userData.email);
-      this.helpSupport.controls['contact'].setValue(this.userData.mobile);
-      this.isUser = true;
-    }
+
 
   }
 
@@ -72,8 +76,6 @@ export class FooterComponent implements OnInit {
       this.notificationservice.showLoader();
       try {
         this.apiService.helpSupport(fullname, email, reason, contact).subscribe((res: any) => {
-          console.log(res)
-
           this.notificationservice.hideLoader();
           this.notificationservice.showToast({ type: ToastType.Info, message: "Thank you for contacting us, Our team will reach you out soon!" });
         });

@@ -1,4 +1,4 @@
-import { Component, OnInit, NgZone } from '@angular/core';
+import { Component, OnInit, NgZone, AfterViewInit, ChangeDetectorRef } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { PrimeNGConfig } from 'primeng/api';
@@ -17,7 +17,7 @@ import sampleQuestion from './sample-questions.json'
   templateUrl: './dashboard.component.html',
   styleUrls: ['./dashboard.component.scss']
 })
-export class DashboardComponent implements OnInit {
+export class DashboardComponent implements OnInit, AfterViewInit {
   userData: any
   data: any;
   question: any[] = sampleQuestion;
@@ -47,13 +47,15 @@ export class DashboardComponent implements OnInit {
     private zone: NgZone,
     private apiService: ApiEkSambandhService,
     private notificationservice: NotificationService,
+    private cdr: ChangeDetectorRef
   ) {
-    this.datastorge.userData.subscribe(data => {
+    this.datastorge.currentUser.subscribe(data => {
       this.userData = data;
     })
   }
 
   ngOnInit() {
+    this.notificationservice.showLoader();
     this.primengConfig.ripple = true;
     this.options = {
       "key": "rzp_test_Ey6vrOQSuNtqJM",
@@ -84,6 +86,7 @@ export class DashboardComponent implements OnInit {
             let amount = 99;
             let relationshipId = this.relationshipId;
             this.apiService.paymentUpdate(transactionId, paymentStatus, amount, relationshipId, readableId).subscribe((res: any) => {
+              this.getRelationship();
               this.notificationservice.showToast({ type: ToastType.Error, message: "Payment Failed" });
             })
 
@@ -97,23 +100,39 @@ export class DashboardComponent implements OnInit {
       email: new FormControl('', [Validators.required])
     });
 
-    this.apiService.getRelationship().subscribe((res: any) => {
-      this.data = res.relationships;
-    })
+    this.notificationservice.hideLoader();
+  }
+
+  ngAfterViewInit() {
+    this.getRelationship();
+    this.cdr.detectChanges();
+  }
+
+  getRelationship() {
+    this.notificationservice.showLoader()
+    try {
+      this.apiService.getRelationship().subscribe((res: any) => {
+        this.notificationservice.hideLoader();
+        this.data = res.relationships;
+      })
+    } catch (error: any) {
+      this.notificationservice.hideLoader();
+      this.notificationservice.showToast({ type: ToastType.Error, message: "an error occured" });
+    }
   }
 
 
   tableButton(data: any, id: string) {
     if (data.relationshipStatus !== "Requested") {
       if (data.feeStatus) {
-        if (data.userForm[0]) {
-          if (data.partnerForm[0]) {
-            this.router.navigate([UrlCollection.Result]);
+        if (data.userFormStatus) {
+          if (data.partnerFormStatus) {
+            this.router.navigate([UrlCollection.Result], { queryParams: { id: data.relationshipId, user: this.userData.fullname, partner: data.partner.fullname } });
           } else {
             this.remindsPartner(data);
           }
         } else {
-          this.router.navigate([UrlCollection.LoveTest]);
+          this.router.navigate([UrlCollection.LoveTest], { queryParams: { id: data.relationshipId } });
         }
       } else {
         this.payFees(data, id);
@@ -125,7 +144,17 @@ export class DashboardComponent implements OnInit {
 
 
   remindsPartner(data: any) {
-
+    this.notificationservice.showLoader();
+    try {
+      this.apiService.remindPartner(data.partner.fullname, data.partner.email, data.relationshipId).subscribe((res) => {
+        this.notificationservice.hideLoader();
+        this.getRelationship();
+        this.notificationservice.showToast({ type: ToastType.Info, message: res.message });
+      })
+    } catch (error: any) {
+      this.notificationservice.hideLoader();
+      this.notificationservice.showToast({ type: ToastType.Error, message: "an error occured" });
+    }
   }
 
   viewQuestion() {
@@ -152,6 +181,7 @@ export class DashboardComponent implements OnInit {
         let amount = 99;
         let relationshipId = this.relationshipId;
         this.apiService.paymentUpdate(transactionId, paymentStatus, amount, relationshipId, readableId).subscribe((res: any) => {
+          this.getRelationship();
           this.notificationservice.showToast({ type: ToastType.Info, message: "Payment Successfull" });
         })
       }
@@ -169,11 +199,11 @@ export class DashboardComponent implements OnInit {
 
           if (res) {
             this.notificationservice.hideLoader();
+            this.getRelationship();
             this.notificationservice.showToast({ type: ToastType.Info, message: res.message });
           }
         })
       } catch (error: any) {
-        console.log(error)
         this.notificationservice.hideLoader();
         this.notificationservice.showToast({ type: ToastType.Error, message: "an error occured" });
       }
@@ -186,17 +216,23 @@ export class DashboardComponent implements OnInit {
 
   resentInvite(data: any) {
     this.notificationservice.showLoader();
-    let email = data.partnerEmail;
+    let email
+    if (data?.partnerEmail) {
+      email = data.partnerEmail;
+    } else {
+      email = data.partner.email;
+    }
+
     try {
       this.apiService.addPartner(email).subscribe((res: any) => {
 
         if (res) {
           this.notificationservice.hideLoader();
+          this.getRelationship();
           this.notificationservice.showToast({ type: ToastType.Info, message: res.message });
         }
       })
     } catch (error: any) {
-      console.log(error)
       this.notificationservice.hideLoader();
       this.notificationservice.showToast({ type: ToastType.Error, message: "an error occured" });
     }
@@ -207,10 +243,10 @@ export class DashboardComponent implements OnInit {
     try {
       this.apiService.deleteRelationship(data.relationshipId).subscribe((res: any) => {
         this.notificationservice.hideLoader();
+        this.getRelationship();
         this.notificationservice.showToast({ type: ToastType.Info, message: res.message })
       })
     } catch (error: any) {
-      console.log(error)
       this.notificationservice.hideLoader();
       this.notificationservice.showToast({ type: ToastType.Error, message: "an error occured" });
     }

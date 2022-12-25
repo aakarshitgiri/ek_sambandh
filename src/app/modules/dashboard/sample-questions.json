@@ -10,7 +10,7 @@
             },
             {
                 "answer": "My Partner",
-                "ansType": "Negetive"
+                "ansType": "Negative"
             },
             {
                 "answer": "Ignore the argument and move on.",
@@ -33,7 +33,7 @@
             },
             {
                 "answer": "Absolutely not",
-                "ansType": "Negetive"
+                "ansType": "Negative"
             }
         ]
     },
@@ -48,7 +48,7 @@
             },
             {
                 "answer": " I believe it is best to hide few things.",
-                "ansType": "Negetive"
+                "ansType": "Negative"
             },
             {
                 "answer": "I don't believe this is really comfy for me.",
@@ -71,7 +71,7 @@
             },
             {
                 "answer": "Absolutely not",
-                "ansType": "Negetive"
+                "ansType": "Negative"
             }
         ]
     },
@@ -86,7 +86,7 @@
             },
             {
                 "answer": "My Partner",
-                "ansType": "Negetive"
+                "ansType": "Negative"
             },
             {
                 "answer": "Ignore the argument and move on.",

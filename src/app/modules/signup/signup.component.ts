@@ -112,7 +112,6 @@ export class SignupComponent implements OnInit {
       try {
         let res = await firstValueFrom(this.apiService.verifyEmail(reqObj));
         this.notificationservice.hideLoader();
-        console.log(res)
         if (res) {
           this.startTimer();
           this.emailDisable = true;
@@ -142,7 +141,6 @@ export class SignupComponent implements OnInit {
       try {
         let res = await firstValueFrom(this.apiService.verifyOtp(email, otp));
         this.notificationservice.hideLoader();
-        console.log(res)
         if (res) {
           this.emailVerified = true;
           this.enableForm()
@@ -194,7 +192,6 @@ export class SignupComponent implements OnInit {
   async signup() {
     this.notificationservice.showLoader();
     this.submitForm = true;
-    console.log(this.signupform.valid, this.signupform.value)
     if (this.signupform.valid && this.checkpasswordMatch() && this.validateEmail() && !this.isPartnerLogin) {
       let email = this.signupform.value.email;
       let fullname = this.signupform.value.fullname;
@@ -205,7 +202,6 @@ export class SignupComponent implements OnInit {
       try {
         let res = await firstValueFrom(this.apiService.createAccount(fullname, email, password, addPartner, partnerEmail, mobile));
         this.notificationservice.hideLoader();
-        console.log(res)
         if (res) {
           this.notificationservice.showToast({ type: ToastType.Info, message: "Account created Successfully !" });
           this.router.navigate([UrlCollection.Login]);

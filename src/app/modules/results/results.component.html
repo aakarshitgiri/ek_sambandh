@@ -2,7 +2,7 @@
     <div class="results-box">
         <div class="flex">
             <div class="print-btn">
-                <button>View Your Answer</button>
+                <button (click)="goToAnswers()">View Your Answer</button>
             </div>
             <div class="print-btn">
                 <button (click)="downloadResult()">Download Results</button>
@@ -10,9 +10,10 @@
         </div>
 
         <div class="result">
+            <img class="demo-bg" src="../../../assets/images/bg-result.jpg" alt="">
             <div class="title">
                 <div class="text right">
-                    <h1>Aakarshit Giri</h1>
+                    <h1>{{user}}</h1>
                 </div>
                 <div class="svg">
                     <svg class="heart" viewBox="0 0 32 29.6">
@@ -21,17 +22,24 @@
                     </svg>
                 </div>
                 <div class="text left">
-                    <h1> Deepika Padukone</h1>
+                    <h1>{{partner}}</h1>
                 </div>
             </div>
-            <div class="box">
-                <div class="results-scores-title">
-                    Love Score
+            <div class="flex-box">
+                <div class="box">
+                    <div class="results-scores-title">
+                        Love Score
+                    </div>
+                    <div class="result-scores">
+                        <h1 *ngIf="showValue">{{(makeAbsolute(apiResult?.score) | number:'1.0-0') + '%'}}</h1>
+                    </div>
                 </div>
-                <div class="result-scores">
-                    <h1>70%</h1>
+                <div class="message">
+                    <p>{{apiResult?.message1}}</p>
+                    <p>{{apiResult?.message2}}</p>
                 </div>
             </div>
+
         </div>
     </div>
 </div>
@@ -42,7 +50,7 @@
             <div id="results" #results class="result">
                 <div class="title">
                     <div class="text right">
-                        <h1>Aakarshit Giri</h1>
+                        <h1>{{user}}</h1>
                     </div>
                     <div class="svg">
                         <svg class="heart" viewBox="0 0 32 29.6">
@@ -51,15 +59,21 @@
                         </svg>
                     </div>
                     <div class="text left">
-                        <h1> Deepika Padukone</h1>
+                        <h1>{{partner}}</h1>
                     </div>
                 </div>
-                <div class="box">
-                    <div class="results-scores-title">
-                        Love Score
+                <div class="flex-box2">
+                    <div class="box">
+                        <div class="results-scores-title">
+                            Love Score
+                        </div>
+                        <div class="result-scores">
+                            <h1>{{(makeAbsolute(apiResult?.score) | number:'1.0-0') + '%'}}</h1>
+                        </div>
                     </div>
-                    <div class="result-scores">
-                        <h1>70%</h1>
+                    <div class="message">
+                        <p>{{apiResult?.message1}}</p>
+                        <p>{{apiResult?.message2}}</p>
                     </div>
                 </div>
             </div>

@@ -53,14 +53,18 @@
             border-radius: 15px;
             width: 85%;
             box-shadow: 0 0 15px rgb(146, 140, 140);
+            overflow: hidden;
+            position: relative;
 
             .title {
                 display: flex;
                 flex-direction: row;
                 justify-content: space-between;
+                z-index: 1;
 
                 .text {
                     width: 45%;
+                    z-index: 1;
 
                     h1 {
                         font-size: 3em;
@@ -69,6 +73,7 @@
                         letter-spacing: 0.08em;
                         font-weight: bold;
                         color: #ab1e43;
+                        z-index: 1;
                     }
 
                 }
@@ -88,6 +93,7 @@
                         fill: #ab1e43;
                         width: 60px;
                         animation: pulse 1s ease infinite;
+                        z-index: 1;
                     }
 
 
@@ -108,37 +114,78 @@
             }
 
             .box {
-                background-color: #ab1e43;
-                width: fit-content;
-                padding: 3em;
-                border-radius: 20px;
-                margin: 2em;
+                background-color: rgb(255, 250, 250);
+                padding: 8em 2em;
+                width: 50%;
+                z-index: 1;
 
                 .results-scores-title {
-                    font-size: 5em;
+                    font-size: 4em;
                     font-family: 'Dancing Script', sans-serif;
                     font-style: normal;
                     letter-spacing: 0.08em;
                     font-weight: bold;
-                    color: #ffffff;
+                    color: #ab1e43;
                 }
 
                 .result-scores {
 
 
                     h1 {
-                        font-size: 5em;
+                        font-size: 4em;
                         font-family: 'Dancing Script', sans-serif;
                         font-style: normal;
                         letter-spacing: 0.08em;
                         font-weight: bold;
-                        color: #ffffff;
+                        color: #ab1e43;
                     }
                 }
             }
         }
     }
 }
+
+.message {
+    width: 50%;
+    background-color: #ab1e43;
+    padding: 1em;
+    z-index: 1;
+
+    p {
+        font-family: 'Dancing Script', sans-serif;
+        font-style: normal;
+        letter-spacing: 0.08em;
+        font-weight: bold;
+        color: #fff;
+        font-size: 1.5em;
+        margin: 2em;
+    }
+}
+
+.demo-bg {
+    opacity: 0.3;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: auto;
+    z-index: 0;
+}
+
+
+.flex-box {
+    display: flex;
+    justify-content: center;
+    box-shadow: 0 0 10px #c4c2c3;
+    margin: 4em;
+}
+
+.flex-box2 {
+    display: flex;
+    justify-content: center;
+    margin: 4em;
+}
+
 
 .result-img {
     text-align: -webkit-center;
@@ -191,11 +238,10 @@
             }
 
             .box {
-                background-color: #ab1e43;
-                width: fit-content;
-                padding: 3em;
-                border-radius: 20px;
-                margin: 2em;
+                background-color: rgb(255, 250, 250);
+                padding: 8em 2em;
+                width: 50%;
+                z-index: 1;
 
                 .results-scores-title {
                     font-size: 5em;
@@ -203,7 +249,7 @@
                     font-style: normal;
                     letter-spacing: 0.08em;
                     font-weight: bold;
-                    color: #ffffff;
+                    color: #ab1e43;
                 }
 
                 .result-scores {
@@ -215,7 +261,7 @@
                         font-style: normal;
                         letter-spacing: 0.08em;
                         font-weight: bold;
-                        color: #ffffff;
+                        color: #ab1e43;
                     }
                 }
             }

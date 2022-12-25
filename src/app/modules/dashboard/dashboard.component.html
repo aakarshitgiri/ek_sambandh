@@ -45,8 +45,8 @@
                                     <button (click)="tableButton(data, data?.readableId)">{{(data.relationshipStatus
                                         === 'Accepted') ?
                                         (data.feeStatus ?
-                                        ((data.userForm[0]) ?
-                                        ((data.partnerForm[0]) ? 'View Results': 'Reminds Partner') :
+                                        ((data.userFormStatus) ?
+                                        ((data.partnerFormStatus) ? 'View Results': 'Reminds Partner') :
                                         'Take Test') : 'Pay Fees')
                                         : 'Resent Invitation'}}</button>
                                 </div>

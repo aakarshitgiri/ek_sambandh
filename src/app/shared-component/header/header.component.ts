@@ -14,7 +14,7 @@ export class HeaderComponent implements OnInit {
     private datastorage: DataStorageService,
     private router: Router
   ) {
-    this.datastorage.userData.subscribe((data: any) => {
+    this.datastorage.currentUser.subscribe((data: any) => {
       this.userData = data;
     });
   }
@@ -25,8 +25,8 @@ export class HeaderComponent implements OnInit {
 
   logout() {
     this.datastorage.clear();
-    this.datastorage.userData.next({})
-    this.router.navigate([UrlCollection.Home])
+    this.datastorage.setUser({})
+    this.router.navigate([UrlCollection.Home]);
   }
 
 }

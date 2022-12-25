@@ -9,7 +9,6 @@ import { QuestionPart1Component } from './question-part1/question-part1.componen
 import { QuestionPart2Component } from './question-part2/question-part2.component';
 import { QuestionPart3Component } from './question-part3/question-part3.component';
 import { QuestionPart4Component } from './question-part4/question-part4.component';
-import { QuestionPart5Component } from './question-part5/question-part5.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
@@ -19,8 +18,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     QuestionPart1Component,
     QuestionPart2Component,
     QuestionPart3Component,
-    QuestionPart4Component,
-    QuestionPart5Component
+    QuestionPart4Component
   ],
   imports: [
     CommonModule,

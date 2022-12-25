@@ -2,6 +2,7 @@
     {
         "index": 21,
         "name": "questions21",
+        "type": "text",
         "question": "How comfortable are you discussing personal matters with your partner?",
         "options": [
             {
@@ -10,7 +11,7 @@
             },
             {
                 "answer": "I believe this might cause conflict.",
-                "ansType": "Negetive"
+                "ansType": "Negative"
             },
             {
                 "answer": "I think we both have a life and we both have the rights whether to discuss or not.",
@@ -21,6 +22,7 @@
     {
         "index": 22,
         "name": "questions22",
+        "type": "text",
         "question": "Which of the following factors is more important for a successful relationship to function?",
         "options": [
             {
@@ -29,7 +31,7 @@
             },
             {
                 "answer": "Compromise",
-                "ansType": "Negetive"
+                "ansType": "Negative"
             },
             {
                 "answer": "Just being together",
@@ -40,6 +42,7 @@
     {
         "index": 23,
         "name": "questions23",
+        "type": "text",
         "question": "If I told you to jump off a tall cliff and tell you that you’ll land safely because there’s a net you can’t see yet, would you blindly trust me and jump?",
         "options": [
             {
@@ -48,7 +51,7 @@
             },
             {
                 "answer": "No, It's complicated",
-                "ansType": "Negetive"
+                "ansType": "Negative"
             },
             {
                 "answer": "I will re-think",
@@ -59,6 +62,7 @@
     {
         "index": 24,
         "name": "questions24",
+        "type": "text",
         "question": "If you ask for professional advice about the future and your partner has a different viewpoint ,but you feel that he is holding you back or is being a road-blocker. You may not talk about it but it is making you question yourself a lot inside your heart, what will you do ?",
         "options": [
             {
@@ -67,7 +71,7 @@
             },
             {
                 "answer": "I'll talk it over with my partner so they can see my point of view.",
-                "ansType": "Negetive"
+                "ansType": "Negative"
             },
             {
                 "answer": "I do not like any interruption in my career options",
@@ -78,6 +82,7 @@
     {
         "index": 25,
         "name": "questions25",
+        "type": "text",
         "question": "What would you do if the distance between you and your companion grows and you do not consider them to be the best or first person to talk in any circumstance?",
         "options": [
             {
@@ -86,7 +91,7 @@
             },
             {
                 "answer": "I think this is the moment where we need to drop this relation.",
-                "ansType": "Negetive"
+                "ansType": "Negative"
             },
             {
                 "answer": "Need to plan few things to spice up our relation.",
@@ -97,6 +102,7 @@
     {
         "index": 26,
         "name": "questions26",
+        "type": "text",
         "question": "How often do you want your partner to call you during the day?",
         "options": [
             {
@@ -105,7 +111,7 @@
             },
             {
                 "answer": "Every hour, or once in two hours.Binding with a time frame.",
-                "ansType": "Negetive"
+                "ansType": "Negative"
             },
             {
                 "answer": "That's okay even if my partner is not frequent.",
@@ -116,6 +122,7 @@
     {
         "index": 27,
         "name": "questions27",
+        "type": "text",
         "question": "Both partners are under pressure at work,How will you prioritise one another's needs while nurturing both personal and professional growth?",
         "options": [
             {
@@ -124,7 +131,7 @@
             },
             {
                 "answer": "we will spend quality time even if it is small.",
-                "ansType": "Negetive"
+                "ansType": "Negative"
             },
             {
                 "answer": "practice active listening and set healthy boundaries.",
@@ -135,6 +142,7 @@
     {
         "index": 28,
         "name": "questions28",
+        "type": "text",
         "question": "Is it important to you that both partners handle their time well?",
         "options": [
             {
@@ -143,7 +151,7 @@
             },
             {
                 "answer": "I want him to be more diverted into this for our future.",
-                "ansType": "Negetive"
+                "ansType": "Negative"
             },
             {
                 "answer": "I am okay with the time he is giving me.",
@@ -154,6 +162,7 @@
     {
         "index": 29,
         "name": "questions29",
+        "type": "text",
         "question": "Would you rather talk it out with me so I can help you feel better, or would you prefer to be left alone to recover from a difficult day?",
         "options": [
             {
@@ -162,7 +171,7 @@
             },
             {
                 "answer": "prefer to talk about it.",
-                "ansType": "Negetive"
+                "ansType": "Negative"
             },
             {
                 "answer": "In such scenario, I'll be satisfied with anything my partner does to make me happy.",
@@ -173,6 +182,7 @@
     {
         "index": 30,
         "name": "questions30",
+        "type": "text",
         "question": "Which would you choose if you had to make a choice between living with your lover and living with your parents?",
         "options": [
             {
@@ -181,7 +191,7 @@
             },
             {
                 "answer": "Patner",
-                "ansType": "Negetive"
+                "ansType": "Negative"
             },
             {
                 "answer": "I wish this situation never arrive ",

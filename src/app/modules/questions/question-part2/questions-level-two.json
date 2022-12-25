@@ -2,11 +2,12 @@
     {
         "index": 11,
         "name": "questions11",
+        "type": "text",
         "question": "Do you experience one of these phases in your relationship?",
         "options": [
             {
                 "answer": "controlling behaviour is annoying you ",
-                "ansType": "Negetive"
+                "ansType": "Negative"
             },
             {
                 "answer": "i think i am dreaming as i feel like i am on top of the world",
@@ -21,6 +22,7 @@
     {
         "index": 12,
         "name": "questions12",
+        "type": "text",
         "question": "Do you feel that long-distance relationships can survive?",
         "options": [
             {
@@ -29,7 +31,7 @@
             },
             {
                 "answer": "I have a bad past in this, So I don't believe",
-                "ansType": "Negetive"
+                "ansType": "Negative"
             },
             {
                 "answer": "i think it can work but upto some extent(understanding should be there)",
@@ -40,6 +42,7 @@
     {
         "index": 13,
         "name": "questions13",
+        "type": "text",
         "question": "Do you believe the expenditures should be shared by a couple?",
         "options": [
             {
@@ -52,18 +55,19 @@
             },
             {
                 "answer": "No, It's fine",
-                "ansType": "Negetive"
+                "ansType": "Negative"
             }
         ]
     },
     {
         "index": 14,
         "name": "questions14",
+        "type": "text",
         "question": "Do they still possess the qualities that made you choose your partner?",
         "options": [
             {
                 "answer": "Yes, my partner is still the same.",
-                "ansType": "Negetive"
+                "ansType": "Negative"
             },
             {
                 "answer": "No,I think that started fading.",
@@ -78,6 +82,7 @@
     {
         "index": 15,
         "name": "questions15",
+        "type": "text",
         "question": "Is it really necessary to know everything from your partner’s previous relationships?",
         "options": [
             {
@@ -90,13 +95,14 @@
             },
             {
                 "answer": "I want to know what was it like.",
-                "ansType": "Negetive"
+                "ansType": "Negative"
             }
         ]
     },
     {
         "index": 16,
         "name": "questions16",
+        "type": "text",
         "question": "How do you feel when your partner has to leave you for some time because of work or study?",
         "options": [
             {
@@ -109,13 +115,14 @@
             },
             {
                 "answer": "No work, in my opinion, is more important than me.",
-                "ansType": "Negetive"
+                "ansType": "Negative"
             }
         ]
     },
     {
         "index": 17,
         "name": "questions17",
+        "type": "text",
         "question": "Are you keeping any secrets that you’re afraid of letting your partner know?",
         "options": [
             {
@@ -124,7 +131,7 @@
             },
             {
                 "answer": "I believe that my lover won't understand, so I say yes.",
-                "ansType": "Negetive"
+                "ansType": "Negative"
             },
             {
                 "answer": "Maybe because there isn't many things that need to be communicated.",
@@ -135,11 +142,12 @@
     {
         "index": 18,
         "name": "questions18",
+        "type": "text",
         "question": "Do you think romantic gifts have to be memorable or do they have to be useful?",
         "options": [
             {
                 "answer": "Memorable I think",
-                "ansType": "Negetive"
+                "ansType": "Negative"
             },
             {
                 "answer": "It should be Useful",
@@ -154,11 +162,12 @@
     {
         "index": 19,
         "name": "questions19",
+        "type": "text",
         "question": "What is your reaction when your partner compares you with other people around ?",
         "options": [
             {
                 "answer": "This disgusts me with the decisions I make.",
-                "ansType": "Negetive"
+                "ansType": "Negative"
             },
             {
                 "answer": "Honestly, I don't care about this.",
@@ -173,6 +182,7 @@
     {
         "index": 20,
         "name": "questions20",
+        "type": "text",
         "question": "How will you come up with your situation if your partner keeps mentioning the same topics during arguments?",
         "options": [
             {
@@ -185,7 +195,7 @@
             },
             {
                 "answer": "apology to not repeat it again",
-                "ansType": "Negetive"
+                "ansType": "Negative"
             }
         ]
     }

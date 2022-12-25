@@ -29,15 +29,13 @@ export class AppComponent {
       this.handleToast.bind(this)
     );
 
-    this.datastorage.userData.subscribe(data => {
+    this.datastorage.currentUser.subscribe(data => {
       this.userData = data;
     });
 
     if (!this.userData?._id) {
       this.datastorage.setUser(JSON.parse(sessionStorage?.getItem('userData') || '{}'))
     }
-
-    console.log(this.userData)
   }
 
   private handleLoader(show: boolean) {

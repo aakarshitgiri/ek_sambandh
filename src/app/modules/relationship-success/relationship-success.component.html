@@ -1,1 +1,7 @@
-RelationShip Success
+<div class="relationship-success">
+    <div class="success-messege" *ngIf="show">
+        <h1>Congratulations!</h1>
+        <h2>for your new relationship!</h2>
+        <p>You will redirected to login page in {{ (timeLeft !== 0) ? timeLeft : redirectToLogin()}}</p>
+    </div>
+</div>

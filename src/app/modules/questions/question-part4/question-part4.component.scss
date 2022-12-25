@@ -91,6 +91,29 @@
     }
 }
 
+.img-answers {
+    display: flex;
+    justify-content: left;
+    flex-direction: row;
+    margin: 1em;
+
+    .img {
+        width: 25em;
+
+        label {
+            color: #000000 !important;
+            margin: 1em !important;
+        }
+
+        img {
+            width: 100%;
+            margin: 1em;
+            border-radius: 15px;
+            height: 15em;
+        }
+    }
+}
+
 :host ::ng-deep {
     .p-radiobutton-label {
         font-size: 1em;
@@ -125,4 +148,5 @@
     .p-radiobutton-label-focus {
         color: #ab1e43;
     }
+
 }

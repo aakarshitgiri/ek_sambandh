@@ -2,11 +2,12 @@
     {
         "index": 1,
         "name": "questions1",
+        "type": "text",
         "question": "What steps do you take to manage stress?",
         "options": [
             {
                 "answer": "I need some time alone",
-                "ansType": "Negetive"
+                "ansType": "Negative"
             },
             {
                 "answer": "I will talk to my partner about it",
@@ -21,6 +22,7 @@
     {
         "index": 2,
         "name": "questions2",
+        "type": "text",
         "question": "Who will resolve a dispute first?",
         "options": [
             {
@@ -29,7 +31,7 @@
             },
             {
                 "answer": "My Partner",
-                "ansType": "Negetive"
+                "ansType": "Negative"
             },
             {
                 "answer": "Ignore the argument and move on.",
@@ -40,6 +42,7 @@
     {
         "index": 3,
         "name": "questions3",
+        "type": "text",
         "question": "Would you sacrifice your happiness in order for the relationship to succeed?",
         "options": [
             {
@@ -52,18 +55,19 @@
             },
             {
                 "answer": "Absolutely not",
-                "ansType": "Negetive"
+                "ansType": "Negative"
             }
         ]
     },
     {
         "index": 4,
         "name": "questions4",
+        "type": "text",
         "question": "If you are an attention seeker and if you are not getting it, how it will impact your relationship?",
         "options": [
             {
                 "answer": "I will accept this fact that my partner is not giving me attention and i will not expect it again",
-                "ansType": "Negetive"
+                "ansType": "Negative"
             },
             {
                 "answer": "I'm annoyed by this, and I need my partner to know that I want his complete attention.",
@@ -78,6 +82,7 @@
     {
         "index": 5,
         "name": "questions5",
+        "type": "text",
         "question": "Which of these characteristics would you find most attractive in a potential partner?",
         "options": [
             {
@@ -90,13 +95,14 @@
             },
             {
                 "answer": "willingness to take risks",
-                "ansType": "Negetive"
+                "ansType": "Negative"
             }
         ]
     },
     {
         "index": 6,
         "name": "questions6",
+        "type": "text",
         "question": "Do you refuse to apologise when you are wrong because of your ego?",
         "options": [
             {
@@ -109,13 +115,14 @@
             },
             {
                 "answer": "No",
-                "ansType": "Negetive"
+                "ansType": "Negative"
             }
         ]
     },
     {
         "index": 7,
         "name": "questions7",
+        "type": "text",
         "question": "How comfortable are you sharing things with your partner?",
         "options": [
             {
@@ -124,7 +131,7 @@
             },
             {
                 "answer": " I believe it is best to hide few things.",
-                "ansType": "Negetive"
+                "ansType": "Negative"
             },
             {
                 "answer": "I don't believe this is really comfy for me.",
@@ -135,11 +142,12 @@
     {
         "index": 8,
         "name": "questions8",
+        "type": "text",
         "question": "What emotions do you experience with your partner?",
         "options": [
             {
                 "answer": "There are somdays when i love my relationship and there are somedays when i don't feel it that way",
-                "ansType": "Negetive"
+                "ansType": "Negative"
             },
             {
                 "answer": "I love my partner's company 'apple of my eye'",
@@ -154,11 +162,12 @@
     {
         "index": 9,
         "name": "questions9",
+        "type": "text",
         "question": "How would you react if you discovered something wrong with your partner?",
         "options": [
             {
                 "answer": "I will leave my partner",
-                "ansType": "Negetive"
+                "ansType": "Negative"
             },
             {
                 "answer": "If my partner is accepting the mistake i will give them another chance (Human is a mannequin of mistakes)",
@@ -173,6 +182,7 @@
     {
         "index": 10,
         "name": "questions10",
+        "type": "text",
         "question": "Do you talk to new people at social gatherings or stick with people you know?",
         "options": [
             {
@@ -185,7 +195,7 @@
             },
             {
                 "answer": "I stick with people I know ",
-                "ansType": "Negetive"
+                "ansType": "Negative"
             }
         ]
     }

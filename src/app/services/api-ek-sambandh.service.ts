@@ -174,6 +174,48 @@ export class ApiEkSambandhService {
     return httpResponse;
   }
 
+  public submitQuestions(answers: any[], relationshipId: string): Observable<any> {
+    const url: string = `${environment.apiUrl.ekSambandhUrl}/questions/answers/${relationshipId}`;
+    const headers = {
+      "Content-Type": "application/json",
+      "Authorization": "Bearer " + JSON.parse(sessionStorage?.getItem('token') as string),
+    }
+    const httpResponse: any = this.http.post<any>(url, { answers }, { headers });
+    return httpResponse;
+  }
+
+  public remindPartner(name: string, email: string, relationshipId: string): Observable<any> {
+    const url: string = `${environment.apiUrl.ekSambandhUrl}/remind-partner/${relationshipId}`;
+    const headers = {
+      "Content-Type": "application/json",
+      "Authorization": "Bearer " + JSON.parse(sessionStorage?.getItem('token') as string),
+    }
+    const httpResponse: any = this.http.post<any>(url, { name, email }, { headers });
+    return httpResponse;
+  }
+
+  public getResults(relationshipId: string): Observable<any> {
+    const url: string = `${environment.apiUrl.ekSambandhUrl}/results/relationship/${relationshipId}`;
+    const headers = {
+      "Content-Type": "application/json",
+      "Authorization": "Bearer " + JSON.parse(sessionStorage?.getItem('token') as string),
+    }
+    const httpResponse: any = this.http.get<any>(url, { headers });
+    return httpResponse;
+  }
+
+
+  public getAnswers(relationshipId: string): Observable<any> {
+    const url: string = `${environment.apiUrl.ekSambandhUrl}/view/answers/${relationshipId}`;
+    const headers = {
+      "Content-Type": "application/json",
+      "Authorization": "Bearer " + JSON.parse(sessionStorage?.getItem('token') as string),
+    }
+    const httpResponse: any = this.http.get<any>(url, { headers });
+    return httpResponse;
+  }
+
+
 
 
 }
