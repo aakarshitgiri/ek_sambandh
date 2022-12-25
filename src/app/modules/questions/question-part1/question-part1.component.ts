@@ -27,6 +27,9 @@ export class QuestionPart1Component implements OnInit {
   ) { }
 
   ngOnInit() {
+
+
+
     this.questionsPart1 = this.formBuilder.group({
       questions1: new FormControl('', Validators.required),
       questions2: new FormControl('', Validators.required),
@@ -43,19 +46,25 @@ export class QuestionPart1Component implements OnInit {
 
 
     let id = this.activateRouter.snapshot.queryParams['id'];
-    let mode = this.activateRouter.snapshot.queryParams['mode'];
-    if (mode) {
-      this.notificationservice.showLoader();
-      this.apiService.getAnswers(id).subscribe((res: any) => {
-        this.previewMode(res.results)
-      })
+    if (!id) {
+      this.router.navigate([UrlCollection.Dashboard])
+    } else {
+      let mode = this.activateRouter.snapshot.queryParams['mode'];
+      if (mode) {
+        this.notificationservice.showLoader();
+        this.apiService.getAnswers(id).subscribe((res: any) => {
+          this.previewMode(res.results)
+        })
+      }
+
+
+
+
+      this.randomizeAnswer();
+      this.setPrevValue();
     }
 
 
-
-
-    this.randomizeAnswer();
-    this.setPrevValue();
   }
 
   previewMode(res: any) {

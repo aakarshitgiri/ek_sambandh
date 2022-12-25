@@ -12,6 +12,7 @@ import { SetPasswordComponent } from './modules/set-password/set-password.compon
 import { SignupComponent } from './modules/signup/signup.component';
 import { TransactionsComponent } from './modules/transactions/transactions.component';
 import { RelationshipSuccessComponent } from './modules/relationship-success/relationship-success.component';
+import { AuthService } from './auth/auth.service';
 const routerOptions: ExtraOptions = {
   scrollPositionRestoration: 'enabled',
   anchorScrolling: 'enabled',
@@ -35,7 +36,8 @@ const routes: Routes = [
   },
   {
     path: UrlCollectionName.Dashboard,
-    component: DashboardComponent
+    component: DashboardComponent,
+    canActivate: [AuthService]
   },
   {
     path: UrlCollectionName.relationshipAccept,
@@ -43,19 +45,23 @@ const routes: Routes = [
   },
   {
     path: UrlCollectionName.Result,
-    component: ResultsComponent
+    component: ResultsComponent,
+    canActivate: [AuthService]
   },
   {
     path: UrlCollectionName.LoveTest,
-    loadChildren: () => import('./modules/questions/questions.module').then(m => m.QuestionsModule)
+    loadChildren: () => import('./modules/questions/questions.module').then(m => m.QuestionsModule),
+    canActivate: [AuthService]
   },
   {
     path: UrlCollectionName.Profile,
-    component: ProfileComponent
+    component: ProfileComponent,
+    canActivate: [AuthService]
   },
   {
     path: UrlCollectionName.Payments,
-    component: TransactionsComponent
+    component: TransactionsComponent,
+    canActivate: [AuthService]
   },
   {
     path: UrlCollectionName.SignUp,

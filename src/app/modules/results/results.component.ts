@@ -34,7 +34,13 @@ export class ResultsComponent implements OnInit {
     this.id = this.ActivateRoute.snapshot.queryParams['id'];
     this.user = this.ActivateRoute.snapshot.queryParams['user'];
     this.partner = this.ActivateRoute.snapshot.queryParams['partner'];
-    this.getResult();
+
+    if (!this.id) {
+      this.router.navigate([UrlCollection.Dashboard])
+    } else {
+      this.getResult();
+    }
+
   }
 
   getResult() {

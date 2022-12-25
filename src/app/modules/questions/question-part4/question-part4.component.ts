@@ -43,16 +43,19 @@ export class QuestionPart4Component implements OnInit {
     });
 
     let id = this.activateRouter.snapshot.queryParams['id'];
-    let mode = this.activateRouter.snapshot.queryParams['mode'];
-    if (mode) {
-      this.notificationservice.showLoader();
-      this.apiService.getAnswers(id).subscribe((res: any) => {
-        this.previewMode(res.results)
-      })
+    if (!id) {
+      this.router.navigate([UrlCollection.Dashboard])
+    } else {
+      let mode = this.activateRouter.snapshot.queryParams['mode'];
+      if (mode) {
+        this.notificationservice.showLoader();
+        this.apiService.getAnswers(id).subscribe((res: any) => {
+          this.previewMode(res.results)
+        })
+      }
+      this.randomizeAnswer();
+      this.setPrevValue();
     }
-
-    this.randomizeAnswer();
-    this.setPrevValue()
   }
 
   previewMode(res: any) {

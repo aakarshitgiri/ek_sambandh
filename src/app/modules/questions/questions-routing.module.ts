@@ -5,6 +5,7 @@ import { QuestionPart2Component } from './question-part2/question-part2.componen
 import { QuestionPart3Component } from './question-part3/question-part3.component';
 import { QuestionPart4Component } from './question-part4/question-part4.component';
 import { QuestionsComponent } from './questions.component';
+import { AuthService } from 'src/app/auth/auth.service';
 
 const routes: Routes = [
   {
@@ -18,19 +19,23 @@ const routes: Routes = [
       },
       {
         path: 'level-1',
-        component: QuestionPart1Component
+        component: QuestionPart1Component,
+        canActivate: [AuthService]
       },
       {
         path: 'level-2',
-        component: QuestionPart2Component
+        component: QuestionPart2Component,
+        canActivate: [AuthService]
       },
       {
         path: 'level-3',
-        component: QuestionPart3Component
+        component: QuestionPart3Component,
+        canActivate: [AuthService]
       },
       {
         path: 'level-4',
-        component: QuestionPart4Component
+        component: QuestionPart4Component,
+        canActivate: [AuthService]
       }
     ]
   }
