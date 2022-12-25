@@ -12,6 +12,30 @@
         border-radius: 15px;
         box-shadow: 0 0 15px rgb(146, 140, 140);
 
+        @include tablet-landscape {
+            width: 50em;
+        }
+
+        @include phone-landscape {
+            width: 100%;
+        }
+
+        @include small-phone-landscape {
+            width: 100%;
+        }
+
+        @include tablet-portrait {
+            width: 35em;
+        }
+
+        @include phone-portrait {
+            width: 100%;
+        }
+
+        @include small-phone-portrait {
+            width: 100%;
+        }
+
         .signup-form {
             .signup-title {
                 h1 {
@@ -22,6 +46,22 @@
                     font-weight: bold;
                     text-align: center;
                     color: #ab1e43;
+
+                    @include phone-landscape {
+                        font-size: 1.5em;
+                    }
+
+                    @include small-phone-landscape {
+                        font-size: 1.5em;
+                    }
+
+                    @include phone-portrait {
+                        font-size: 1.5em;
+                    }
+
+                    @include small-phone-portrait {
+                        font-size: 1.5em;
+                    }
                 }
             }
 
@@ -30,12 +70,48 @@
                 flex-direction: row;
                 justify-content: space-between;
 
+                @include phone-landscape {
+                    flex-direction: column;
+                }
+
+                @include small-phone-landscape {
+                    flex-direction: column;
+                }
+
+                @include phone-portrait {
+                    flex-direction: column;
+                }
+
+                @include small-phone-portrait {
+                    flex-direction: column;
+                }
+
                 .input-container {
                     width: 20em;
                     display: flex;
                     flex-direction: column;
 
                     margin: 2em 1em;
+
+                    @include phone-landscape {
+                        width: 100%;
+                        margin: 1em 0em;
+                    }
+
+                    @include small-phone-landscape {
+                        width: 100%;
+                        margin: 1em 0em;
+                    }
+
+                    @include phone-portrait {
+                        width: 100%;
+                        margin: 1em 0em;
+                    }
+
+                    @include small-phone-portrait {
+                        width: 100%;
+                        margin: 1em 0em;
+                    }
 
                     label {
                         text-align: left;
@@ -69,6 +145,22 @@
                 .email-verify {
                     margin-top: 2.6em;
 
+                    @include phone-landscape {
+                        margin-top: 1em;
+                    }
+
+                    @include small-phone-landscape {
+                        margin-top: 1em;
+                    }
+
+                    @include phone-portrait {
+                        margin-top: 1em;
+                    }
+
+                    @include small-phone-portrait {
+                        margin-top: 1em;
+                    }
+
                     button {
                         border: none;
                         background-color: #ab1e43;
@@ -85,6 +177,30 @@
                         margin: 1em;
                         width: 20em;
                         cursor: pointer;
+
+                        @include tablet-portrait {
+                            width: 85%;
+                        }
+
+                        @include phone-landscape {
+                            width: 100%;
+                            margin: 1em 0em;
+                        }
+
+                        @include small-phone-landscape {
+                            width: 100%;
+                            margin: 1em 0em;
+                        }
+
+                        @include phone-portrait {
+                            width: 100%;
+                            margin: 1em 0em;
+                        }
+
+                        @include small-phone-portrait {
+                            width: 100%;
+                            margin: 1em 0em;
+                        }
                     }
 
                     button:hover {
@@ -96,10 +212,46 @@
 
                 .partneremail {
                     margin: 1em 1em !important;
+
+                    @include phone-landscape {
+                        width: 100%;
+                        margin: 1em 0em;
+                    }
+
+                    @include small-phone-landscape {
+                        width: 100%;
+                        margin: 1em 0em;
+                    }
+
+                    @include phone-portrait {
+                        width: 100%;
+                        margin: 1em 0em;
+                    }
+
+                    @include small-phone-portrait {
+                        width: 100%;
+                        margin: 1em 0em;
+                    }
                 }
 
                 .checkbox {
                     margin: 0.2em 1em !important;
+
+                    @include phone-landscape {
+                        margin: 0.2em 0em !important;
+                    }
+
+                    @include small-phone-landscape {
+                        margin: 0.2em 0em !important;
+                    }
+
+                    @include phone-portrait {
+                        margin: 0.2em 0em !important;
+                    }
+
+                    @include small-phone-portrait {
+                        margin: 0.2em 0em !important;
+                    }
                 }
 
 
@@ -122,6 +274,26 @@
                     margin: 1em;
                     width: 20em;
                     cursor: pointer;
+
+                    @include phone-landscape {
+                        width: 100%;
+                        margin: 1em 0em;
+                    }
+
+                    @include small-phone-landscape {
+                        width: 100%;
+                        margin: 1em 0em;
+                    }
+
+                    @include phone-portrait {
+                        width: 100%;
+                        margin: 1em 0em;
+                    }
+
+                    @include small-phone-portrait {
+                        width: 100%;
+                        margin: 1em 0em;
+                    }
                 }
 
                 button:hover {

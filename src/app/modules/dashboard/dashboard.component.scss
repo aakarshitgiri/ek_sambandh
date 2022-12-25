@@ -6,6 +6,22 @@
     text-align: -webkit-center;
     min-height: 80vh;
 
+    @include phone-landscape {
+        margin: 0.2em;
+    }
+
+    @include small-phone-landscape {
+        margin: 0.2em;
+    }
+
+    @include phone-portrait {
+        margin: 0.2em;
+    }
+
+    @include small-phone-portrait {
+        margin: 0.2em;
+    }
+
     .welcom-title {
         h1 {
             font-size: 2.5em;
@@ -15,7 +31,25 @@
             font-weight: bold;
             text-align: center;
             color: #ab1e43;
+
+            @include phone-landscape {
+                font-size: 1.5em;
+            }
+
+            @include small-phone-landscape {
+                font-size: 1.5em;
+            }
+
+            @include phone-portrait {
+                font-size: 1.5em;
+            }
+
+            @include small-phone-portrait {
+                font-size: 1.5em;
+            }
         }
+
+
     }
 
     .dashboard-table {
@@ -24,6 +58,30 @@
         border-radius: 15px;
         width: 85%;
         box-shadow: 0 0 15px rgb(146, 140, 140);
+
+        @include tablet-landscape {
+            width: 100%;
+        }
+
+        @include phone-landscape {
+            width: 100%;
+        }
+
+        @include small-phone-landscape {
+            width: 100%;
+        }
+
+        @include tablet-portrait {
+            width: 100%;
+        }
+
+        @include phone-portrait {
+            width: 100%;
+        }
+
+        @include small-phone-portrait {
+            width: 100%;
+        }
 
         .table-top-feature {
             .table-title {
@@ -45,12 +103,44 @@
                 flex-direction: row;
                 justify-content: space-between;
 
+                @include tablet-landscape {
+                    flex-direction: column;
+                }
+
+                @include phone-landscape {
+                    flex-direction: column;
+                }
+
+                @include small-phone-landscape {
+                    flex-direction: column;
+                }
+
+                @include tablet-portrait {
+                    flex-direction: column;
+                }
+
+                @include phone-portrait {
+                    flex-direction: column;
+                }
+
+                @include small-phone-portrait {
+                    flex-direction: column;
+                }
+
                 .left {
                     display: table;
 
                     .add-sample-btn {
                         display: table-cell;
                         vertical-align: middle;
+
+                        @include tablet-landscape {
+                            text-align: left;
+                        }
+
+                        @include tablet-portrait {
+                            text-align: left;
+                        }
 
                         button {
                             border: none;
@@ -67,6 +157,22 @@
                             font-weight: 600;
                             width: 15em;
                             cursor: pointer;
+
+                            @include phone-landscape {
+                                width: 90%;
+                            }
+
+                            @include small-phone-landscape {
+                                width: 90%;
+                            }
+
+                            @include phone-portrait {
+                                width: 90%;
+                            }
+
+                            @include small-phone-portrait {
+                                width: 90%;
+                            }
                         }
 
                         button:hover {
@@ -83,6 +189,35 @@
                     flex-direction: row;
                     margin: 1em 0em;
 
+                    @include tablet-landscape {
+                        justify-content: end;
+                    }
+
+                    @include phone-landscape {
+                        justify-content: end;
+                        flex-direction: column-reverse;
+                    }
+
+                    @include small-phone-landscape {
+                        justify-content: end;
+                        flex-direction: column-reverse;
+                    }
+
+                    @include tablet-portrait {
+                        justify-content: end;
+
+                    }
+
+                    @include phone-portrait {
+                        justify-content: end;
+                        flex-direction: column-reverse;
+                    }
+
+                    @include small-phone-portrait {
+                        justify-content: end;
+                        flex-direction: column-reverse;
+                    }
+
                     .search-filter {
                         input {
                             font-family: $cr-font;
@@ -96,6 +231,26 @@
                             margin: 0em 1em;
                             width: 18em;
                             box-shadow: 0 0 10px rgb(146, 140, 140);
+
+                            @include phone-landscape {
+                                width: 90%;
+                                margin-top: 1em;
+                            }
+
+                            @include small-phone-landscape {
+                                width: 90%;
+                                margin-top: 1em;
+                            }
+
+                            @include phone-portrait {
+                                width: 90%;
+                                margin-top: 1em;
+                            }
+
+                            @include small-phone-portrait {
+                                width: 90%;
+                                margin-top: 1em;
+                            }
                         }
 
                         input:focus-visible {
@@ -120,6 +275,22 @@
                             font-weight: 600;
                             width: 15em;
                             cursor: pointer;
+
+                            @include phone-landscape {
+                                width: 90%;
+                            }
+
+                            @include small-phone-landscape {
+                                width: 90%;
+                            }
+
+                            @include phone-portrait {
+                                width: 90%;
+                            }
+
+                            @include small-phone-portrait {
+                                width: 90%;
+                            }
                         }
 
                         button:hover {
@@ -234,6 +405,22 @@
 .help-support {
     margin: 1em;
 
+    @include phone-landscape {
+        margin: 0em;
+    }
+
+    @include small-phone-landscape {
+        margin: 0em;
+    }
+
+    @include phone-portrait {
+        margin: 0em;
+    }
+
+    @include small-phone-portrait {
+        margin: 0em;
+    }
+
     .form-help {
         display: flex;
         flex-direction: column;
@@ -265,6 +452,22 @@
                 border-radius: 5px;
                 border: none;
                 box-shadow: 0 0 10px rgb(146, 140, 140);
+
+                @include phone-landscape {
+                    width: 90%;
+                }
+
+                @include small-phone-landscape {
+                    width: 90%;
+                }
+
+                @include phone-portrait {
+                    width: 90%;
+                }
+
+                @include small-phone-portrait {
+                    width: 90%;
+                }
             }
 
             input:focus-visible {
@@ -362,7 +565,42 @@
         color: #ab1e43;
     }
 
+    .p-dialog .p-dialog-content {
 
+        @include phone-landscape {
+            padding: 0em;
+        }
+
+        @include small-phone-landscape {
+            padding: 0em;
+        }
+
+        @include phone-portrait {
+            padding: 0em;
+        }
+
+        @include small-phone-portrait {
+            padding: 0em;
+        }
+    }
+
+    .p-dialog .p-dialog-header .p-dialog-title {
+        @include phone-landscape {
+            font-size: 1em;
+        }
+
+        @include small-phone-landscape {
+            font-size: 1em;
+        }
+
+        @include phone-portrait {
+            font-size: 1em;
+        }
+
+        @include small-phone-portrait {
+            font-size: 1em;
+        }
+    }
 }
 
 p {
@@ -382,6 +620,22 @@ p {
 .question-form {
     margin: 3em 2em;
 
+    @include phone-landscape {
+        margin: 1em 0.5em;
+    }
+
+    @include small-phone-landscape {
+        margin: 1em 0.5em;
+    }
+
+    @include phone-portrait {
+        margin: 1em 0.5em;
+    }
+
+    @include small-phone-portrait {
+        margin: 1em 0.5em;
+    }
+
     .question {
         text-align: left;
         display: flex;
@@ -396,6 +650,22 @@ p {
             color: #ab1e43;
             margin: 0px;
 
+            @include phone-landscape {
+                font-size: 0.75em;
+            }
+
+            @include small-phone-landscape {
+                font-size: 0.75em;
+            }
+
+            @include phone-portrait {
+                font-size: 0.75em;
+            }
+
+            @include small-phone-portrait {
+                font-size: 0.75em;
+            }
+
             span {
                 margin: 0px 5px;
             }
@@ -403,6 +673,22 @@ p {
 
         .btns {
             margin: 1em;
+
+            @include phone-landscape {
+                margin: 1em 0.5em;
+            }
+
+            @include small-phone-landscape {
+                margin: 1em 0.5em;
+            }
+
+            @include phone-portrait {
+                margin: 1em 0.5em;
+            }
+
+            @include small-phone-portrait {
+                margin: 1em 0.5em;
+            }
 
             label {
                 margin: -5px 10px;

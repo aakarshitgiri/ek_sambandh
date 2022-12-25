@@ -6,6 +6,22 @@
     padding: 1em;
     text-align: -webkit-center;
 
+    @include phone-landscape {
+        padding: 0em;
+    }
+
+    @include small-phone-landscape {
+        padding: 0em;
+    }
+
+    @include phone-portrait {
+        padding: 0em;
+    }
+
+    @include small-phone-portrait {
+        padding: 0em;
+    }
+
     .results-box {
 
 
@@ -16,9 +32,68 @@
             margin: 0em 2em;
             width: 85%;
 
+            @include desktop {
+                width: 90%;
+            }
+
+            @include desktopMedium {
+                width: 85%;
+            }
+
+            @include tablet-landscape {
+                width: 90%;
+            }
+
+            @include phone-landscape {
+                width: 100%;
+                margin: 2em 0em;
+                flex-direction: column;
+                justify-content: center;
+            }
+
+            @include small-phone-landscape {
+                width: 100%;
+                margin: 2em 0em;
+                flex-direction: column;
+                justify-content: center;
+            }
+
+            @include tablet-portrait {
+                width: 90%;
+            }
+
+            @include phone-portrait {
+                width: 100%;
+                margin: 2em 0em;
+                flex-direction: column;
+                justify-content: center;
+            }
+
+            @include small-phone-portrait {
+                width: 100%;
+                margin: 2em 0em;
+                flex-direction: column;
+                justify-content: center;
+            }
+
             .print-btn {
                 text-align: end;
 
+                @include phone-landscape {
+                    text-align: center;
+                }
+
+                @include small-phone-landscape {
+                    text-align: center;
+                }
+
+                @include phone-portrait {
+                    text-align: center;
+                }
+
+                @include small-phone-portrait {
+                    text-align: center;
+                }
 
                 button {
                     border: none;
@@ -36,6 +111,22 @@
                     width: 15em;
                     cursor: pointer;
                     margin: 0.5em;
+
+                    @include phone-landscape {
+                        width: 90%;
+                    }
+
+                    @include small-phone-landscape {
+                        width: 90%;
+                    }
+
+                    @include phone-portrait {
+                        width: 90%;
+                    }
+
+                    @include small-phone-portrait {
+                        width: 90%;
+                    }
                 }
 
                 button:hover {
@@ -56,15 +147,103 @@
             overflow: hidden;
             position: relative;
 
+            @include desktop {
+                width: 90%;
+            }
+
+            @include desktopMedium {
+                width: 85%;
+            }
+
+            @include tablet-landscape {
+                width: 90%;
+            }
+
+            @include phone-landscape {
+                width: 100%;
+                margin: 2em 0em;
+                padding: 0.5em;
+            }
+
+            @include small-phone-landscape {
+                width: 100%;
+                margin: 2em 0em;
+                padding: 0.5em;
+            }
+
+            @include tablet-portrait {
+                width: 90%;
+            }
+
+            @include phone-portrait {
+                width: 100%;
+                margin: 2em 0em;
+                padding: 0.5em;
+            }
+
+            @include small-phone-portrait {
+                width: 100%;
+                margin: 2em 0em;
+                padding: 0.5em;
+            }
+
             .title {
                 display: flex;
                 flex-direction: row;
                 justify-content: space-between;
                 z-index: 1;
 
+                @include tablet-landscape {
+                    flex-direction: column;
+                }
+
+                @include phone-landscape {
+                    flex-direction: column;
+                }
+
+                @include small-phone-landscape {
+                    flex-direction: column;
+                }
+
+                @include tablet-portrait {
+                    flex-direction: column;
+                }
+
+                @include phone-portrait {
+                    flex-direction: column;
+                }
+
+                @include small-phone-portrait {
+                    flex-direction: column;
+                }
+
                 .text {
                     width: 45%;
                     z-index: 1;
+
+                    @include tablet-landscape {
+                        width: 100%;
+                    }
+
+                    @include phone-landscape {
+                        width: 100%;
+                    }
+
+                    @include small-phone-landscape {
+                        width: 100%;
+                    }
+
+                    @include tablet-portrait {
+                        width: 100%;
+                    }
+
+                    @include phone-portrait {
+                        width: 100%;
+                    }
+
+                    @include small-phone-portrait {
+                        width: 100%;
+                    }
 
                     h1 {
                         font-size: 3em;
@@ -74,16 +253,68 @@
                         font-weight: bold;
                         color: #ab1e43;
                         z-index: 1;
+
+
+
                     }
 
                 }
 
                 .right {
                     text-align: right;
+
+                    @include tablet-landscape {
+                        text-align: center;
+                    }
+
+                    @include phone-landscape {
+                        text-align: center;
+                    }
+
+                    @include small-phone-landscape {
+                        text-align: center;
+                    }
+
+                    @include tablet-portrait {
+                        text-align: center;
+                    }
+
+                    @include phone-portrait {
+                        text-align: center;
+                    }
+
+                    @include small-phone-portrait {
+                        text-align: center;
+                    }
+
                 }
 
                 .left {
                     text-align: left;
+
+                    @include tablet-landscape {
+                        text-align: center;
+                    }
+
+                    @include phone-landscape {
+                        text-align: center;
+                    }
+
+                    @include small-phone-landscape {
+                        text-align: center;
+                    }
+
+                    @include tablet-portrait {
+                        text-align: center;
+                    }
+
+                    @include phone-portrait {
+                        text-align: center;
+                    }
+
+                    @include small-phone-portrait {
+                        text-align: center;
+                    }
                 }
 
                 .svg {
@@ -94,6 +325,31 @@
                         width: 60px;
                         animation: pulse 1s ease infinite;
                         z-index: 1;
+
+                        /*    @include tablet-landscape {
+                            width: 45px;
+                        }
+
+                        @include phone-landscape {
+                            width: 45px;
+                        }
+
+                        @include small-phone-landscape {
+                            width: 45px;
+                        }
+
+                        @include tablet-portrait {
+                            width: 45px;
+                        }
+
+                        @include phone-portrait {
+                            width: 45px;
+                        }
+
+                        @include small-phone-portrait {
+                            width: 45px;
+                        } */
+
                     }
 
 
@@ -118,6 +374,30 @@
                 padding: 8em 2em;
                 width: 50%;
                 z-index: 1;
+
+                @include tablet-landscape {
+                    width: 100%;
+                }
+
+                @include phone-landscape {
+                    width: 100%;
+                }
+
+                @include small-phone-landscape {
+                    width: 100%;
+                }
+
+                @include tablet-portrait {
+                    width: 100%;
+                }
+
+                @include phone-portrait {
+                    width: 100%;
+                }
+
+                @include small-phone-portrait {
+                    width: 100%;
+                }
 
                 .results-scores-title {
                     font-size: 4em;
@@ -151,6 +431,30 @@
     padding: 1em;
     z-index: 1;
 
+    @include tablet-landscape {
+        width: 100%;
+    }
+
+    @include phone-landscape {
+        width: 100%;
+    }
+
+    @include small-phone-landscape {
+        width: 100%;
+    }
+
+    @include tablet-portrait {
+        width: 100%;
+    }
+
+    @include phone-portrait {
+        width: 100%;
+    }
+
+    @include small-phone-portrait {
+        width: 100%;
+    }
+
     p {
         font-family: 'Dancing Script', sans-serif;
         font-style: normal;
@@ -159,11 +463,27 @@
         color: #fff;
         font-size: 1.5em;
         margin: 2em;
+
+        @include phone-landscape {
+            margin: 1em;
+        }
+
+        @include small-phone-landscape {
+            margin: 1em;
+        }
+
+        @include phone-portrait {
+            margin: 1em;
+        }
+
+        @include small-phone-portrait {
+            margin: 1em;
+        }
     }
 }
 
 .demo-bg {
-    opacity: 0.3;
+    opacity: 0.2;
     position: absolute;
     left: 0;
     top: 0;
@@ -176,8 +496,47 @@
 .flex-box {
     display: flex;
     justify-content: center;
+    flex-direction: row;
     box-shadow: 0 0 10px #c4c2c3;
     margin: 4em;
+
+    @include desktop {
+        margin: 4em 1em;
+    }
+
+    @include desktopMedium {
+        margin: 4em 4em;
+    }
+
+    @include tablet-landscape {
+        margin: 3em 1em;
+        flex-direction: column;
+    }
+
+    @include phone-landscape {
+        margin: 2em 0em;
+        flex-direction: column;
+    }
+
+    @include small-phone-landscape {
+        margin: 2em 0em;
+        flex-direction: column;
+    }
+
+    @include tablet-portrait {
+        margin: 3em 1em;
+        flex-direction: column;
+    }
+
+    @include phone-portrait {
+        margin: 2em 0em;
+        flex-direction: column;
+    }
+
+    @include small-phone-portrait {
+        margin: 2em 0em;
+        flex-direction: column;
+    }
 }
 
 .flex-box2 {

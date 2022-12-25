@@ -6,12 +6,59 @@
     text-align: -webkit-center;
     min-height: 80vh;
 
+
+    @include phone-landscape {
+        padding: 1em 0em;
+    }
+
+    @include small-phone-landscape {
+        padding: 1em 0em;
+    }
+
+    @include phone-portrait {
+        padding: 1em 0em;
+    }
+
+    @include small-phone-portrait {
+        padding: 1em 0em;
+    }
+
     .question-box {
         background-color: #fff;
         padding: 1em 2em;
         border-radius: 15px;
         width: 85%;
         box-shadow: 0 0 15px rgb(146, 140, 140);
+
+        @include tablet-landscape {
+            width: 90%;
+            padding: 1em 1em;
+        }
+
+        @include phone-landscape {
+            padding: 1em 0em;
+            width: 100%;
+        }
+
+        @include small-phone-landscape {
+            padding: 1em 0em;
+            width: 100%;
+        }
+
+        @include tablet-portrait {
+            width: 90%;
+            padding: 1em 1em;
+        }
+
+        @include phone-portrait {
+            padding: 1em 0em;
+            width: 100%;
+        }
+
+        @include small-phone-portrait {
+            padding: 1em 0em;
+            width: 100%;
+        }
     }
 
     .stepper {

@@ -4,11 +4,75 @@
     margin: 1em;
     padding: 1em;
 
+    @include tablet-landscape {
+        margin: 0em;
+        padding: 0em;
+    }
+
+    @include phone-landscape {
+        margin: 0em;
+        padding: 0em;
+    }
+
+    @include small-phone-landscape {
+        margin: 0em;
+        padding: 0em;
+    }
+
+    @include tablet-portrait {
+        margin: 0em;
+        padding: 0em;
+    }
+
+    @include phone-portrait {
+        margin: 0em;
+        padding: 0em;
+    }
+
+    @include small-phone-portrait {
+        margin: 0em;
+        padding: 0em;
+    }
+
     .question-box {
         padding: 1em;
 
+
+        @include phone-landscape {
+            padding: 1em 0.5em;
+        }
+
+        @include small-phone-landscape {
+            padding: 1em 0.5em;
+        }
+
+        @include phone-portrait {
+            padding: 1em 0.5em;
+        }
+
+        @include small-phone-portrait {
+            padding: 1em 0.5em;
+        }
+
+
         .title {
             text-align: left;
+
+            @include phone-landscape {
+                text-align: center;
+            }
+
+            @include small-phone-landscape {
+                text-align: center;
+            }
+
+            @include phone-portrait {
+                text-align: center;
+            }
+
+            @include small-phone-portrait {
+                text-align: center;
+            }
 
             h1 {
                 font-size: 1.5em;
@@ -25,8 +89,50 @@
             padding: 1em;
             margin-top: 1em;
 
+
+            @include phone-landscape {
+                padding: 1em 0em;
+            }
+
+            @include small-phone-landscape {
+                padding: 1em 0em;
+            }
+
+            @include phone-portrait {
+                padding: 1em 0em;
+            }
+
+            @include small-phone-portrait {
+                padding: 1em 0em;
+            }
+
+
             .question-form {
                 margin: 3em 2em;
+
+                @include tablet-landscape {
+                    margin: 2em 1em;
+                }
+
+                @include phone-landscape {
+                    margin: 1em 0.5em;
+                }
+
+                @include small-phone-landscape {
+                    margin: 1em 0.5em;
+                }
+
+                @include tablet-portrait {
+                    margin: 2em 1em;
+                }
+
+                @include phone-portrait {
+                    margin: 1em 0.5em;
+                }
+
+                @include small-phone-portrait {
+                    margin: 1em 0.5em;
+                }
 
                 .question {
                     text-align: left;
@@ -60,6 +166,22 @@
             margin-top: 1em;
             text-align: end;
 
+            @include phone-landscape {
+                text-align: center;
+            }
+
+            @include small-phone-landscape {
+                text-align: center;
+            }
+
+            @include phone-portrait {
+                text-align: center;
+            }
+
+            @include small-phone-portrait {
+                text-align: center;
+            }
+
             .next-btn {
                 button {
                     border: none;
@@ -76,6 +198,22 @@
                     font-weight: 600;
                     width: 15em;
                     cursor: pointer;
+
+                    @include phone-landscape {
+                        width: 90%;
+                    }
+
+                    @include small-phone-landscape {
+                        width: 90%;
+                    }
+
+                    @include phone-portrait {
+                        width: 90%;
+                    }
+
+                    @include small-phone-portrait {
+                        width: 90%;
+                    }
                 }
 
                 button:hover {

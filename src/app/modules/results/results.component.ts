@@ -51,6 +51,7 @@ export class ResultsComponent implements OnInit {
 
   }
 
+
   downloadResult() {
     html2canvas(this.results.nativeElement).then(canvas => {
       this.canvas.nativeElement.src = canvas.toDataURL();

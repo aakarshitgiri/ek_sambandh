@@ -10,6 +10,7 @@ import { DataStorageService } from 'src/app/services/data-storage.service';
 })
 export class HeaderComponent implements OnInit {
   userData: any;
+  display: boolean;
   constructor(
     private datastorage: DataStorageService,
     private router: Router
@@ -24,6 +25,7 @@ export class HeaderComponent implements OnInit {
   }
 
   logout() {
+    this.display = false;
     this.datastorage.clear();
     this.datastorage.setUser({})
     this.router.navigate([UrlCollection.Home]);

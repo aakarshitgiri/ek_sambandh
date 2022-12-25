@@ -6,17 +6,69 @@
     text-align: -webkit-center;
     min-height: 80vh;
 
+    @include phone-landscape {
+        padding: 1em 0em;
+    }
+
+    @include small-phone-landscape {
+        padding: 1em 0em;
+    }
+
+
+    @include phone-portrait {
+        padding: 1em 0em;
+    }
+
+    @include small-phone-portrait {
+        padding: 1em 0em;
+    }
+
     .user-profile {
         background-color: #fff;
         padding: 1em 2em;
         border-radius: 15px;
-        width: 85%;
+        width: 95%;
         box-shadow: 0 0 15px rgb(146, 140, 140);
+
+        @include phone-landscape {
+            padding: 1em 0em;
+        }
+
+        @include small-phone-landscape {
+            padding: 1em 0em;
+        }
+
+
+        @include phone-portrait {
+            padding: 1em 0em;
+        }
+
+        @include small-phone-portrait {
+            padding: 1em 0em;
+        }
+
 
         .flex-box {
             display: flex;
             flex-direction: row;
             justify-content: space-between;
+
+            @include phone-landscape {
+                flex-direction: column;
+            }
+
+            @include small-phone-landscape {
+                flex-direction: column;
+            }
+
+
+            @include phone-portrait {
+                flex-direction: column;
+            }
+
+            @include small-phone-portrait {
+                flex-direction: column;
+            }
 
             .title {
                 h1 {
@@ -31,6 +83,27 @@
 
             .edit-profile-btn {
                 display: table;
+
+                @include phone-landscape {
+                    display: flex;
+                    flex-direction: column;
+                }
+
+                @include small-phone-landscape {
+                    display: flex;
+                    flex-direction: column;
+                }
+
+
+                @include phone-portrait {
+                    display: flex;
+                    flex-direction: column;
+                }
+
+                @include small-phone-portrait {
+                    display: flex;
+                    flex-direction: column;
+                }
 
                 .cell {
                     display: table-cell;
@@ -52,6 +125,27 @@
                         font-weight: 600;
                         width: 15em;
                         cursor: pointer;
+
+                        @include phone-landscape {
+                            width: 85%;
+                            margin-top: 1em;
+                        }
+
+                        @include small-phone-landscape {
+                            width: 85%;
+                            margin-top: 1em;
+                        }
+
+
+                        @include phone-portrait {
+                            width: 85%;
+                            margin-top: 1em;
+                        }
+
+                        @include small-phone-portrait {
+                            width: 85%;
+                            margin-top: 1em;
+                        }
                     }
 
                     button:hover {
@@ -77,11 +171,59 @@
                     width: 45%;
                     text-align: left;
 
+                    @include tablet-landscape {
+                        width: 100%;
+                    }
+
+                    @include phone-landscape {
+                        width: 100%;
+                    }
+
+                    @include small-phone-landscape {
+                        width: 100%;
+                    }
+
+                    @include tablet-portrait {
+                        width: 100%;
+                    }
+
+                    @include phone-portrait {
+                        width: 100%;
+                    }
+
+                    @include small-phone-portrait {
+                        width: 100%;
+                    }
+
                     .input-container {
                         width: 25em;
                         display: flex;
                         flex-direction: column;
                         margin: 2em 1em;
+
+                        @include tablet-landscape {
+                            width: 100%;
+                        }
+
+                        @include phone-landscape {
+                            width: 100%;
+                        }
+
+                        @include small-phone-landscape {
+                            width: 100%;
+                        }
+
+                        @include tablet-portrait {
+                            width: 100%;
+                        }
+
+                        @include phone-portrait {
+                            width: 100%;
+                        }
+
+                        @include small-phone-portrait {
+                            width: 100%;
+                        }
 
                         label {
                             text-align: left;
@@ -103,6 +245,31 @@
                             border-radius: 5px;
                             border: none;
                             box-shadow: 0 0 10px rgb(146, 140, 140);
+
+
+                            @include tablet-landscape {
+                                width: 90%;
+                            }
+
+                            @include phone-landscape {
+                                width: 90%;
+                            }
+
+                            @include small-phone-landscape {
+                                width: 90%;
+                            }
+
+                            @include tablet-portrait {
+                                width: 90%;
+                            }
+
+                            @include phone-portrait {
+                                width: 90%;
+                            }
+
+                            @include small-phone-portrait {
+                                width: 90%;
+                            }
                         }
 
                         input:focus-visible {
@@ -181,6 +348,22 @@
 .help-support {
     margin: 1em;
 
+    @include phone-landscape {
+        margin: 0em;
+    }
+
+    @include small-phone-landscape {
+        margin: 0em;
+    }
+
+    @include phone-portrait {
+        margin: 0em;
+    }
+
+    @include small-phone-portrait {
+        margin: 0em;
+    }
+
     .form-help {
         display: flex;
         flex-direction: column;
@@ -212,6 +395,22 @@
                 border-radius: 5px;
                 border: none;
                 box-shadow: 0 0 10px rgb(146, 140, 140);
+
+                @include phone-landscape {
+                    width: 90%;
+                }
+
+                @include small-phone-landscape {
+                    width: 90%;
+                }
+
+                @include phone-portrait {
+                    width: 90%;
+                }
+
+                @include small-phone-portrait {
+                    width: 90%;
+                }
             }
 
             input:focus-visible {
@@ -242,6 +441,7 @@
 }
 
 
+
 .btn {
     border: none;
     background-color: #ab1e43;
@@ -258,6 +458,26 @@
     margin: 1em;
     width: 17em;
     cursor: pointer;
+
+    @include phone-landscape {
+        width: 90%;
+        margin-bottom: 1em !important;
+    }
+
+    @include small-phone-landscape {
+        width: 90%;
+        margin-bottom: 1em !important;
+    }
+
+    @include phone-portrait {
+        width: 90%;
+        margin-bottom: 1em !important;
+    }
+
+    @include small-phone-portrait {
+        width: 90%;
+        margin-bottom: 1em !important;
+    }
 }
 
 .btn:hover {
@@ -307,6 +527,50 @@
         font-weight: bold;
         text-align: center;
         color: #ab1e43;
+    }
+
+    .p-dialog .p-dialog-footer {
+        @include phone-landscape {
+            text-align: center;
+            display: flex;
+            flex-direction: column-reverse;
+        }
+
+        @include small-phone-landscape {
+            text-align: center;
+            display: flex;
+            flex-direction: column-reverse;
+        }
+
+        @include phone-portrait {
+            text-align: center;
+            display: flex;
+            flex-direction: column-reverse;
+        }
+
+        @include small-phone-portrait {
+            text-align: center;
+            display: flex;
+            flex-direction: column-reverse;
+        }
+    }
+
+    .p-dialog .p-dialog-header .p-dialog-title {
+        @include phone-landscape {
+            font-size: 1em;
+        }
+
+        @include small-phone-landscape {
+            font-size: 1em;
+        }
+
+        @include phone-portrait {
+            font-size: 1em;
+        }
+
+        @include small-phone-portrait {
+            font-size: 1em;
+        }
     }
 
 

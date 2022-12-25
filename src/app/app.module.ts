@@ -29,6 +29,7 @@ import { RelationshipSuccessComponent } from './modules/relationship-success/rel
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 import { RadioButtonModule } from 'primeng/radiobutton';
 import { DataStorageService } from './services/data-storage.service';
+import { SidebarModule } from 'primeng/sidebar';
 
 
 
@@ -62,6 +63,7 @@ import { DataStorageService } from './services/data-storage.service';
     ReactiveFormsModule,
     FormsModule,
     RadioButtonModule,
+    SidebarModule,
     NgIdleKeepaliveModule.forRoot()
   ],
   providers: [

@@ -1,19 +1,11 @@
 <div class="nav">
-    <input type="checkbox" id="nav-check">
     <div class="nav-header">
         <div class="nav-title">
             <img src="../../../assets/images/logo-2.png" alt="Ek Sambandh">
         </div>
     </div>
-    <div class="nav-btn">
-        <label for="nav-check">
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-        </label>
+    <div class="sidebar">
+        <p-button type="button" class="mr-2" (click)="display = true" icon="pi pi-th-large"></p-button>
     </div>
 
     <div class="nav-links">
@@ -30,3 +22,21 @@
         <a class="nav-btn" (click)="logout()" *ngIf="userData?._id">Logout</a>
     </div>
 </div>
+
+<p-sidebar [(visible)]="display" position="right">
+    <div class="sidebar-nav-links">
+        <a class="link" routerLink="/home" (click)="display = false">Home</a>
+        <a class="link" routerLink="/home" (click)="display = false" fragment="about" *ngIf="!userData?._id">About
+            Us</a>
+        <a class="link" routerLink="/home" (click)="display = false" fragment="howitworks" *ngIf="!userData?._id">How it
+            works?</a>
+        <a class="link" routerLink="/home" (click)="display = false" fragment="team" *ngIf="!userData?._id">Teams</a>
+        <a class="link" routerLink="/home" (click)="display = false" fragment="faq" *ngIf="!userData?._id">FAQ</a>
+        <a class="nav-btn" routerLink="/login" (click)="display = false" *ngIf="!userData?._id">Login</a>
+
+        <a class="link" routerLink="/dashboard" (click)="display = false" *ngIf="userData?._id">Dashboard</a>
+        <a class="link" routerLink="/profile" (click)="display = false" *ngIf="userData?._id">Profile</a>
+        <a class="link" routerLink="/payments" (click)="display = false" *ngIf="userData?._id">Payments</a>
+        <a class="nav-btn" (click)="logout()" *ngIf="userData?._id">Logout</a>
+    </div>
+</p-sidebar>

@@ -2,16 +2,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing Script');
 
 .relationship-success {
-    margin: 2em 1em;
-    padding: 1em;
+    margin: 2em 0em;
+    padding: 1em 0em;
     text-align: -webkit-center;
     min-height: 80vh;
 
     .success-messege {
-        padding: 2em;
+        padding: 2em 1em;
 
         h1 {
-            font-size: 6em;
+            font-size: 3em;
             font-family: 'Dancing Script', sans-serif;
             font-style: normal;
             letter-spacing: 0.08em;
@@ -20,7 +20,7 @@
         }
 
         h2 {
-            font-size: 3em;
+            font-size: 2.5em;
             font-family: 'Dancing Script', sans-serif;
             font-style: normal;
             letter-spacing: 0.08em;

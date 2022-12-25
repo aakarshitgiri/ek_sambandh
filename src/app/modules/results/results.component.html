@@ -44,36 +44,38 @@
     </div>
 </div>
 
-<div class="hidebox" style=" position: fixed; width: 100%; opacity: 0.0;">
+<div class="hidebox" style=" position: fixed; width: 120em; opacity: 0;">
     <div id="results" #results class="result-img">
+        <img style=" opacity: 0.2; position: absolute;  left: 0; top: 0; width: 100%; height: auto; z-index: -1;"
+            src="../../../assets/images/bg-result.jpg" alt="">
         <div class="box">
             <div id="results" #results class="result">
                 <div class="title">
                     <div class="text right">
-                        <h1>{{user}}</h1>
+                        <h1 style="z-index: 1;">{{user}}</h1>
                     </div>
-                    <div class="svg">
+                    <div class="svg" style="z-index: 1;">
                         <svg class="heart" viewBox="0 0 32 29.6">
                             <path d="M23.6,0c-3.4,0-6.3,2.7-7.6,5.6C14.7,2.7,11.8,0,8.4,0C3.8,0,0,3.8,0,8.4c0,9.4,9.5,11.9,16,21.2
                   c6.1-9.3,16-12.1,16-21.2C32,3.8,28.2,0,23.6,0z" />
                         </svg>
                     </div>
                     <div class="text left">
-                        <h1>{{partner}}</h1>
+                        <h1 style="z-index: 1;">{{partner}}</h1>
                     </div>
                 </div>
-                <div class="flex-box2">
-                    <div class="box">
-                        <div class="results-scores-title">
+                <div class="flex-box2" style="z-index: 1;">
+                    <div class="box" style="width: 50%;">
+                        <div class="results-scores-title" style="z-index: 1;">
                             Love Score
                         </div>
-                        <div class="result-scores">
+                        <div class="result-scores" style="z-index: 1;">
                             <h1>{{(makeAbsolute(apiResult?.score) | number:'1.0-0') + '%'}}</h1>
                         </div>
                     </div>
-                    <div class="message">
-                        <p>{{apiResult?.message1}}</p>
-                        <p>{{apiResult?.message2}}</p>
+                    <div class="message" style="width: 50%; padding-top: 2em; z-index: 1;">
+                        <p style="z-index: 1;">{{apiResult?.message1}}</p>
+                        <p style="z-index: 1;">{{apiResult?.message2}}</p>
                     </div>
                 </div>
             </div>

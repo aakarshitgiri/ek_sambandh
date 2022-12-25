@@ -9,11 +9,49 @@
     padding: 2em 1em;
     text-align: -webkit-center;
 
+    @include phone-landscape {
+        flex-direction: column;
+    }
 
+    @include small-phone-landscape {
+        flex-direction: column;
+    }
+
+    @include tablet-portrait {
+        flex-direction: column;
+    }
+
+    @include phone-portrait {
+        flex-direction: column;
+    }
+
+    @include small-phone-portrait {
+        flex-direction: column;
+    }
 
     .home-container-left {
         width: 50%;
         padding-top: 2em;
+
+        @include phone-landscape {
+            width: 100%;
+        }
+
+        @include small-phone-landscape {
+            width: 100%;
+        }
+
+        @include tablet-portrait {
+            width: 100%;
+        }
+
+        @include phone-portrait {
+            width: 100%;
+        }
+
+        @include small-phone-portrait {
+            width: 100%;
+        }
 
         h1 {
             font-family: $cr-font;
@@ -25,6 +63,51 @@
             color: #ab1e43;
             width: 70%;
 
+            @include desktop {
+                font-size: 2em;
+                width: 90%;
+            }
+
+            @include desktopMedium {
+                font-size: 2em;
+                width: 80%;
+            }
+
+            @include big-desktop {
+                font-size: 2.5em;
+                width: 70%;
+            }
+
+            @include tablet-landscape {
+                font-size: 1.5em;
+                width: 100%;
+            }
+
+            @include phone-landscape {
+                font-size: 2em;
+                width: 100%;
+            }
+
+            @include small-phone-landscape {
+                font-size: 2em;
+                width: 100%;
+            }
+
+            @include tablet-portrait {
+                font-size: 2.5em;
+                width: 100%;
+            }
+
+            @include phone-portrait {
+                font-size: 2em;
+                width: 100%;
+            }
+
+            @include small-phone-portrait {
+                font-size: 2em;
+                width: 100%;
+            }
+
         }
 
         p {
@@ -34,6 +117,39 @@
             font-size: 1.5em;
             text-align: center;
             color: #000000;
+
+            @include desktop {
+                font-size: 1.2em;
+            }
+
+            @include desktopMedium {
+                font-size: 1.5em;
+            }
+
+
+            @include tablet-landscape {
+                font-size: 1.3em;
+            }
+
+            @include phone-landscape {
+                font-size: 1.2em;
+            }
+
+            @include small-phone-landscape {
+                font-size: 1.2em;
+            }
+
+            @include tablet-portrait {
+                font-size: 1.2em;
+            }
+
+            @include phone-portrait {
+                font-size: 1.2em;
+            }
+
+            @include small-phone-portrait {
+                font-size: 1.2em;
+            }
         }
 
         button {
@@ -69,6 +185,25 @@
             animation: pulse 1s ease infinite;
             margin: 1em;
 
+            @include tablet-landscape {
+                width: 40px;
+            }
+
+            @include phone-landscape {
+                width: 30px;
+            }
+
+            @include small-phone-landscape {
+                width: 30px;
+            }
+
+            @include phone-portrait {
+                width: 30px;
+            }
+
+            @include small-phone-portrait {
+                width: 30px;
+            }
         }
 
 
@@ -93,11 +228,60 @@
         width: 50%;
         margin: 2em;
 
+        @include phone-landscape {
+            width: 100%;
+            margin: 5em 0em 0em 0em;
+        }
+
+        @include small-phone-landscape {
+            width: 100%;
+            margin: 5em 0em 0em 0em;
+        }
+
+        @include tablet-portrait {
+            width: 100%;
+            margin: 5em 0em 0em 0em;
+        }
+
+        @include phone-portrait {
+            width: 100%;
+            margin: 5em 0em 0em 0em;
+        }
+
+        @include small-phone-portrait {
+            width: 100%;
+            margin: 5em 0em 0em 0em;
+        }
+
         .img {
             img {
                 width: 30em;
                 -webkit-animation: mover 1s infinite alternate;
                 animation: mover 1s infinite alternate;
+
+                @include phone-landscape {
+                    width: 28em;
+                    margin-top: 3em;
+                }
+
+                @include small-phone-landscape {
+                    width: 25em;
+                    margin-top: 3em;
+                }
+
+                @include tablet-portrait {
+                    width: 35em;
+                    margin-top: 3em;
+                }
+
+                @include phone-portrait {
+                    width: 21em;
+                    margin-top: 3em;
+                }
+
+                @include small-phone-portrait {
+                    width: 18em;
+                }
             }
 
             @-webkit-keyframes mover {
@@ -144,10 +328,68 @@
 
     .flex {
         display: flex;
+        flex-direction: row;
         justify-content: space-between;
+
+        @include desktop {
+            // font-size: 1.2em;
+        }
+
+        @include desktopMedium {
+            // font-size: 1.5em;
+        }
+
+
+        @include tablet-landscape {
+            flex-direction: column;
+        }
+
+        @include phone-landscape {
+            flex-direction: column;
+        }
+
+        @include small-phone-landscape {
+            flex-direction: column;
+        }
+
+        @include tablet-portrait {
+            flex-direction: column;
+        }
+
+        @include phone-portrait {
+            flex-direction: column;
+        }
+
+        @include small-phone-portrait {
+            flex-direction: column;
+        }
 
         .left {
             width: 50%;
+
+            @include tablet-landscape {
+                width: 100%;
+            }
+
+            @include phone-landscape {
+                width: 100%;
+            }
+
+            @include small-phone-landscape {
+                width: 100%;
+            }
+
+            @include tablet-portrait {
+                width: 100%;
+            }
+
+            @include phone-portrait {
+                width: 100%;
+            }
+
+            @include small-phone-portrait {
+                width: 100%;
+            }
 
             .img {
                 text-align: center;
@@ -157,11 +399,87 @@
                     width: 42em;
                     -webkit-animation: verticalmover 1s infinite alternate;
                     animation: verticalmover 2s infinite alternate;
+
+
+                    @include desktop {
+                        width: 38em;
+                    }
+
+                    @include desktopMedium {
+                        width: 42em;
+                    }
+
+                    @include tablet-landscape {
+                        width: 35em;
+                        margin-top: 3em;
+                    }
+
+                    @include phone-landscape {
+                        width: 28em;
+                        margin-top: 3em;
+                    }
+
+                    @include small-phone-landscape {
+                        width: 25em;
+                        margin-top: 3em;
+                    }
+
+                    @include tablet-portrait {
+                        width: 35em;
+                        margin-top: 3em;
+                    }
+
+                    @include phone-portrait {
+                        width: 21em;
+                        margin-top: 3em;
+                    }
+
+                    @include small-phone-portrait {
+                        width: 18em;
+                    }
+
                 }
 
                 .verticalImg2 {
                     width: 42em;
                     animation: zoom-in-zoom-out 10s ease-out infinite;
+
+                    @include desktop {
+                        width: 38em;
+                    }
+
+                    @include desktopMedium {
+                        width: 42em;
+                    }
+
+                    @include tablet-landscape {
+                        width: 35em;
+                        margin-top: 3em;
+                    }
+
+                    @include phone-landscape {
+                        width: 28em;
+                        margin-top: 3em;
+                    }
+
+                    @include small-phone-landscape {
+                        width: 25em;
+                        margin-top: 3em;
+                    }
+
+                    @include tablet-portrait {
+                        width: 35em;
+                        margin-top: 3em;
+                    }
+
+                    @include phone-portrait {
+                        width: 21em;
+                        margin-top: 3em;
+                    }
+
+                    @include small-phone-portrait {
+                        width: 18em;
+                    }
                 }
 
                 @-webkit-keyframes verticalmover {
@@ -209,9 +527,61 @@
             padding: 0em 2em;
             width: 50%;
 
+            @include tablet-landscape {
+                width: 100%;
+            }
+
+            @include phone-landscape {
+                width: 100%;
+                padding: 0em 0.5em;
+            }
+
+            @include small-phone-landscape {
+                width: 100%;
+                padding: 0em 0.5em;
+            }
+
+            @include tablet-portrait {
+                width: 100%;
+            }
+
+            @include phone-portrait {
+                width: 100%;
+                padding: 0em 0.5em;
+            }
+
+            @include small-phone-portrait {
+                width: 100%;
+                padding: 0em 0.5em;
+            }
+
             .text {
 
                 margin: 1em;
+
+                @include tablet-landscape {
+                    margin: 5em 1em 0em 1em;
+                }
+
+                @include phone-landscape {
+                    margin: 5em 1em 0em 1em;
+                }
+
+                @include small-phone-landscape {
+                    margin: 5em 1em 0em 1em;
+                }
+
+                @include tablet-portrait {
+                    margin: 5em 1em 0em 1em;
+                }
+
+                @include phone-portrait {
+                    margin: 5em 1em 0em 1em;
+                }
+
+                @include small-phone-portrait {
+                    margin: 5em 1em 0em 1em;
+                }
 
                 p {
                     font-size: 1.2em;
@@ -220,10 +590,42 @@
                     letter-spacing: 0.08em;
                     font-weight: 500;
                     text-align: justify;
+
+                    @include desktop {
+                        font-size: 1em;
+                    }
+
+                    @include desktopMedium {
+                        font-size: 1.2em;
+                    }
+
+                    @include tablet-landscape {
+                        font-size: 1em;
+                    }
+
+                    @include phone-landscape {
+                        font-size: 1em;
+                    }
+
+                    @include small-phone-landscape {
+                        font-size: 1em;
+                    }
+
+                    @include tablet-portrait {
+                        font-size: 1em;
+                    }
+
+                    @include phone-portrait {
+                        font-size: 1em;
+                    }
+
+                    @include small-phone-portrait {
+                        font-size: 1em;
+                    }
                 }
 
                 .list {
-                    width: max-content;
+                    width: 100%;
                 }
             }
         }
@@ -297,13 +699,44 @@
 
     .team-head {
         padding: 2em;
-        width: 22%;
+        width: 22em;
         margin: 1em;
         border-radius: 10px;
         box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
         background: linear-gradient(0deg, white, white, white);
         position: relative;
 
+        @include desktop {
+            width: 24em;
+        }
+
+        @include desktopMedium {
+            width: 20em;
+        }
+
+        @include tablet-landscape {
+            width: 19em;
+        }
+
+        @include phone-landscape {
+            width: 90%;
+        }
+
+        @include small-phone-landscape {
+            width: 90%;
+        }
+
+        @include tablet-portrait {
+            width: 17em;
+        }
+
+        @include phone-portrait {
+            width: 90%;
+        }
+
+        @include small-phone-portrait {
+            width: 90%;
+        }
 
         h1 {
             font-size: 1.5em;
@@ -357,8 +790,28 @@
     .team-section {
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
+        justify-content: center;
         flex-wrap: wrap;
+
+        @include phone-landscape {
+            justify-content: center;
+        }
+
+        @include small-phone-landscape {
+            justify-content: center;
+        }
+
+        @include tablet-portrait {
+            justify-content: center;
+        }
+
+        @include phone-portrait {
+            justify-content: center;
+        }
+
+        @include small-phone-portrait {
+            justify-content: center;
+        }
     }
 }
 
@@ -376,6 +829,30 @@
 
 .home-container-faq {
     padding: 1em 15em;
+
+    @include tablet-landscape {
+        padding: 1em 5em;
+    }
+
+    @include phone-landscape {
+        padding: 1em 0.5em;
+    }
+
+    @include small-phone-landscape {
+        padding: 1em 0.5em;
+    }
+
+    @include tablet-portrait {
+        padding: 1em 3em;
+    }
+
+    @include phone-portrait {
+        padding: 1em 0.5em;
+    }
+
+    @include small-phone-portrait {
+        padding: 1em 0.5em;
+    }
 
     h1 {
         font-size: 2.5em;
