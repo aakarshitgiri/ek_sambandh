@@ -5,6 +5,7 @@ import { firstValueFrom } from 'rxjs';
 import { ToastType } from 'src/app/models/notification-model';
 import { UrlCollection } from 'src/app/models/urlcollection';
 import { ApiEkSambandhService } from 'src/app/services/api-ek-sambandh.service';
+import { DataStorageService } from 'src/app/services/data-storage.service';
 import { NotificationService } from 'src/app/services/notifications.service';
 
 @Component({
@@ -24,6 +25,7 @@ export class SignupComponent implements OnInit {
   btnvisble: boolean = false;
   isPartnerLogin: boolean = false;
   relationshipId: any;
+  userData: any;
 
   constructor(
     private formbuilder: FormBuilder,
@@ -31,9 +33,18 @@ export class SignupComponent implements OnInit {
     private notificationservice: NotificationService,
     private router: Router,
     private _activateroute: ActivatedRoute,
-  ) { }
+    private datastorage: DataStorageService
+  ) {
+    this.datastorage.currentUser.subscribe(data => {
+      this.userData = data;
+
+    })
+  }
 
   ngOnInit() {
+    if (this.userData?._id) {
+      this.router.navigate([UrlCollection.Dashboard])
+    }
     const verifyPartnerToken = this._activateroute.snapshot.queryParams['token'];
     const verifyPartnerEmail = this._activateroute.snapshot.queryParams['email'];
 

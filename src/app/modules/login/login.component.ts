@@ -24,9 +24,17 @@ export class LoginComponent implements OnInit {
     private notificationservice: NotificationService,
     private router: Router,
     private datastorage: DataStorageService
-  ) { }
+  ) {
+    this.datastorage.currentUser.subscribe(data => {
+      this.userData = data;
+
+    })
+  }
 
   ngOnInit() {
+    if (this.userData?._id) {
+      this.router.navigate([UrlCollection.Dashboard])
+    }
     this.loginforms = this.formBuilder.group({
       email: new FormControl('', [Validators.required]),
       password: new FormControl('', [Validators.required])
