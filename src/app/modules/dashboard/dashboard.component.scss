@@ -601,6 +601,12 @@
             font-size: 1em;
         }
     }
+
+    .p-datatable-responsive-scroll>.p-datatable-wrapper>table,
+    .p-datatable-auto-layout>.p-datatable-wrapper>table {
+        table-layout: fixed;
+        width: 100%;
+    }
 }
 
 p {
