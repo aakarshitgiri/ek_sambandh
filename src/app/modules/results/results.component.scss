@@ -254,7 +254,21 @@
                         color: #ab1e43;
                         z-index: 1;
 
+                        @include phone-landscape {
+                            font-size: 2em;
+                        }
 
+                        @include small-phone-landscape {
+                            font-size: 2em;
+                        }
+
+                        @include phone-portrait {
+                            font-size: 2em;
+                        }
+
+                        @include small-phone-portrait {
+                            font-size: 2em;
+                        }
 
                     }
 
@@ -326,7 +340,7 @@
                         animation: pulse 1s ease infinite;
                         z-index: 1;
 
-                        /*    @include tablet-landscape {
+                        @include tablet-landscape {
                             width: 45px;
                         }
 
@@ -348,7 +362,7 @@
 
                         @include small-phone-portrait {
                             width: 45px;
-                        } */
+                        }
 
                     }
 
@@ -406,6 +420,22 @@
                     letter-spacing: 0.08em;
                     font-weight: bold;
                     color: #ab1e43;
+
+                    @include phone-landscape {
+                        font-size: 2.5em;
+                    }
+
+                    @include small-phone-landscape {
+                        font-size: 2.5em;
+                    }
+
+                    @include phone-portrait {
+                        font-size: 2.5em;
+                    }
+
+                    @include small-phone-portrait {
+                        font-size: 2.5em;
+                    }
                 }
 
                 .result-scores {
@@ -418,6 +448,22 @@
                         letter-spacing: 0.08em;
                         font-weight: bold;
                         color: #ab1e43;
+
+                        @include phone-landscape {
+                            font-size: 2.5em;
+                        }
+
+                        @include small-phone-landscape {
+                            font-size: 2.5em;
+                        }
+
+                        @include phone-portrait {
+                            font-size: 2.5em;
+                        }
+
+                        @include small-phone-portrait {
+                            font-size: 2.5em;
+                        }
                     }
                 }
             }
@@ -461,25 +507,70 @@
         letter-spacing: 0.08em;
         font-weight: bold;
         color: #fff;
-        font-size: 1.5em;
+        font-size: 2em;
         margin: 2em;
+        // padding-top: 3em;
 
         @include phone-landscape {
             margin: 1em;
+            font-size: 1.5em;
+            //   padding-top: 1em;
         }
 
         @include small-phone-landscape {
             margin: 1em;
+            font-size: 1.5em;
+            //   padding-top: 1em;
         }
 
         @include phone-portrait {
             margin: 1em;
+            font-size: 1.5em;
+            //  padding-top: 1em;
         }
 
         @include small-phone-portrait {
             margin: 1em;
+            font-size: 1.5em;
+            //   padding-top: 1em;
         }
     }
+}
+
+.bottom {
+    display: flex;
+    justify-content: space-between;
+
+    .left {
+        img {
+            width: 15em;
+        }
+    }
+
+    .right {
+        margin-top: 1.5em;
+        font-size: 0.85em;
+        font-family: $cr-font;
+        font-style: normal;
+        letter-spacing: 0.08em;
+        font-weight: bold;
+        text-align: center;
+        color: #ab1e43;
+
+    }
+}
+
+
+.font {
+    margin-top: 1.5em;
+    font-size: 0.85em;
+    font-family: $cr-font;
+    font-style: normal;
+    letter-spacing: 0.08em;
+    font-weight: bold;
+    text-align: center;
+    color: #ab1e43;
+
 }
 
 .demo-bg {

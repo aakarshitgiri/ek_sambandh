@@ -6,14 +6,17 @@
         "question": "How comfortable are you discussing personal matters with your partner?",
         "options": [
             {
+                "id": 1,
                 "answer": "Yes, I feel safe while discussing.",
                 "ansType": "Positive"
             },
             {
+                "id": 2,
                 "answer": "I believe this might cause conflict.",
                 "ansType": "Negative"
             },
             {
+                "id": 3,
                 "answer": "I think we both have a life and we both have the rights whether to discuss or not.",
                 "ansType": "Neutral"
             }
@@ -26,14 +29,17 @@
         "question": "Which of the following factors is more important for a successful relationship to function?",
         "options": [
             {
+                "id": 1,
                 "answer": "Trust",
                 "ansType": "Positive"
             },
             {
+                "id": 2,
                 "answer": "Compromise",
                 "ansType": "Negative"
             },
             {
+                "id": 3,
                 "answer": "Just being together",
                 "ansType": "Neutral"
             }
@@ -46,14 +52,17 @@
         "question": "If I told you to jump off a tall cliff and tell you that you’ll land safely because there’s a net you can’t see yet, would you blindly trust me and jump?",
         "options": [
             {
+                "id": 1,
                 "answer": "Yes,I will",
                 "ansType": "Positive"
             },
             {
+                "id": 2,
                 "answer": "No, It's complicated",
                 "ansType": "Negative"
             },
             {
+                "id": 3,
                 "answer": "I will re-think",
                 "ansType": "Neutral"
             }
@@ -66,14 +75,17 @@
         "question": "If you ask for professional advice about the future and your partner has a different viewpoint ,but you feel that he is holding you back or is being a road-blocker. You may not talk about it but it is making you question yourself a lot inside your heart, what will you do ?",
         "options": [
             {
+                "id": 1,
                 "answer": "I'll consider my partner's viewpoint.",
                 "ansType": "Positive"
             },
             {
+                "id": 2,
                 "answer": "I'll talk it over with my partner so they can see my point of view.",
                 "ansType": "Negative"
             },
             {
+                "id": 3,
                 "answer": "I do not like any interruption in my career options",
                 "ansType": "Neutral"
             }
@@ -86,14 +98,17 @@
         "question": "What would you do if the distance between you and your companion grows and you do not consider them to be the best or first person to talk in any circumstance?",
         "options": [
             {
+                "id": 1,
                 "answer": "Communication is the key.",
                 "ansType": "Positive"
             },
             {
+                "id": 2,
                 "answer": "I think this is the moment where we need to drop this relation.",
                 "ansType": "Negative"
             },
             {
+                "id": 3,
                 "answer": "Need to plan few things to spice up our relation.",
                 "ansType": "Neutral"
             }
@@ -106,14 +121,17 @@
         "question": "How often do you want your partner to call you during the day?",
         "options": [
             {
+                "id": 1,
                 "answer": "I expect my partner to update me about his daily routine, whenever the person gets that time.",
                 "ansType": "Positive"
             },
             {
+                "id": 2,
                 "answer": "Every hour, or once in two hours.Binding with a time frame.",
                 "ansType": "Negative"
             },
             {
+                "id": 3,
                 "answer": "That's okay even if my partner is not frequent.",
                 "ansType": "Neutral"
             }
@@ -126,14 +144,17 @@
         "question": "Both partners are under pressure at work,How will you prioritise one another's needs while nurturing both personal and professional growth?",
         "options": [
             {
+                "id": 1,
                 "answer": "will definitely help in each other work to decrease the load and develop more synchronization.",
                 "ansType": "Positive"
             },
             {
+                "id": 2,
                 "answer": "we will spend quality time even if it is small.",
                 "ansType": "Negative"
             },
             {
+                "id": 3,
                 "answer": "practice active listening and set healthy boundaries.",
                 "ansType": "Neutral"
             }
@@ -146,14 +167,17 @@
         "question": "Is it important to you that both partners handle their time well?",
         "options": [
             {
+                "id": 1,
                 "answer": "It's really an important factor !",
                 "ansType": "Positive"
             },
             {
+                "id": 2,
                 "answer": "I want him to be more diverted into this for our future.",
                 "ansType": "Negative"
             },
             {
+                "id": 3,
                 "answer": "I am okay with the time he is giving me.",
                 "ansType": "Neutral"
             }
@@ -166,14 +190,17 @@
         "question": "Would you rather talk it out with me so I can help you feel better, or would you prefer to be left alone to recover from a difficult day?",
         "options": [
             {
+                "id": 1,
                 "answer": "like to be left alone",
                 "ansType": "Positive"
             },
             {
+                "id": 2,
                 "answer": "prefer to talk about it.",
                 "ansType": "Negative"
             },
             {
+                "id": 3,
                 "answer": "In such scenario, I'll be satisfied with anything my partner does to make me happy.",
                 "ansType": "Neutral"
             }
@@ -186,14 +213,17 @@
         "question": "Which would you choose if you had to make a choice between living with your lover and living with your parents?",
         "options": [
             {
+                "id": 1,
                 "answer": "Parents",
                 "ansType": "Positive"
             },
             {
+                "id": 2,
                 "answer": "Patner",
                 "ansType": "Negative"
             },
             {
+                "id": 3,
                 "answer": "I wish this situation never arrive ",
                 "ansType": "Neutral"
             }

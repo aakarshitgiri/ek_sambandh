@@ -5,6 +5,23 @@
     margin: 1em;
     text-align: -webkit-center;
 
+
+    @include phone-landscape {
+        padding: 0em;
+    }
+
+    @include small-phone-landscape {
+        padding: 0em;
+    }
+
+    @include phone-portrait {
+        padding: 0em;
+    }
+
+    @include small-phone-portrait {
+        padding: 0em;
+    }
+
     .signup-box {
         padding: 2em;
         background-color: #fff;
@@ -18,10 +35,12 @@
 
         @include phone-landscape {
             width: 100%;
+            padding: 1em;
         }
 
         @include small-phone-landscape {
             width: 100%;
+            padding: 1em;
         }
 
         @include tablet-portrait {
@@ -30,10 +49,12 @@
 
         @include phone-portrait {
             width: 100%;
+            padding: 1em;
         }
 
         @include small-phone-portrait {
             width: 100%;
+            padding: 1em;
         }
 
         .signup-form {

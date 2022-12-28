@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
-import { ToastType } from 'src/app/models/notification-model';
-import { UrlCollection } from 'src/app/models/urlcollection';
-import { ApiEkSambandhService } from 'src/app/services/api-ek-sambandh.service';
-import { DataStorageService } from 'src/app/services/data-storage.service';
-import { NotificationService } from 'src/app/services/notifications.service';
+import { ToastType } from '../../models/notification-model';
+import { UrlCollection } from '../../models/urlcollection';
+import { ApiEkSambandhService } from '../../services/api-ek-sambandh.service';
+import { DataStorageService } from '../../services/data-storage.service';
+import { NotificationService } from '../../services/notifications.service';
 
 @Component({
   selector: 'app-set-password',

@@ -93,22 +93,22 @@
                     animation: zoom-in-zoom-out 6s ease-out infinite;
 
                     @include phone-landscape {
-                        width: 30em;
+                        width: 20em;
                         margin-top: 3em;
                     }
 
                     @include small-phone-landscape {
-                        width: 22em;
+                        width: 18em;
                         margin-top: 3em;
                     }
 
                     @include phone-portrait {
-                        width: 24em;
+                        width: 19em;
                         margin-top: 3em;
                     }
 
                     @include small-phone-portrait {
-                        width: 20em;
+                        width: 17em;
                         margin-top: 3em;
                     }
                 }
@@ -205,6 +205,22 @@
                         font-weight: bold;
                         text-align: center;
                         color: #ab1e43;
+
+                        @include phone-landscape {
+                            font-size: 2em;
+                        }
+
+                        @include small-phone-landscape {
+                            font-size: 2em;
+                        }
+
+                        @include phone-portrait {
+                            font-size: 2em;
+                        }
+
+                        @include small-phone-portrait {
+                            font-size: 2em;
+                        }
                     }
                 }
 
@@ -240,6 +256,18 @@
                             border: none;
                             box-shadow: 0 0 10px rgb(146, 140, 140);
 
+                            @include phone-landscape {
+                                width: 92%;
+                            }
+
+                            @include small-phone-landscape {
+                                width: 90%;
+                            }
+
+                            @include phone-portrait {
+                                width: 92%;
+                            }
+
                             @include small-phone-portrait {
                                 width: 90%;
                             }
@@ -269,6 +297,18 @@
                             width: 17em;
                             cursor: pointer;
 
+                            @include phone-landscape {
+                                width: 90%;
+                            }
+
+                            @include small-phone-landscape {
+                                width: 90%;
+                            }
+
+                            @include phone-portrait {
+                                width: 90%;
+                            }
+
                             @include small-phone-portrait {
                                 width: 90%;
                             }
@@ -294,6 +334,18 @@
                             letter-spacing: 0.08em;
                             font-weight: 600;
                             margin: 5px 0px;
+
+                            @include phone-landscape {
+                                width: 90%;
+                            }
+
+                            @include small-phone-landscape {
+                                width: 90%;
+                            }
+
+                            @include phone-portrait {
+                                width: 90%;
+                            }
 
                             @include small-phone-portrait {
                                 width: 90%;

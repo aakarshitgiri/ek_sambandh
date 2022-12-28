@@ -1,23 +1,28 @@
-import { AfterViewInit, ChangeDetectorRef, Component, OnInit } from '@angular/core';
+import { AfterViewInit, ChangeDetectorRef, Component, OnChanges, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { PrimeNGConfig } from 'primeng/api';
-import { ToastType } from 'src/app/models/notification-model';
-import { ApiEkSambandhService } from 'src/app/services/api-ek-sambandh.service';
+import { ToastType } from '../../models/notification-model';
+import { ApiEkSambandhService } from '../../services/api-ek-sambandh.service';
 import { DataStorageService } from '../../services/data-storage.service';
-import { NotificationService } from 'src/app/services/notifications.service';
+import { NotificationService } from '../../services/notifications.service';
 
 @Component({
   selector: 'app-footer',
   templateUrl: './footer.component.html',
   styleUrls: ['./footer.component.scss']
 })
-export class FooterComponent implements OnInit {
-
-  helpSupport: FormGroup;
+export class FooterComponent implements OnInit, AfterViewInit {
+  disclaimerModal: boolean = false;
   helpModal: boolean = false;
   userData: any;
   isUser: boolean = false;
   submit: boolean = false;
+  helpSupport: FormGroup = this.formBuilder.group({
+    fullname: new FormControl('', [Validators.required]),
+    email: new FormControl('', [Validators.required]),
+    contact: new FormControl('', [Validators.required]),
+    reason: new FormControl('', [Validators.required])
+  });
   constructor(
     private primengConfig: PrimeNGConfig,
     private formBuilder: FormBuilder,
@@ -25,8 +30,10 @@ export class FooterComponent implements OnInit {
     private datastorge: DataStorageService,
     private notificationservice: NotificationService
   ) {
+
     this.datastorge.currentUser.subscribe(data => {
       this.userData = data;
+
       if (this.userData?._id) {
         this.helpSupport.controls['fullname'].setValue(this.userData.fullname);
         this.helpSupport.controls['email'].setValue(this.userData.email);
@@ -39,20 +46,19 @@ export class FooterComponent implements OnInit {
         this.isUser = false;
       }
     });
-
   }
 
   ngOnInit() {
 
 
     this.primengConfig.ripple = true;
-    this.helpSupport = this.formBuilder.group({
-      fullname: new FormControl('', [Validators.required]),
-      email: new FormControl('', [Validators.required]),
-      contact: new FormControl('', [Validators.required]),
-      reason: new FormControl('', [Validators.required])
-    });
 
+
+
+
+  }
+
+  ngAfterViewInit() {
 
 
   }

@@ -13,7 +13,7 @@
                     <div *ngFor="let answers of questions.options">
                         <div class="btns">
                             <p-radioButton name="{{questions.name}}" value="{{answers.ansType}}"
-                                [label]="answers.answer" inputId="{{questions.name}}"
+                                [label]="answers.answer" inputId="{{questions.name+answers.id}}"
                                 [formControlName]="questions.name"></p-radioButton>
                         </div>
                     </div>

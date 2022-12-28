@@ -31,4 +31,33 @@
     .p-toast .p-toast-message.p-toast-message-info .p-toast-icon-close {
         color: #ab1e43;
     }
+
+    .p-dialog[pr_id_2],
+    .p-dialog[pr_id_5],
+    .p-dialog[pr_id_4],
+    .p-dialog[pr_id_3],
+    .p-dialog[pr_id_1],
+    .p-dialog[pr_id_6],
+    .p-dialog[pr_id_7],
+    .p-dialog[pr_id_8],
+    .p-dialog[pr_id_9],
+    .p-dialog[pr_id_10] {
+
+        @include phone-landscape {
+            width: 94% !important;
+        }
+
+        @include small-phone-landscape {
+            width: 94% !important;
+        }
+
+        @include phone-portrait {
+            width: 94% !important;
+        }
+
+        @include small-phone-portrait {
+            width: 94% !important;
+        }
+
+    }
 }

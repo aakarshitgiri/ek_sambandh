@@ -16,8 +16,11 @@
 
         </div>
         <div class="table-relationship">
-            <p-table #dt [value]="payment" [responsive]="true" responsiveLayout="scroll" [paginator]="true" [rows]="10"
-                [responsive]="true" [globalFilterFields]="['id','relationshipID', 'date', 'amount', 'status']">
+            <p-table #dt [value]="payment" [responsive]="true" responsiveLayout="scroll" [paginator]="true"
+                [responsive]="true" [tableStyle]="{'min-width': '70rem'}" [showCurrentPageReport]="true" [rows]="10"
+                currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries"
+                [rowsPerPageOptions]="[10,25,50]"
+                [globalFilterFields]="['id','relationshipID', 'date', 'amount', 'status']">
                 <ng-template pTemplate="header">
                     <tr>
                         <th>Transaction ID</th>

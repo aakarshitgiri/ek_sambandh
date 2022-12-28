@@ -18,16 +18,16 @@ export class HomeComponent implements OnInit {
   activeState: boolean[] = [true, false, false];
   team: any[] = [
     {
-      'name': 'Rohit Kapoor', 'about': "Entrepreneur with a successful track record in the e-learning industry. Strong suits include command of Microsoft Word, communication, presentation, and team-building techniques. Strong business development professional with an M.com(H) in Accounting and Finance from the business school at Punjab University. Founder of Commerce Vidya (embedded technology in education), YouTuber, career coach, and educator."
+      'name': 'Rohit Kapoor', 'about': "Entrepreneur with a successful track record in the e-learning industry. Founder of Commerce Vidya (embedded technology in education), YouTuber, career coach, and educator."
     },
     {
-      'name': 'Yamini Singh (Engineer)', 'about': "Skills in Business Development, Revenue Forecasting, Project Strategy, Business Planning, Sales Administration, Operational Excellence, Business Growth Expansion, Sales & Marketing Operations, Command in MS Office, Google sheets, Sales Forecaster"
+      'name': 'Yamini Singh (Engineer)', 'about': "Skills in Business Development, Revenue Forecasting, Project Strategy, Operational Excellence, Sales & Marketing Operations."
     },
     {
-      'name': 'Vishesh Singh (Engineer)', 'about': "Possess strong presentation, communication, customer relationship management, and negotiation skills. Skilled in Generating new business with marketing initiatives and strategic plans. Strategizing and planning."
+      'name': 'Vishesh Singh (Engineer)', 'about': "Possess strong presentation, communication, customer relationship management. Skilled in Generating new business with marketing initiatives and strategic plans."
     },
     {
-      'name': 'Shubham Bhatia M.com(Hons.)', 'about': "Accounting and Finance. A working professional with commercial, branding, accounting, and investment banking expertise. Aside from my employment, I have a strong desire to play cricket. He has an easy time communicating effectively and learning new things."
+      'name': 'Shubham Bhatia M.com(Hons.)', 'about': "Accounting and Finance. A working professional with commercial, branding, accounting, and investment banking expertise."
     }
   ]
   userData: any;

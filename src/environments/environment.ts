@@ -5,7 +5,7 @@
 export const environment = {
   production: false,
   apiUrl: {
-    ekSambandhUrl: 'https://api.eksambandh.in/api'
+    ekSambandhUrl: 'http://localhost:5000/api'
   },
 };
 

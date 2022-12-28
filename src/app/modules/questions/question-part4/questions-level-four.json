@@ -6,14 +6,17 @@
         "question": "Do you prefer an urban or rural setting to raise your family?",
         "options": [
             {
+                "id": 1,
                 "answer": "Urban living: safe ,affordable,mix of nationalities and get along and work together",
                 "ansType": "Positive"
             },
             {
+                "id": 2,
                 "answer": "Rural Life: Fresh air and food, physical activities(Farming, animal rearing), Free from the hustle",
                 "ansType": "Negative"
             },
             {
+                "id": 3,
                 "answer": "I would love to experience both",
                 "ansType": "Neutral"
             }
@@ -26,14 +29,17 @@
         "question": "How you will rate your partner's decision-making skills?",
         "options": [
             {
+                "id": 1,
                 "answer": "I always support my partner's choices",
                 "ansType": "Positive"
             },
             {
+                "id": 2,
                 "answer": "it is good but sometimes we are just stuck while making any decision",
                 "ansType": "Negative"
             },
             {
+                "id": 3,
                 "answer": "we both talk and undersatnd each other's priority and make decisions accordingly",
                 "ansType": "Neutral"
             }
@@ -46,14 +52,17 @@
         "question": "How willing are you to balance and make an effort to win over your partner?",
         "options": [
             {
+                "id": 1,
                 "answer": "We should Accept Disagreement  and respect each other's privacy",
                 "ansType": "Positive"
             },
             {
+                "id": 2,
                 "answer": "Commit but don't compromise",
                 "ansType": "Negative"
             },
             {
+                "id": 3,
                 "answer": "Relationship with no set bar, go with the flow",
                 "ansType": "Neutral"
             }
@@ -66,14 +75,17 @@
         "question": "Do you think you are spending enough Quality time with your partner",
         "options": [
             {
+                "id": 1,
                 "answer": "Yes",
                 "ansType": "Positive"
             },
             {
+                "id": 2,
                 "answer": "No",
                 "ansType": "Negative"
             },
             {
+                "id": 3,
                 "answer": "Neutral",
                 "ansType": "Neutral"
             }
@@ -86,14 +98,17 @@
         "question": "Do you partner shows emotional availability and maturity",
         "options": [
             {
+                "id": 1,
                 "answer": "Yes",
                 "ansType": "Positive"
             },
             {
+                "id": 2,
                 "answer": "No",
                 "ansType": "Negative"
             },
             {
+                "id": 3,
                 "answer": "Neutral",
                 "ansType": "Neutral"
             }
@@ -106,14 +121,17 @@
         "question": "Do you think couples finance should be together or separate?",
         "options": [
             {
+                "id": 1,
                 "answer": "Yes",
                 "ansType": "Positive"
             },
             {
+                "id": 2,
                 "answer": "No",
                 "ansType": "Negative"
             },
             {
+                "id": 3,
                 "answer": "Your funds are mine, and vice versa.",
                 "ansType": "Neutral"
             }
@@ -126,15 +144,18 @@
         "question": "Where do you believe you must go on holiday and travel?",
         "options": [
             {
-                "answer": "../../../../assets/images/answers/question37/img1.jpg",
+                "id": 1,
+                "answer": "../../../../assets/images/answers/question37/img1.webp",
                 "ansType": "img1"
             },
             {
-                "answer": "../../../../assets/images/answers/question37/img2.jpg",
+                "id": 2,
+                "answer": "../../../../assets/images/answers/question37/img2.webp",
                 "ansType": "img2"
             },
             {
-                "answer": "../../../../assets/images/answers/question37/img3.jpg",
+                "id": 3,
+                "answer": "../../../../assets/images/answers/question37/img3.webp",
                 "ansType": "img3"
             }
         ]
@@ -146,15 +167,18 @@
         "question": "What kind of cuisine do you prefer?",
         "options": [
             {
-                "answer": "../../../../assets/images/answers/question38/img1.jpg",
+                "id": 1,
+                "answer": "../../../../assets/images/answers/question38/img1.webp",
                 "ansType": "img1"
             },
             {
-                "answer": "../../../../assets/images/answers/question38/img2.jpg",
+                "id": 2,
+                "answer": "../../../../assets/images/answers/question38/img2.webp",
                 "ansType": "img2"
             },
             {
-                "answer": "../../../../assets/images/answers/question38/img3.jpg",
+                "id": 3,
+                "answer": "../../../../assets/images/answers/question38/img3.webp",
                 "ansType": "img3"
             }
         ]
@@ -166,19 +190,19 @@
         "question": "Do you have a pet that you adore?",
         "options": [
             {
-                "answer": "../../../../assets/images/answers/question39/img1.jpg",
-                "ansType": "img1",
-                "title": "Go with the flow and get married"
+                "id": 1,
+                "answer": "../../../../assets/images/answers/question39/img1.webp",
+                "ansType": "img1"
             },
             {
-                "answer": "../../../../assets/images/answers/question39/img2.jpg",
-                "ansType": "img2",
-                "title": "Friendship"
+                "id": 2,
+                "answer": "../../../../assets/images/answers/question39/img2.webp",
+                "ansType": "img2"
             },
             {
-                "answer": "../../../../assets/images/answers/question39/img3.jpg",
-                "ansType": "img3",
-                "title": "It’s complicated to answer this"
+                "id": 3,
+                "answer": "../../../../assets/images/answers/question39/img3.webp",
+                "ansType": "img3"
             }
         ]
     },
@@ -189,16 +213,22 @@
         "question": "What type of connection do you prefer?",
         "options": [
             {
-                "answer": "../../../../assets/images/answers/question40/img1.jpg",
-                "ansType": "img1"
+                "id": 1,
+                "answer": "../../../../assets/images/answers/question40/img1.webp",
+                "ansType": "img1",
+                "title": "It’s complicated to answer this"
             },
             {
-                "answer": "../../../../assets/images/answers/question40/img2.jpg",
-                "ansType": "img2"
+                "id": 2,
+                "answer": "../../../../assets/images/answers/question40/img2.webp",
+                "ansType": "img2",
+                "title": "Friendship"
             },
             {
-                "answer": "../../../../assets/images/answers/question40/img3.jpg",
-                "ansType": "img3"
+                "id": 3,
+                "answer": "../../../../assets/images/answers/question40/img3.webp",
+                "ansType": "img3",
+                "title": "Go with the flow and get married"
             }
         ]
     },
@@ -209,15 +239,18 @@
         "question": "What kind of house you'd love to build together as your dream home?",
         "options": [
             {
-                "answer": "../../../../assets/images/answers/question41/img1.jpg",
+                "id": 1,
+                "answer": "../../../../assets/images/answers/question41/img1.webp",
                 "ansType": "img1"
             },
             {
-                "answer": "../../../../assets/images/answers/question41/img2.jpg",
+                "id": 2,
+                "answer": "../../../../assets/images/answers/question41/img2.webp",
                 "ansType": "img2"
             },
             {
-                "answer": "../../../../assets/images/answers/question41/img3.jpg",
+                "id": 3,
+                "answer": "../../../../assets/images/answers/question41/img3.webp",
                 "ansType": "img3"
             }
         ]
@@ -229,15 +262,18 @@
         "question": "What do you prefer to engage in when you are hanging out with your companion?",
         "options": [
             {
-                "answer": "../../../../assets/images/answers/question42/img1.jpg",
+                "id": 1,
+                "answer": "../../../../assets/images/answers/question42/img1.webp",
                 "ansType": "img1"
             },
             {
-                "answer": "../../../../assets/images/answers/question42/img2.jpg",
+                "id": 2,
+                "answer": "../../../../assets/images/answers/question42/img2.webp",
                 "ansType": "img2"
             },
             {
-                "answer": "../../../../assets/images/answers/question42/img3.jpg",
+                "id": 3,
+                "answer": "../../../../assets/images/answers/question42/img3.webp",
                 "ansType": "img3"
             }
         ]

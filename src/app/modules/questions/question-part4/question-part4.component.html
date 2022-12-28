@@ -12,16 +12,17 @@
                     <div *ngFor="let answers of questions.options">
                         <div class="btns" *ngIf="questions.type !== 'img'">
                             <p-radioButton name="{{questions.name}}" value="{{answers.ansType}}"
-                                [label]="answers.answer" inputId="{{questions.name}}"
+                                [label]="answers.answer" inputId="{{questions.name+answers.id}}"
                                 [formControlName]="questions.name"></p-radioButton>
                         </div>
                         <div class="img-answers" *ngIf="questions.type === 'img'">
                             <p-radioButton name="{{questions.name}}" value="{{answers.ansType}}"
-                                inputId="{{questions.name}}" [formControlName]="questions.name"
+                                inputId="{{questions.name+answers.id}}" [formControlName]="questions.name"
                                 (onClick)="save()"></p-radioButton>
                             <div class="img">
                                 <label for="{{questions.name}}" *ngIf="answers?.title">{{answers?.title}}</label>
-                                <img [src]="answers.answer" alt="">
+                                <label for="{{questions.name+answers.id}}"><img [src]="answers.answer"
+                                        alt="{{answers.answer}}"></label>
                             </div>
                         </div>
                     </div>

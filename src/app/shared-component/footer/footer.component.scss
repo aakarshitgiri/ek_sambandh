@@ -11,64 +11,166 @@
     border-top: 1px solid #ab1e43;
 
 
-    /*  @include phone-landscape {
-        flex-direction: column;
+    @include phone-landscape {
+        flex-direction: column-reverse;
     }
 
     @include small-phone-landscape {
-        flex-direction: column;
+        flex-direction: column-reverse;
     }
 
     @include phone-portrait {
-        flex-direction: column;
+        flex-direction: column-reverse;
     }
 
     @include small-phone-portrait {
-        flex-direction: column;
-    } */
+        flex-direction: column-reverse;
+    }
 
     .left-items {
         display: flex;
         flex-direction: row;
-        justify-content: left;
 
         .footer-left {
-            display: table;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+
             margin: 0em 1em 0em 1rem;
 
-            .link {
-                font-size: $cr-font18;
-                font-family: $cr-font;
-                color: #ab1e43;
-                font-weight: bold;
-                margin: 0 1em;
-                display: table-cell;
-                vertical-align: middle;
-                cursor: pointer;
+            @include phone-landscape {
+                margin: 0em;
+                width: 100%;
+            }
 
+            @include small-phone-landscape {
+                margin: 0em;
+                width: 100%;
+            }
+
+            @include phone-portrait {
+                margin: 0em;
+                width: 100%;
+            }
+
+            @include small-phone-portrait {
+                margin: 0em;
+                width: 100%;
+            }
+
+            .left-flex {
                 @include phone-landscape {
-                    font-size: 0.8em;
+
+                    width: 50%;
+
+
                 }
 
                 @include small-phone-landscape {
-                    font-size: 0.8em;
+
+                    width: 50%;
+
                 }
 
                 @include phone-portrait {
-                    font-size: 0.8em;
+
+                    width: 50%;
+
                 }
 
                 @include small-phone-portrait {
-                    font-size: 0.8em;
+
+                    width: 50%;
                 }
 
+                .left {
+                    @include phone-landscape {
+                        text-align: left;
+                    }
+
+                    @include small-phone-landscape {
+                        text-align: left;
+                    }
+
+                    @include phone-portrait {
+                        text-align: left;
+                    }
+
+                    @include small-phone-portrait {
+                        text-align: left;
+                    }
+                }
+
+                .right {
+                    @include phone-landscape {
+                        text-align: right;
+                    }
+
+                    @include small-phone-landscape {
+                        text-align: right;
+                    }
+
+                    @include phone-portrait {
+                        text-align: right;
+                    }
+
+                    @include small-phone-portrait {
+                        text-align: right;
+                    }
+                }
+
+                .link {
+
+                    font-size: $cr-font16;
+                    font-family: $cr-font;
+                    color: #ab1e43;
+                    font-weight: bold;
+                    margin: 0 1em;
+                    cursor: pointer;
+                    padding: 0em 1em;
+
+
+                    @include phone-landscape {
+                        width: 100%;
+                        padding: 0.4em 0em;
+                        margin: 0em;
+                    }
+
+                    @include small-phone-landscape {
+
+                        width: 100%;
+                        padding: 0.4em 0em;
+                        margin: 0em;
+                    }
+
+                    @include phone-portrait {
+
+                        width: 100%;
+                        padding: 0.4em 0em;
+                        margin: 0em;
+                    }
+
+                    @include small-phone-portrait {
+
+                        width: 100%;
+                        padding: 0.4em 0em;
+                        margin: 0em;
+                    }
+
+                    a {
+                        text-decoration: none;
+                        color: #ab1e43;
+                    }
+
+                }
+
+                .link:hover {
+                    padding-bottom: 2px;
+                    border-bottom: 2px solid #cc1344;
+                    color: #cc1344;
+                }
             }
 
-            .link:hover {
-                padding-bottom: 2px;
-                border-bottom: 2px solid #cc1344;
-                color: #cc1344;
-            }
         }
     }
 
@@ -78,18 +180,22 @@
 
         @include phone-landscape {
             flex-direction: column;
+            padding-top: 1em;
         }
 
         @include small-phone-landscape {
             flex-direction: column;
+            padding-top: 1em;
         }
 
         @include phone-portrait {
             flex-direction: column;
+            padding-top: 1em;
         }
 
         @include small-phone-portrait {
             flex-direction: column;
+            padding-top: 1em;
         }
 
         .table {
@@ -391,6 +497,8 @@
             flex-direction: column-reverse;
         }
     }
+
+
 
     .p-dialog .p-dialog-header .p-dialog-title {
         @include phone-landscape {

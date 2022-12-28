@@ -1,44 +1,29 @@
 [
     {
         "index": 1,
-        "name": "questions2",
-        "question": "Who will resolve a dispute first?",
+        "name": "questions13",
+        "type": "text",
+        "question": "Do you believe the expenditures should be shared by a couple?",
         "options": [
             {
-                "answer": "Myself",
+                "id": 1,
+                "answer": "No, I believe that individuals should be responsible.",
+                "ansType": "Neutral"
+            },
+            {
+                "id": 2,
+                "answer": "Yes, this make us equal in relation.",
                 "ansType": "Positive"
             },
             {
-                "answer": "My Partner",
+                "id": 3,
+                "answer": "No, It's fine",
                 "ansType": "Negative"
-            },
-            {
-                "answer": "Ignore the argument and move on.",
-                "ansType": "Neutral"
             }
         ]
     },
     {
         "index": 2,
-        "name": "questions3",
-        "question": "Would you sacrifice your happiness in order for the relationship to succeed?",
-        "options": [
-            {
-                "answer": "Both are different, hence we cannot compare the two situations.",
-                "ansType": "Neutral"
-            },
-            {
-                "answer": "Undoubtedly, yes",
-                "ansType": "Positive"
-            },
-            {
-                "answer": "Absolutely not",
-                "ansType": "Negative"
-            }
-        ]
-    },
-    {
-        "index": 3,
         "name": "questions7",
         "question": "How comfortable are you sharing things with your partner?",
         "options": [
@@ -57,21 +42,48 @@
         ]
     },
     {
-        "index": 4,
-        "name": "questions3",
-        "question": "Would you sacrifice your happiness in order for the relationship to succeed?",
+        "index": 3,
+        "name": "questions15",
+        "type": "text",
+        "question": "Is it really necessary to know everything from your partner’s previous relationships?",
         "options": [
             {
-                "answer": "Both are different, hence we cannot compare the two situations.",
+                "id": 1,
+                "answer": "I want to know,so even if something comes up in our future I am aware of that.",
                 "ansType": "Neutral"
             },
             {
-                "answer": "Undoubtedly, yes",
+                "id": 2,
+                "answer": "No,I am okay with not knowing my partner's past.",
                 "ansType": "Positive"
             },
             {
-                "answer": "Absolutely not",
+                "id": 3,
+                "answer": "I want to know what was it like.",
                 "ansType": "Negative"
+            }
+        ]
+    },
+    {
+        "index": 4,
+        "name": "questions21",
+        "type": "text",
+        "question": "How comfortable are you discussing personal matters with your partner?",
+        "options": [
+            {
+                "id": 1,
+                "answer": "Yes, I feel safe while discussing.",
+                "ansType": "Positive"
+            },
+            {
+                "id": 2,
+                "answer": "I believe this might cause conflict.",
+                "ansType": "Negative"
+            },
+            {
+                "id": 3,
+                "answer": "I think we both have a life and we both have the rights whether to discuss or not.",
+                "ansType": "Neutral"
             }
         ]
     },

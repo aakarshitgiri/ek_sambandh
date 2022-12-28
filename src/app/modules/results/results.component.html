@@ -10,7 +10,7 @@
         </div>
 
         <div class="result">
-            <img class="demo-bg" src="../../../assets/images/bg-result.jpg" alt="">
+            <img class="demo-bg" src="../../../assets/images/bg-result.jpg" alt="bg">
             <div class="title">
                 <div class="text right">
                     <h1>{{user}}</h1>
@@ -28,18 +28,16 @@
             <div class="flex-box">
                 <div class="box">
                     <div class="results-scores-title">
-                        Love Score
+                        Compatability Score
                     </div>
                     <div class="result-scores">
                         <h1 *ngIf="showValue">{{(makeAbsolute(apiResult?.score) | number:'1.0-0') + '%'}}</h1>
                     </div>
                 </div>
                 <div class="message">
-                    <p>{{apiResult?.message1}}</p>
-                    <p>{{apiResult?.message2}}</p>
+                    <p>{{apiResult?.message}}</p>
                 </div>
             </div>
-
         </div>
     </div>
 </div>
@@ -47,7 +45,7 @@
 <div class="hidebox" style=" position: fixed; width: 120em; opacity: 0;">
     <div id="results" #results class="result-img">
         <img style=" opacity: 0.2; position: absolute;  left: 0; top: 0; width: 100%; height: auto; z-index: -1;"
-            src="../../../assets/images/bg-result.jpg" alt="">
+            src="../../../assets/images/bg-result.jpg" alt="bg">
         <div class="box">
             <div id="results" #results class="result">
                 <div class="title">
@@ -67,15 +65,22 @@
                 <div class="flex-box2" style="z-index: 1;">
                     <div class="box" style="width: 50%;">
                         <div class="results-scores-title" style="z-index: 1;">
-                            Love Score
+                            Compatability Score
                         </div>
                         <div class="result-scores" style="z-index: 1;">
                             <h1>{{(makeAbsolute(apiResult?.score) | number:'1.0-0') + '%'}}</h1>
                         </div>
                     </div>
-                    <div class="message" style="width: 50%; padding-top: 2em; z-index: 1;">
-                        <p style="z-index: 1;">{{apiResult?.message1}}</p>
-                        <p style="z-index: 1;">{{apiResult?.message2}}</p>
+                    <div class="message" style="width: 50%; padding-top: 3em; z-index: 1;">
+                        <p style="z-index: 1;">{{apiResult?.message}}</p>
+                    </div>
+                </div>
+                <div style="  display: flex; justify-content: space-between;">
+                    <div class="left">
+                        <img style="width: 15em;" src="../../../assets/images/logo-2.png" alt="logo">
+                    </div>
+                    <div class="right font">
+                        for more information visit: <a>wwww.eksambandh.in</a>
                     </div>
                 </div>
             </div>
@@ -85,6 +90,6 @@
 </div>
 
 <div id="download" style="display: none;">
-    <img #canvas>
+    <img #canvas alt="img">
     <a #downloadLink></a>
 </div>

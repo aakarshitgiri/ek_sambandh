@@ -6,14 +6,17 @@
         "question": "What steps do you take to manage stress?",
         "options": [
             {
+                "id": 1,
                 "answer": "I need some time alone",
                 "ansType": "Negative"
             },
             {
+                "id": 2,
                 "answer": "I will talk to my partner about it",
                 "ansType": "Positive"
             },
             {
+                "id": 3,
                 "answer": "I'll not let my stress to take over my happiness",
                 "ansType": "Neutral"
             }
@@ -26,14 +29,17 @@
         "question": "Who will resolve a dispute first?",
         "options": [
             {
+                "id": 1,
                 "answer": "Myself",
                 "ansType": "Positive"
             },
             {
+                "id": 2,
                 "answer": "My Partner",
                 "ansType": "Negative"
             },
             {
+                "id": 3,
                 "answer": "Ignore the argument and move on.",
                 "ansType": "Neutral"
             }
@@ -46,14 +52,17 @@
         "question": "Would you sacrifice your happiness in order for the relationship to succeed?",
         "options": [
             {
+                "id": 1,
                 "answer": "Both are different, hence we cannot compare the two situations.",
                 "ansType": "Neutral"
             },
             {
+                "id": 2,
                 "answer": "Undoubtedly, yes",
                 "ansType": "Positive"
             },
             {
+                "id": 3,
                 "answer": "Absolutely not",
                 "ansType": "Negative"
             }
@@ -66,14 +75,17 @@
         "question": "If you are an attention seeker and if you are not getting it, how it will impact your relationship?",
         "options": [
             {
+                "id": 1,
                 "answer": "I will accept this fact that my partner is not giving me attention and i will not expect it again",
                 "ansType": "Negative"
             },
             {
-                "answer": "I'm annoyed by this, and I need my partner to know that I want his complete attention.",
+                "id": 2,
+                "answer": "I’ll start seeking options outside of the relationship",
                 "ansType": "Positive"
             },
             {
+                "id": 3,
                 "answer": "I don't seek attention.",
                 "ansType": "Neutral"
             }
@@ -86,14 +98,17 @@
         "question": "Which of these characteristics would you find most attractive in a potential partner?",
         "options": [
             {
+                "id": 1,
                 "answer": "Fitnees freak",
                 "ansType": "Neutral"
             },
             {
+                "id": 2,
                 "answer": "Financial stability",
                 "ansType": "Positive"
             },
             {
+                "id": 3,
                 "answer": "willingness to take risks",
                 "ansType": "Negative"
             }
@@ -106,14 +121,17 @@
         "question": "Do you refuse to apologise when you are wrong because of your ego?",
         "options": [
             {
+                "id": 1,
                 "answer": "Yes",
                 "ansType": "Positive"
             },
             {
+                "id": 2,
                 "answer": "I will ask my partner to switch the shoes and try to rethink the situation again",
                 "ansType": "Neutral"
             },
             {
+                "id": 3,
                 "answer": "No",
                 "ansType": "Negative"
             }
@@ -126,14 +144,17 @@
         "question": "How comfortable are you sharing things with your partner?",
         "options": [
             {
+                "id": 1,
                 "answer": "I believe he is my closest friend and secret keeper.",
                 "ansType": "Positive"
             },
             {
+                "id": 2,
                 "answer": " I believe it is best to hide few things.",
                 "ansType": "Negative"
             },
             {
+                "id": 3,
                 "answer": "I don't believe this is really comfy for me.",
                 "ansType": "Neutral"
             }
@@ -146,14 +167,17 @@
         "question": "What emotions do you experience with your partner?",
         "options": [
             {
+                "id": 1,
                 "answer": "There are somdays when i love my relationship and there are somedays when i don't feel it that way",
                 "ansType": "Negative"
             },
             {
+                "id": 2,
                 "answer": "I love my partner's company 'apple of my eye'",
                 "ansType": "Positive"
             },
             {
+                "id": 3,
                 "answer": "It is routine and easygoing.",
                 "ansType": "Neutral"
             }
@@ -166,14 +190,17 @@
         "question": "How would you react if you discovered something wrong with your partner?",
         "options": [
             {
+                "id": 1,
                 "answer": "I will leave my partner",
                 "ansType": "Negative"
             },
             {
+                "id": 2,
                 "answer": "If my partner is accepting the mistake i will give them another chance (Human is a mannequin of mistakes)",
                 "ansType": "Neutral"
             },
             {
+                "id": 3,
                 "answer": "I will talk with my partner and understand their point of view",
                 "ansType": "Positive"
             }
@@ -186,14 +213,17 @@
         "question": "Do you talk to new people at social gatherings or stick with people you know?",
         "options": [
             {
+                "id": 1,
                 "answer": "I love to connect with people with different personality/I love to make new friend",
                 "ansType": "Positive"
             },
             {
+                "id": 2,
                 "answer": "I am Neutral, It depends on my mood ",
                 "ansType": "Neutral"
             },
             {
+                "id": 3,
                 "answer": "I stick with people I know ",
                 "ansType": "Negative"
             }

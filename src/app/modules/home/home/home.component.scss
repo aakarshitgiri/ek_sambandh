@@ -315,6 +315,27 @@
 
     padding: 1em;
 
+
+    @include phone-landscape {
+
+        padding: 0em 0em;
+    }
+
+    @include small-phone-landscape {
+
+        padding: 0em 0em;
+    }
+
+    @include phone-portrait {
+
+        padding: 0em 0em;
+    }
+
+    @include small-phone-portrait {
+
+        padding: 0em 0em;
+    }
+
     h1 {
         font-size: 2.5em;
         font-family: $cr-font;
@@ -324,20 +345,32 @@
         text-align: center;
         color: #ab1e43;
         padding: 2em 0em;
+
+        @include phone-landscape {
+            font-size: 2em;
+            padding: 0em 0em;
+        }
+
+        @include small-phone-landscape {
+            font-size: 2em;
+            padding: 0em 0em;
+        }
+
+        @include phone-portrait {
+            font-size: 2em;
+            padding: 0em 0em;
+        }
+
+        @include small-phone-portrait {
+            font-size: 2em;
+            padding: 0em 0em;
+        }
     }
 
     .flex {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-
-        @include desktop {
-            // font-size: 1.2em;
-        }
-
-        @include desktopMedium {
-            // font-size: 1.5em;
-        }
 
 
         @include tablet-landscape {
@@ -346,10 +379,12 @@
 
         @include phone-landscape {
             flex-direction: column;
+            margin: 3em 0em;
         }
 
         @include small-phone-landscape {
             flex-direction: column;
+            margin: 3em 0em;
         }
 
         @include tablet-portrait {
@@ -358,10 +393,12 @@
 
         @include phone-portrait {
             flex-direction: column;
+            margin: 3em 0em;
         }
 
         @include small-phone-portrait {
             flex-direction: column;
+            margin: 3em 0em;
         }
 
         .left {
@@ -564,11 +601,11 @@
                 }
 
                 @include phone-landscape {
-                    margin: 5em 1em 0em 1em;
+                    margin: 5em 1em 2em 1em;
                 }
 
                 @include small-phone-landscape {
-                    margin: 5em 1em 0em 1em;
+                    margin: 5em 1em 2em 1em;
                 }
 
                 @include tablet-portrait {
@@ -576,11 +613,11 @@
                 }
 
                 @include phone-portrait {
-                    margin: 5em 1em 0em 1em;
+                    margin: 5em 1em 2em 1em;
                 }
 
                 @include small-phone-portrait {
-                    margin: 5em 1em 0em 1em;
+                    margin: 5em 1em 2em 1em;
                 }
 
                 p {
@@ -641,6 +678,26 @@
     padding: 10px;
     border-radius: 10px;
     color: white;
+
+    @include phone-landscape {
+        font-size: 0.85em !important;
+        text-align: center !important;
+    }
+
+    @include small-phone-landscape {
+        font-size: 0.85em !important;
+        text-align: center !important;
+    }
+
+    @include phone-portrait {
+        font-size: 0.85em !important;
+        text-align: center !important;
+    }
+
+    @include small-phone-portrait {
+        font-size: 0.85em !important;
+        text-align: center !important;
+    }
 }
 
 .chip:hover {
@@ -684,6 +741,22 @@
         font-weight: bold;
         text-align: center;
         color: #ab1e43;
+
+        @include phone-landscape {
+            font-size: 2em;
+        }
+
+        @include small-phone-landscape {
+            font-size: 2em;
+        }
+
+        @include phone-portrait {
+            font-size: 2em;
+        }
+
+        @include small-phone-portrait {
+            font-size: 2em;
+        }
     }
 
     .section-title {
@@ -695,6 +768,23 @@
         text-align: center;
         color: #ab1e43;
         padding: 1em 0em;
+
+
+        @include phone-landscape {
+            font-size: 2em;
+        }
+
+        @include small-phone-landscape {
+            font-size: 2em;
+        }
+
+        @include phone-portrait {
+            font-size: 2em;
+        }
+
+        @include small-phone-portrait {
+            font-size: 2em;
+        }
     }
 
     .team-head {
@@ -743,6 +833,23 @@
             font-family: $cr-font;
             font-style: normal;
             letter-spacing: 0.08em;
+
+
+            @include phone-landscape {
+                font-size: 1.2em;
+            }
+
+            @include small-phone-landscape {
+                font-size: 1.2em;
+            }
+
+            @include phone-portrait {
+                font-size: 1.2em;
+            }
+
+            @include small-phone-portrait {
+                font-size: 1.2em;
+            }
         }
 
         p {
@@ -750,6 +857,23 @@
             font-family: $cr-font;
             font-style: normal;
             letter-spacing: 0.08em;
+
+
+            @include phone-landscape {
+                font-size: 0.85em;
+            }
+
+            @include small-phone-landscape {
+                font-size: 0.85em;
+            }
+
+            @include phone-portrait {
+                font-size: 0.85em;
+            }
+
+            @include small-phone-portrait {
+                font-size: 0.85em;
+            }
         }
 
     }
@@ -863,6 +987,26 @@
         text-align: center;
         color: #ab1e43;
         padding: 1em 0em;
+
+        @include phone-landscape {
+            padding: 0em 0em;
+            font-size: 2em;
+        }
+
+        @include small-phone-landscape {
+            padding: 0em 0em;
+            font-size: 2em;
+        }
+
+        @include phone-portrait {
+            padding: 0em 0em;
+            font-size: 2em;
+        }
+
+        @include small-phone-portrait {
+            padding: 0em 0em;
+            font-size: 2em;
+        }
     }
 }
 
@@ -900,6 +1044,22 @@
         font-family: $cr-font;
         font-style: normal;
         letter-spacing: 0.08em;
+
+        @include phone-landscape {
+            font-size: 0.85em;
+        }
+
+        @include small-phone-landscape {
+            font-size: 0.85em;
+        }
+
+        @include phone-portrait {
+            font-size: 0.85em;
+        }
+
+        @include small-phone-portrait {
+            font-size: 0.85em;
+        }
     }
 
 
@@ -909,6 +1069,22 @@
         font-family: $cr-font;
         font-style: normal;
         letter-spacing: 0.08em;
+
+        @include phone-landscape {
+            font-size: 0.85em;
+        }
+
+        @include small-phone-landscape {
+            font-size: 0.85em;
+        }
+
+        @include phone-portrait {
+            font-size: 0.85em;
+        }
+
+        @include small-phone-portrait {
+            font-size: 0.85em;
+        }
     }
 
     .p-accordion .p-accordion-header:not(.p-disabled) .p-accordion-header-link:focus {
@@ -920,6 +1096,23 @@
         font-family: $cr-font;
         font-style: normal;
         letter-spacing: 0.08em;
+
+
+        @include phone-landscape {
+            font-size: 0.85em;
+        }
+
+        @include small-phone-landscape {
+            font-size: 0.85em;
+        }
+
+        @include phone-portrait {
+            font-size: 0.85em;
+        }
+
+        @include small-phone-portrait {
+            font-size: 0.85em;
+        }
     }
 
 }

@@ -6,14 +6,17 @@
         "question": "Do you experience one of these phases in your relationship?",
         "options": [
             {
+                "id": 1,
                 "answer": "controlling behaviour is annoying you ",
                 "ansType": "Negative"
             },
             {
+                "id": 2,
                 "answer": "i think i am dreaming as i feel like i am on top of the world",
                 "ansType": "Positive"
             },
             {
+                "id": 3,
                 "answer": "Going with the flow",
                 "ansType": "Neutral"
             }
@@ -26,14 +29,17 @@
         "question": "Do you feel that long-distance relationships can survive?",
         "options": [
             {
+                "id": 1,
                 "answer": "Yes,I believe distance is not a concern",
                 "ansType": "Positive"
             },
             {
+                "id": 2,
                 "answer": "I have a bad past in this, So I don't believe",
                 "ansType": "Negative"
             },
             {
+                "id": 3,
                 "answer": "i think it can work but upto some extent(understanding should be there)",
                 "ansType": "Neutral"
             }
@@ -46,14 +52,17 @@
         "question": "Do you believe the expenditures should be shared by a couple?",
         "options": [
             {
+                "id": 1,
                 "answer": "No, I believe that individuals should be responsible.",
                 "ansType": "Neutral"
             },
             {
+                "id": 2,
                 "answer": "Yes, this make us equal in relation.",
                 "ansType": "Positive"
             },
             {
+                "id": 3,
                 "answer": "No, It's fine",
                 "ansType": "Negative"
             }
@@ -66,14 +75,17 @@
         "question": "Do they still possess the qualities that made you choose your partner?",
         "options": [
             {
+                "id": 1,
                 "answer": "Yes, my partner is still the same.",
                 "ansType": "Negative"
             },
             {
+                "id": 2,
                 "answer": "No,I think that started fading.",
                 "ansType": "Positive"
             },
             {
+                "id": 3,
                 "answer": "I don't think it at all.",
                 "ansType": "Neutral"
             }
@@ -86,14 +98,17 @@
         "question": "Is it really necessary to know everything from your partner’s previous relationships?",
         "options": [
             {
+                "id": 1,
                 "answer": "I want to know,so even if something comes up in our future I am aware of that.",
                 "ansType": "Neutral"
             },
             {
+                "id": 2,
                 "answer": "No,I am okay with not knowing my partner's past.",
                 "ansType": "Positive"
             },
             {
+                "id": 3,
                 "answer": "I want to know what was it like.",
                 "ansType": "Negative"
             }
@@ -106,14 +121,17 @@
         "question": "How do you feel when your partner has to leave you for some time because of work or study?",
         "options": [
             {
+                "id": 1,
                 "answer": "Although I will miss him, if he is working, I have no problems.",
                 "ansType": "Positive"
             },
             {
+                "id": 2,
                 "answer": "I dont care.",
                 "ansType": "Neutral"
             },
             {
+                "id": 3,
                 "answer": "No work, in my opinion, is more important than me.",
                 "ansType": "Negative"
             }
@@ -126,14 +144,17 @@
         "question": "Are you keeping any secrets that you’re afraid of letting your partner know?",
         "options": [
             {
+                "id": 1,
                 "answer": "No, my partner is fully aware of all the facts.",
                 "ansType": "Positive"
             },
             {
+                "id": 2,
                 "answer": "I believe that my lover won't understand, so I say yes.",
                 "ansType": "Negative"
             },
             {
+                "id": 3,
                 "answer": "Maybe because there isn't many things that need to be communicated.",
                 "ansType": "Neutral"
             }
@@ -146,14 +167,17 @@
         "question": "Do you think romantic gifts have to be memorable or do they have to be useful?",
         "options": [
             {
+                "id": 1,
                 "answer": "Memorable I think",
                 "ansType": "Negative"
             },
             {
+                "id": 2,
                 "answer": "It should be Useful",
                 "ansType": "Positive"
             },
             {
+                "id": 3,
                 "answer": "Not a big concern",
                 "ansType": "Neutral"
             }
@@ -166,14 +190,17 @@
         "question": "What is your reaction when your partner compares you with other people around ?",
         "options": [
             {
+                "id": 1,
                 "answer": "This disgusts me with the decisions I make.",
                 "ansType": "Negative"
             },
             {
+                "id": 2,
                 "answer": "Honestly, I don't care about this.",
                 "ansType": "Neutral"
             },
             {
+                "id": 3,
                 "answer": "In that case, I'll constantly try to get better.",
                 "ansType": "Positive"
             }
@@ -186,14 +213,17 @@
         "question": "How will you come up with your situation if your partner keeps mentioning the same topics during arguments?",
         "options": [
             {
+                "id": 1,
                 "answer": "sort out via conversation",
                 "ansType": "Positive"
             },
             {
+                "id": 2,
                 "answer": "will not react and ignore the situation",
                 "ansType": "Neutral"
             },
             {
+                "id": 3,
                 "answer": "apology to not repeat it again",
                 "ansType": "Negative"
             }

@@ -2,12 +2,12 @@ import { Component, OnInit, NgZone, AfterViewInit, ChangeDetectorRef } from '@an
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { PrimeNGConfig } from 'primeng/api';
-import { ToastType } from 'src/app/models/notification-model';
-import { UrlCollection } from 'src/app/models/urlcollection';
-import { ApiEkSambandhService } from 'src/app/services/api-ek-sambandh.service';
-import { DataStorageService } from 'src/app/services/data-storage.service';
-import { NotificationService } from 'src/app/services/notifications.service';
-import { WindowRef } from 'src/app/services/windows-ref';
+import { ToastType } from '../../models/notification-model';
+import { UrlCollection } from '../..//models/urlcollection';
+import { ApiEkSambandhService } from '../../services/api-ek-sambandh.service';
+import { DataStorageService } from '../../services/data-storage.service';
+import { NotificationService } from '../../services/notifications.service';
+import { WindowRef } from '../../services/windows-ref';
 import sampleQuestion from './sample-questions.json'
 
 
@@ -58,7 +58,7 @@ export class DashboardComponent implements OnInit, AfterViewInit {
     this.notificationservice.showLoader();
     this.primengConfig.ripple = true;
     this.options = {
-      "key": "rzp_test_Ey6vrOQSuNtqJM",
+      "key": "rzp_test_BZyewGi7ryMSEm",
       "name": 'Ek Sambandh',
       "description": 'Romantic Compatibility Test',
       "amount": 9900,
@@ -121,25 +121,12 @@ export class DashboardComponent implements OnInit, AfterViewInit {
     }
   }
 
+  takeTest(data: any) {
+    this.router.navigate([UrlCollection.LoveTest], { queryParams: { id: data.relationshipId } });
+  }
 
-  tableButton(data: any, id: string) {
-    if (data.relationshipStatus !== "Requested") {
-      if (data.feeStatus) {
-        if (data.userFormStatus) {
-          if (data.partnerFormStatus) {
-            this.router.navigate([UrlCollection.Result], { queryParams: { id: data.relationshipId, user: this.userData.fullname, partner: data.partner.fullname } });
-          } else {
-            this.remindsPartner(data);
-          }
-        } else {
-          this.router.navigate([UrlCollection.LoveTest], { queryParams: { id: data.relationshipId } });
-        }
-      } else {
-        this.payFees(data, id);
-      }
-    } else {
-      this.resentInvite(data);
-    }
+  viewResults(data: any) {
+    this.router.navigate([UrlCollection.Result], { queryParams: { id: data.relationshipId, user: this.userData.fullname, partner: data.partner.fullname } });
   }
 
 
@@ -164,7 +151,7 @@ export class DashboardComponent implements OnInit, AfterViewInit {
   payFees(data: any, id: string) {
     this.readableId = id
     this.relationshipId = data.relationshipId;
-    this.partnerName = data.partner.fullname
+    this.partnerName = data.partner?.fullname || 'not registered'
     let rzp1 = new this.winRef.nativeWindow.Razorpay(this.options);
     rzp1.open()
 
