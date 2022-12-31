@@ -30,6 +30,10 @@ const routes: Routes = [
     path: UrlCollectionName.Home,
     loadChildren: () => import('./modules/home/home.module').then(m => m.HomeModule)
   },
+  /*  {
+     path: "admin",
+     loadChildren: () => import('./admin/admin.module').then(m => m.AdminModule)
+   }, */
   {
     path: UrlCollectionName.Login,
     component: LoginComponent

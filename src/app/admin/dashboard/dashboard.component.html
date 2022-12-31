@@ -1,0 +1,14 @@
+<div class="dashboard-admin">
+    <div class="admin-box">
+        <div class="title">
+            <h1>Dashboard</h1>
+        </div>
+        <div class="admin-data-box">
+            <div class="box" *ngFor="let data of dashoardDataArray">
+                <h2>{{data.title}}</h2>
+                <h3>{{data.number}}</h3>
+                <button (click)="routeToPage(data.route)">Go to {{data.button}}</button>
+            </div>
+        </div>
+    </div>
+</div>

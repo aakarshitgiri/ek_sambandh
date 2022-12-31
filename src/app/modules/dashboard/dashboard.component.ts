@@ -58,7 +58,7 @@ export class DashboardComponent implements OnInit, AfterViewInit {
     this.notificationservice.showLoader();
     this.primengConfig.ripple = true;
     this.options = {
-      "key": "rzp_test_BZyewGi7ryMSEm",
+      "key": "rzp_live_HoNsQxFol16O6Rv",
       "name": 'Ek Sambandh',
       "description": 'Romantic Compatibility Test',
       "amount": 9900,

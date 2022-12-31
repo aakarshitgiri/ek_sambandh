@@ -15,14 +15,14 @@
         <a class="link" routerLink="/home" fragment="team" *ngIf="!userData?._id">Teams</a>
         <a class="link" routerLink="/home" fragment="faq" *ngIf="!userData?._id">FAQ</a>
         <a class="link" href="../../../assets/pdf/eksambandh-vision.pdf" target="_blank" *ngIf="!userData?._id">Our
-            Vision</a>
+            Research</a>
         <a class="nav-btn" routerLink="/login" *ngIf="!userData?._id">Login</a>
 
         <a class="link" routerLink="/dashboard" *ngIf="userData?._id">Dashboard</a>
         <a class="link" routerLink="/profile" *ngIf="userData?._id">Profile</a>
         <a class="link" routerLink="/payments" *ngIf="userData?._id">Payments</a>
-        <a class="link" href="../../../assets/pdf/eksambandh-vision.pdf" target="_blank"
-            *ngIf="userData?._id">Vision</a>
+        <a class="link" href="../../../assets/pdf/eksambandh-vision.pdf" target="_blank" *ngIf="userData?._id">Our
+            Research</a>
         <a class="nav-btn" (click)="logout()" *ngIf="userData?._id">Logout</a>
     </div>
 </div>
@@ -37,14 +37,14 @@
         <a class="link" routerLink="/home" (click)="display = false" fragment="team" *ngIf="!userData?._id">Teams</a>
         <a class="link" routerLink="/home" (click)="display = false" fragment="faq" *ngIf="!userData?._id">FAQ</a>
         <a class="link" href="../../../assets/pdf/eksambandh-vision.pdf" target="_blank" *ngIf="!userData?._id">Our
-            Vision</a>
+            Research</a>
         <a class="nav-btn" routerLink="/login" (click)="display = false" *ngIf="!userData?._id">Login</a>
 
         <a class="link" routerLink="/dashboard" (click)="display = false" *ngIf="userData?._id">Dashboard</a>
         <a class="link" routerLink="/profile" (click)="display = false" *ngIf="userData?._id">Profile</a>
         <a class="link" routerLink="/payments" (click)="display = false" *ngIf="userData?._id">Payments</a>
-        <a class="link" href="../../../assets/pdf/eksambandh-vision.pdf" target="_blank"
-            *ngIf="userData?._id">Vision</a>
+        <a class="link" href="../../../assets/pdf/eksambandh-vision.pdf" target="_blank" *ngIf="userData?._id">Our
+            Research</a>
         <a class="nav-btn" (click)="logout()" *ngIf="userData?._id">Logout</a>
     </div>
 </p-sidebar>
