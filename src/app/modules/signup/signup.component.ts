@@ -123,7 +123,7 @@ export class SignupComponent implements OnInit {
       try {
         let res = await firstValueFrom(this.apiService.verifyEmail(reqObj));
         this.notificationservice.hideLoader();
-        if (res) {
+        if (res.message) {
           this.startTimer();
           this.emailDisable = true;
           this.hideSendBtn = true;
@@ -132,9 +132,10 @@ export class SignupComponent implements OnInit {
           this.notificationservice.showToast({ type: ToastType.Info, message: res.message });
         }
 
+
       } catch (error: any) {
         this.notificationservice.hideLoader();
-        this.notificationservice.showToast({ type: ToastType.Error, message: error.error.message });
+        this.notificationservice.showToast({ type: ToastType.Error, message: error.error.error });
       }
 
     } else {
@@ -160,7 +161,7 @@ export class SignupComponent implements OnInit {
 
       } catch (error: any) {
         this.notificationservice.hideLoader();
-        this.notificationservice.showToast({ type: ToastType.Error, message: error.error.message });
+        this.notificationservice.showToast({ type: ToastType.Error, message: error.error.error });
       }
 
     } else {
@@ -220,7 +221,7 @@ export class SignupComponent implements OnInit {
 
       } catch (error: any) {
         this.notificationservice.hideLoader();
-        this.notificationservice.showToast({ type: ToastType.Error, message: error.error.message });
+        this.notificationservice.showToast({ type: ToastType.Error, message: error.error.error });
       }
 
     } else if (this.isPartnerLogin && this.signupform.valid && this.checkpasswordMatch()) {
@@ -229,12 +230,20 @@ export class SignupComponent implements OnInit {
       let password = this.signupform.value.password;
       let mobile = this.signupform.value.mobile;
       let relationshipId = this.relationshipId;
-      let res = await firstValueFrom(this.apiService.createPartner(fullname, email, password, relationshipId, mobile));
-      this.notificationservice.hideLoader();
-      if (res) {
-        this.notificationservice.showToast({ type: ToastType.Info, message: "Account created Successfully !" });
-        this.router.navigate([UrlCollection.Login]);
+      try {
+
+        let res = await firstValueFrom(this.apiService.createPartner(fullname, email, password, relationshipId, mobile));
+        this.notificationservice.hideLoader();
+        if (res) {
+          this.notificationservice.showToast({ type: ToastType.Info, message: "Account created Successfully !" });
+          this.router.navigate([UrlCollection.Login]);
+        }
+
+      } catch (error: any) {
+        this.notificationservice.hideLoader();
+        this.notificationservice.showToast({ type: ToastType.Error, message: error.error.error });
       }
+
     } else {
       this.notificationservice.hideLoader();
       this.notificationservice.showToast({ type: ToastType.Error, message: 'Complete form first!' });

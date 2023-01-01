@@ -87,7 +87,7 @@ export class FooterComponent implements OnInit, AfterViewInit {
         });
       } catch (error: any) {
         this.notificationservice.hideLoader();
-        this.notificationservice.showToast({ type: ToastType.Error, message: error });
+        this.notificationservice.showToast({ type: ToastType.Error, message: error.error.error });
       }
     }
 

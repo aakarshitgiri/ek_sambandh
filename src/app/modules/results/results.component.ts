@@ -1,6 +1,7 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import html2canvas from 'html2canvas';
+import { ToastType } from 'src/app/models/notification-model';
 import { UrlCollection } from 'src/app/models/urlcollection';
 import { ApiEkSambandhService } from 'src/app/services/api-ek-sambandh.service';
 import { DataStorageService } from 'src/app/services/data-storage.service';
@@ -51,8 +52,9 @@ export class ResultsComponent implements OnInit {
         this.showValue = true;
         this.notificationservice.hideLoader()
       })
-    } catch (error) {
-      this.notificationservice.hideLoader()
+    } catch (error: any) {
+      this.notificationservice.hideLoader();
+      this.notificationservice.showToast({ type: ToastType.Error, message: error.error.error });
     }
 
   }

@@ -38,7 +38,7 @@ export class ForgotPasswordComponent implements OnInit {
           this.notificationservice.showToast({ type: ToastType.Info, message: res.message });
         })
       } catch (error: any) {
-        this, this.notificationservice.hideLoader();
+        this.notificationservice.hideLoader();
         this.notificationservice.showToast({ type: ToastType.Error, message: error.error.error });
       }
     }

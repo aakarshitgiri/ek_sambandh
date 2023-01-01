@@ -58,7 +58,7 @@ export class LoginComponent implements OnInit {
           this.notificationservice.hideLoader();
         }
       } catch (error: any) {
-        this, this.notificationservice.hideLoader();
+        this.notificationservice.hideLoader();
         this.notificationservice.showToast({ type: ToastType.Error, message: error.error.error });
       }
     } else {

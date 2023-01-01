@@ -90,7 +90,7 @@ export class ProfileComponent implements OnInit {
         })
       } catch (error: any) {
         this.notificationservice.hideLoader();
-        this.notificationservice.showToast({ type: ToastType.Error, message: error.error.message });
+        this.notificationservice.showToast({ type: ToastType.Error, message: error.error.error });
       }
     }
   }
@@ -114,7 +114,7 @@ export class ProfileComponent implements OnInit {
         })
       } catch (error: any) {
         this.notificationservice.hideLoader();
-        this.notificationservice.showToast({ type: ToastType.Error, message: error.error.message });
+        this.notificationservice.showToast({ type: ToastType.Error, message: error.error.error });
       }
     }
   }

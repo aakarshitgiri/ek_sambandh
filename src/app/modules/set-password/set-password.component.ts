@@ -41,7 +41,7 @@ export class SetPasswordComponent implements OnInit {
         });
       } catch (error: any) {
         this.router.navigate([UrlCollection.Login])
-        this.notificationservice.showToast({ type: ToastType.Error, message: error });
+        this.notificationservice.showToast({ type: ToastType.Error, message: error.error.error });
       }
     } else {
       this.router.navigate([UrlCollection.Login])
@@ -76,7 +76,7 @@ export class SetPasswordComponent implements OnInit {
         })
       } catch (error: any) {
         this.notificationservice.hideLoader();
-        this.notificationservice.showToast({ type: ToastType.Error, message: error.error.message });
+        this.notificationservice.showToast({ type: ToastType.Error, message: error.error.error });
       }
     }
   }

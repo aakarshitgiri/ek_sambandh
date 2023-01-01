@@ -288,15 +288,19 @@ export class QuestionPart4Component implements OnInit {
     if (level1 && level2 && level3 && level4) {
       let finalData = [...level1, ...level2, ...level3, ...level4];
       let relationshipId = this.activateRouter.snapshot.queryParams['id'];
-      this.apiService.submitQuestions(finalData, relationshipId).subscribe((res: any) => {
-        this.datastorge.setQuestionLevelOne([]);
-        this.datastorge.setQuestionLevelTwo([]);
-        this.datastorge.setQuestionLevelThree([]);
-        this.datastorge.setQuestionLevelFour([]);
-        this.notificationservice.hideLoader();
-        this.notificationservice.showToast({ type: ToastType.Info, message: res.message });
-        this.router.navigate([UrlCollection.Dashboard])
-      })
+      try {
+        this.apiService.submitQuestions(finalData, relationshipId).subscribe((res: any) => {
+          this.datastorge.setQuestionLevelOne([]);
+          this.datastorge.setQuestionLevelTwo([]);
+          this.datastorge.setQuestionLevelThree([]);
+          this.datastorge.setQuestionLevelFour([]);
+          this.notificationservice.hideLoader();
+          this.notificationservice.showToast({ type: ToastType.Info, message: res.message });
+          this.router.navigate([UrlCollection.Dashboard])
+        })
+      } catch (error: any) {
+        this.notificationservice.showToast({ type: ToastType.Error, message: error.error.error });
+      }
 
 
     } else {

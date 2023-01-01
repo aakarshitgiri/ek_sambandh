@@ -34,9 +34,9 @@ export class RelationshipSuccessComponent implements OnInit {
           this.notificationservice.showToast({ type: ToastType.Info, message: res.message });
           this.startTimer();
         })
-      } catch (err: any) {
+      } catch (error: any) {
         this.show = false;
-        this.notificationservice.showToast({ type: ToastType.Error, message: err });
+        this.notificationservice.showToast({ type: ToastType.Error, message: error.error.error });
       }
     } else {
       this.show = false;
