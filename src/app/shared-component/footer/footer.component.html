@@ -1,14 +1,15 @@
 <div class="footer-container">
     <div class="footer-center">
         <div class="table">
-            <div class="logo"> <img src="../../../assets/images/logo-2.png" alt="Ek Sambandh"></div>
+            <div class="logo" (click)="goToHome()"> <img src="../../../assets/images/logo-2.png" alt="Ek Sambandh">
+            </div>
         </div>
     </div>
     <div class="left-items">
 
         <div class="footer-left">
             <div class="left-flex">
-                <div class="link left" (click)="showHelpModal()"><a>Help & Support</a></div>
+                <div class="link left" (click)="showHelpModal()" *ngIf="!isAdmin"><a>Contact Us</a></div>
             </div>
             <div class="left-flex">
                 <div class="link right"><a href="../../../assets/pdf/TERMS-AND-CONDITIONS-Eksamabandh.pdf"
@@ -21,7 +22,14 @@
                         Policy</a></div>
             </div>
             <div class="left-flex ">
-                <div class="link right" (click)="disclaimerModal = true"><a>Disclaimer</a></div>
+                <div class="link right"><a href="../../../assets/pdf/Refund_Policy - Ek Sambandh.pdf"
+                        target="_blank">Refund Policy</a></div>
+            </div>
+            <div class="left-flex ">
+                <div class="link left" (click)="disclaimerModal = true"><a>Disclaimer</a></div>
+            </div>
+            <div class="left-flex ">
+                <div class="link right" (click)="redirectToLogin()" *ngIf="!this.userData?._id"><a>Admin Login</a></div>
             </div>
         </div>
     </div>
@@ -47,7 +55,9 @@
             </div>
             <div class="input-container">
                 <label for="email">Email*</label>
-                <input type="email" name="email" formControlName="email" [readOnly]="isUser">
+                <input type="email" name="email"
+                    pattern="^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$"
+                    formControlName="email" [readOnly]="isUser">
                 <span class="error-box" *ngIf="submit && this.helpSupport.controls['email'].hasError('required')">Please
                     enter
                     email</span>

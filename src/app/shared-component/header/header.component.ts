@@ -11,17 +11,27 @@ import { DataStorageService } from 'src/app/services/data-storage.service';
 export class HeaderComponent implements OnInit {
   userData: any;
   display: boolean;
+  isAdmin: boolean = false;
   constructor(
     private datastorage: DataStorageService,
     private router: Router
   ) {
     this.datastorage.currentUser.subscribe((data: any) => {
       this.userData = data;
+      if (this.userData?.userRole === "ADMIN") {
+        this.isAdmin = true;
+      } else {
+        this.isAdmin = false;
+      }
     });
   }
 
   ngOnInit() {
 
+  }
+
+  goToHome() {
+    this.router.navigate([UrlCollection.Home])
   }
 
   logout() {

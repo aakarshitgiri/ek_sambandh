@@ -5,7 +5,7 @@
 export const environment = {
   production: false,
   apiUrl: {
-    ekSambandhUrl: 'https://ek-sambandh.vercel.app/api'
+    ekSambandhUrl: 'https://api.eksambandh.in.app/api'
   },
 };
 

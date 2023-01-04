@@ -5,31 +5,51 @@ import { UsersComponent } from './users/users.component';
 import { PaymentsComponent } from './payments/payments.component';
 import { RelationshipsComponent } from './relationships/relationships.component';
 import { ContactsComponent } from './contacts/contacts.component';
+import { UrlCollectionName } from '../models/urlcollection';
+import { ViewAnswersComponent } from './view-answers/view-answers.component';
+import { AdminAuthService } from '../auth/admin-auth.service';
 
 const routes: Routes = [
   {
     path: '',
+    pathMatch: 'full',
     component: DashboardComponent,
+    canActivate: [AdminAuthService]
   },
   {
-    path: 'dashboard',
+    path: UrlCollectionName.admindashboard,
     component: DashboardComponent,
+    canActivate: [AdminAuthService]
+
   },
   {
-    path: 'users',
+    path: UrlCollectionName.adminusers,
     component: UsersComponent,
+    canActivate: [AdminAuthService]
   },
   {
-    path: 'payments',
+    path: UrlCollectionName.adminpayments,
     component: PaymentsComponent,
+    canActivate: [AdminAuthService]
   },
   {
-    path: 'relationships',
+    path: UrlCollectionName.adminrelationship,
     component: RelationshipsComponent,
+    canActivate: [AdminAuthService]
   },
   {
-    path: 'contact-us',
+    path: UrlCollectionName.admincontactus,
     component: ContactsComponent,
+    canActivate: [AdminAuthService]
+  },
+  {
+    path: UrlCollectionName.adminviewanswer,
+    component: ViewAnswersComponent,
+    canActivate: [AdminAuthService]
+  },
+  {
+    path: '**',
+    redirectTo: UrlCollectionName.Dashboard
   },
 
 ];

@@ -30,6 +30,8 @@ import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 import { RadioButtonModule } from 'primeng/radiobutton';
 import { DataStorageService } from './services/data-storage.service';
 import { SidebarModule } from 'primeng/sidebar';
+import { AdminloginComponent } from './modules/adminlogin/adminlogin.component';
+import { DocsComponent } from './modules/docs/docs.component';
 
 
 
@@ -47,6 +49,8 @@ import { SidebarModule } from 'primeng/sidebar';
     ProfileComponent,
     TransactionsComponent,
     RelationshipSuccessComponent,
+    AdminloginComponent,
+    DocsComponent,
 
   ],
   imports: [

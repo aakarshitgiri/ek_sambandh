@@ -1,0 +1,971 @@
+[
+    {
+        "index": 1,
+        "name": "questions1",
+        "type": "text",
+        "question": "What steps do you take to manage stress?",
+        "options": [
+            {
+                "id": 1,
+                "answer": "I need some time alone",
+                "ansType": "Negative"
+            },
+            {
+                "id": 2,
+                "answer": "I will talk to my partner about it",
+                "ansType": "Positive"
+            },
+            {
+                "id": 3,
+                "answer": "I'll not let my stress to take over my happiness",
+                "ansType": "Neutral"
+            }
+        ]
+    },
+    {
+        "index": 2,
+        "name": "questions2",
+        "type": "text",
+        "question": "Who will resolve a dispute first?",
+        "options": [
+            {
+                "id": 1,
+                "answer": "Myself",
+                "ansType": "Positive"
+            },
+            {
+                "id": 2,
+                "answer": "My Partner",
+                "ansType": "Negative"
+            },
+            {
+                "id": 3,
+                "answer": "Ignore the argument and move on.",
+                "ansType": "Neutral"
+            }
+        ]
+    },
+    {
+        "index": 3,
+        "name": "questions3",
+        "type": "text",
+        "question": "Would you sacrifice your happiness in order for the relationship to succeed?",
+        "options": [
+            {
+                "id": 1,
+                "answer": "Both are different, hence we cannot compare the two situations.",
+                "ansType": "Neutral"
+            },
+            {
+                "id": 2,
+                "answer": "Undoubtedly, yes",
+                "ansType": "Positive"
+            },
+            {
+                "id": 3,
+                "answer": "Absolutely not",
+                "ansType": "Negative"
+            }
+        ]
+    },
+    {
+        "index": 4,
+        "name": "questions4",
+        "type": "text",
+        "question": "If you are an attention seeker and if you are not getting it, how it will impact your relationship?",
+        "options": [
+            {
+                "id": 1,
+                "answer": "I will accept this fact that my partner is not giving me attention and i will not expect it again",
+                "ansType": "Negative"
+            },
+            {
+                "id": 2,
+                "answer": "I’ll start seeking options outside of the relationship",
+                "ansType": "Positive"
+            },
+            {
+                "id": 3,
+                "answer": "I don't seek attention.",
+                "ansType": "Neutral"
+            }
+        ]
+    },
+    {
+        "index": 5,
+        "name": "questions5",
+        "type": "text",
+        "question": "Which of these characteristics would you find most attractive in a potential partner?",
+        "options": [
+            {
+                "id": 1,
+                "answer": "Fitnees freak",
+                "ansType": "Neutral"
+            },
+            {
+                "id": 2,
+                "answer": "Financial stability",
+                "ansType": "Positive"
+            },
+            {
+                "id": 3,
+                "answer": "willingness to take risks",
+                "ansType": "Negative"
+            }
+        ]
+    },
+    {
+        "index": 6,
+        "name": "questions6",
+        "type": "text",
+        "question": "Do you refuse to apologise when you are wrong because of your ego?",
+        "options": [
+            {
+                "id": 1,
+                "answer": "Yes",
+                "ansType": "Positive"
+            },
+            {
+                "id": 2,
+                "answer": "I will ask my partner to switch the shoes and try to rethink the situation again",
+                "ansType": "Neutral"
+            },
+            {
+                "id": 3,
+                "answer": "No",
+                "ansType": "Negative"
+            }
+        ]
+    },
+    {
+        "index": 7,
+        "name": "questions7",
+        "type": "text",
+        "question": "How comfortable are you sharing things with your partner?",
+        "options": [
+            {
+                "id": 1,
+                "answer": "I believe he is my closest friend and secret keeper.",
+                "ansType": "Positive"
+            },
+            {
+                "id": 2,
+                "answer": " I believe it is best to hide few things.",
+                "ansType": "Negative"
+            },
+            {
+                "id": 3,
+                "answer": "I don't believe this is really comfy for me.",
+                "ansType": "Neutral"
+            }
+        ]
+    },
+    {
+        "index": 8,
+        "name": "questions8",
+        "type": "text",
+        "question": "What emotions do you experience with your partner?",
+        "options": [
+            {
+                "id": 1,
+                "answer": "There are somdays when i love my relationship and there are somedays when i don't feel it that way",
+                "ansType": "Negative"
+            },
+            {
+                "id": 2,
+                "answer": "I love my partner's company 'apple of my eye'",
+                "ansType": "Positive"
+            },
+            {
+                "id": 3,
+                "answer": "It is routine and easygoing.",
+                "ansType": "Neutral"
+            }
+        ]
+    },
+    {
+        "index": 9,
+        "name": "questions9",
+        "type": "text",
+        "question": "How would you react if you discovered something wrong with your partner?",
+        "options": [
+            {
+                "id": 1,
+                "answer": "I will leave my partner",
+                "ansType": "Negative"
+            },
+            {
+                "id": 2,
+                "answer": "If my partner is accepting the mistake i will give them another chance (Human is a mannequin of mistakes)",
+                "ansType": "Neutral"
+            },
+            {
+                "id": 3,
+                "answer": "I will talk with my partner and understand their point of view",
+                "ansType": "Positive"
+            }
+        ]
+    },
+    {
+        "index": 10,
+        "name": "questions10",
+        "type": "text",
+        "question": "Do you talk to new people at social gatherings or stick with people you know?",
+        "options": [
+            {
+                "id": 1,
+                "answer": "I love to connect with people with different personality/I love to make new friend",
+                "ansType": "Positive"
+            },
+            {
+                "id": 2,
+                "answer": "I am Neutral, It depends on my mood ",
+                "ansType": "Neutral"
+            },
+            {
+                "id": 3,
+                "answer": "I stick with people I know ",
+                "ansType": "Negative"
+            }
+        ]
+    },
+    {
+        "index": 11,
+        "name": "questions11",
+        "type": "text",
+        "question": "Do you experience one of these phases in your relationship?",
+        "options": [
+            {
+                "id": 1,
+                "answer": "controlling behaviour is annoying you ",
+                "ansType": "Negative"
+            },
+            {
+                "id": 2,
+                "answer": "i think i am dreaming as i feel like i am on top of the world",
+                "ansType": "Positive"
+            },
+            {
+                "id": 3,
+                "answer": "Going with the flow",
+                "ansType": "Neutral"
+            }
+        ]
+    },
+    {
+        "index": 12,
+        "name": "questions12",
+        "type": "text",
+        "question": "Do you feel that long-distance relationships can survive?",
+        "options": [
+            {
+                "id": 1,
+                "answer": "Yes,I believe distance is not a concern",
+                "ansType": "Positive"
+            },
+            {
+                "id": 2,
+                "answer": "I have a bad past in this, So I don't believe",
+                "ansType": "Negative"
+            },
+            {
+                "id": 3,
+                "answer": "i think it can work but upto some extent(understanding should be there)",
+                "ansType": "Neutral"
+            }
+        ]
+    },
+    {
+        "index": 13,
+        "name": "questions13",
+        "type": "text",
+        "question": "Do you believe the expenditures should be shared by a couple?",
+        "options": [
+            {
+                "id": 1,
+                "answer": "No, I believe that individuals should be responsible.",
+                "ansType": "Neutral"
+            },
+            {
+                "id": 2,
+                "answer": "Yes, this make us equal in relation.",
+                "ansType": "Positive"
+            },
+            {
+                "id": 3,
+                "answer": "No, It's fine",
+                "ansType": "Negative"
+            }
+        ]
+    },
+    {
+        "index": 14,
+        "name": "questions14",
+        "type": "text",
+        "question": "Do they still possess the qualities that made you choose your partner?",
+        "options": [
+            {
+                "id": 1,
+                "answer": "Yes, my partner is still the same.",
+                "ansType": "Negative"
+            },
+            {
+                "id": 2,
+                "answer": "No,I think that started fading.",
+                "ansType": "Positive"
+            },
+            {
+                "id": 3,
+                "answer": "I don't think it at all.",
+                "ansType": "Neutral"
+            }
+        ]
+    },
+    {
+        "index": 15,
+        "name": "questions15",
+        "type": "text",
+        "question": "Is it really necessary to know everything from your partner’s previous relationships?",
+        "options": [
+            {
+                "id": 1,
+                "answer": "I want to know,so even if something comes up in our future I am aware of that.",
+                "ansType": "Neutral"
+            },
+            {
+                "id": 2,
+                "answer": "No,I am okay with not knowing my partner's past.",
+                "ansType": "Positive"
+            },
+            {
+                "id": 3,
+                "answer": "I want to know what was it like.",
+                "ansType": "Negative"
+            }
+        ]
+    },
+    {
+        "index": 16,
+        "name": "questions16",
+        "type": "text",
+        "question": "How do you feel when your partner has to leave you for some time because of work or study?",
+        "options": [
+            {
+                "id": 1,
+                "answer": "Although I will miss him, if he is working, I have no problems.",
+                "ansType": "Positive"
+            },
+            {
+                "id": 2,
+                "answer": "I dont care.",
+                "ansType": "Neutral"
+            },
+            {
+                "id": 3,
+                "answer": "No work, in my opinion, is more important than me.",
+                "ansType": "Negative"
+            }
+        ]
+    },
+    {
+        "index": 17,
+        "name": "questions17",
+        "type": "text",
+        "question": "Are you keeping any secrets that you’re afraid of letting your partner know?",
+        "options": [
+            {
+                "id": 1,
+                "answer": "No, my partner is fully aware of all the facts.",
+                "ansType": "Positive"
+            },
+            {
+                "id": 2,
+                "answer": "I believe that my lover won't understand, so I say yes.",
+                "ansType": "Negative"
+            },
+            {
+                "id": 3,
+                "answer": "Maybe because there isn't many things that need to be communicated.",
+                "ansType": "Neutral"
+            }
+        ]
+    },
+    {
+        "index": 18,
+        "name": "questions18",
+        "type": "text",
+        "question": "Do you think romantic gifts have to be memorable or do they have to be useful?",
+        "options": [
+            {
+                "id": 1,
+                "answer": "Memorable I think",
+                "ansType": "Negative"
+            },
+            {
+                "id": 2,
+                "answer": "It should be Useful",
+                "ansType": "Positive"
+            },
+            {
+                "id": 3,
+                "answer": "Not a big concern",
+                "ansType": "Neutral"
+            }
+        ]
+    },
+    {
+        "index": 19,
+        "name": "questions19",
+        "type": "text",
+        "question": "What is your reaction when your partner compares you with other people around ?",
+        "options": [
+            {
+                "id": 1,
+                "answer": "This disgusts me with the decisions I make.",
+                "ansType": "Negative"
+            },
+            {
+                "id": 2,
+                "answer": "Honestly, I don't care about this.",
+                "ansType": "Neutral"
+            },
+            {
+                "id": 3,
+                "answer": "In that case, I'll constantly try to get better.",
+                "ansType": "Positive"
+            }
+        ]
+    },
+    {
+        "index": 20,
+        "name": "questions20",
+        "type": "text",
+        "question": "How will you come up with your situation if your partner keeps mentioning the same topics during arguments?",
+        "options": [
+            {
+                "id": 1,
+                "answer": "sort out via conversation",
+                "ansType": "Positive"
+            },
+            {
+                "id": 2,
+                "answer": "will not react and ignore the situation",
+                "ansType": "Neutral"
+            },
+            {
+                "id": 3,
+                "answer": "apology to not repeat it again",
+                "ansType": "Negative"
+            }
+        ]
+    },
+    {
+        "index": 21,
+        "name": "questions21",
+        "type": "text",
+        "question": "How comfortable are you discussing personal matters with your partner?",
+        "options": [
+            {
+                "id": 1,
+                "answer": "Yes, I feel safe while discussing.",
+                "ansType": "Positive"
+            },
+            {
+                "id": 2,
+                "answer": "I believe this might cause conflict.",
+                "ansType": "Negative"
+            },
+            {
+                "id": 3,
+                "answer": "I think we both have a life and we both have the rights whether to discuss or not.",
+                "ansType": "Neutral"
+            }
+        ]
+    },
+    {
+        "index": 22,
+        "name": "questions22",
+        "type": "text",
+        "question": "Which of the following factors is more important for a successful relationship to function?",
+        "options": [
+            {
+                "id": 1,
+                "answer": "Trust",
+                "ansType": "Positive"
+            },
+            {
+                "id": 2,
+                "answer": "Compromise",
+                "ansType": "Negative"
+            },
+            {
+                "id": 3,
+                "answer": "Just being together",
+                "ansType": "Neutral"
+            }
+        ]
+    },
+    {
+        "index": 23,
+        "name": "questions23",
+        "type": "text",
+        "question": "If I told you to jump off a tall cliff and tell you that you’ll land safely because there’s a net you can’t see yet, would you blindly trust me and jump?",
+        "options": [
+            {
+                "id": 1,
+                "answer": "Yes,I will",
+                "ansType": "Positive"
+            },
+            {
+                "id": 2,
+                "answer": "No, It's complicated",
+                "ansType": "Negative"
+            },
+            {
+                "id": 3,
+                "answer": "I will re-think",
+                "ansType": "Neutral"
+            }
+        ]
+    },
+    {
+        "index": 24,
+        "name": "questions24",
+        "type": "text",
+        "question": "If you ask for professional advice about the future and your partner has a different viewpoint ,but you feel that he is holding you back or is being a road-blocker. You may not talk about it but it is making you question yourself a lot inside your heart, what will you do ?",
+        "options": [
+            {
+                "id": 1,
+                "answer": "I'll consider my partner's viewpoint.",
+                "ansType": "Positive"
+            },
+            {
+                "id": 2,
+                "answer": "I'll talk it over with my partner so they can see my point of view.",
+                "ansType": "Negative"
+            },
+            {
+                "id": 3,
+                "answer": "I do not like any interruption in my career options",
+                "ansType": "Neutral"
+            }
+        ]
+    },
+    {
+        "index": 25,
+        "name": "questions25",
+        "type": "text",
+        "question": "What would you do if the distance between you and your companion grows and you do not consider them to be the best or first person to talk in any circumstance?",
+        "options": [
+            {
+                "id": 1,
+                "answer": "Communication is the key.",
+                "ansType": "Positive"
+            },
+            {
+                "id": 2,
+                "answer": "I think this is the moment where we need to drop this relation.",
+                "ansType": "Negative"
+            },
+            {
+                "id": 3,
+                "answer": "Need to plan few things to spice up our relation.",
+                "ansType": "Neutral"
+            }
+        ]
+    },
+    {
+        "index": 26,
+        "name": "questions26",
+        "type": "text",
+        "question": "How often do you want your partner to call you during the day?",
+        "options": [
+            {
+                "id": 1,
+                "answer": "I expect my partner to update me about his daily routine, whenever the person gets that time.",
+                "ansType": "Positive"
+            },
+            {
+                "id": 2,
+                "answer": "Every hour, or once in two hours.Binding with a time frame.",
+                "ansType": "Negative"
+            },
+            {
+                "id": 3,
+                "answer": "That's okay even if my partner is not frequent.",
+                "ansType": "Neutral"
+            }
+        ]
+    },
+    {
+        "index": 27,
+        "name": "questions27",
+        "type": "text",
+        "question": "Both partners are under pressure at work,How will you prioritise one another's needs while nurturing both personal and professional growth?",
+        "options": [
+            {
+                "id": 1,
+                "answer": "will definitely help in each other work to decrease the load and develop more synchronization.",
+                "ansType": "Positive"
+            },
+            {
+                "id": 2,
+                "answer": "we will spend quality time even if it is small.",
+                "ansType": "Negative"
+            },
+            {
+                "id": 3,
+                "answer": "practice active listening and set healthy boundaries.",
+                "ansType": "Neutral"
+            }
+        ]
+    },
+    {
+        "index": 28,
+        "name": "questions28",
+        "type": "text",
+        "question": "Is it important to you that both partners handle their time well?",
+        "options": [
+            {
+                "id": 1,
+                "answer": "It's really an important factor !",
+                "ansType": "Positive"
+            },
+            {
+                "id": 2,
+                "answer": "I want him to be more diverted into this for our future.",
+                "ansType": "Negative"
+            },
+            {
+                "id": 3,
+                "answer": "I am okay with the time he is giving me.",
+                "ansType": "Neutral"
+            }
+        ]
+    },
+    {
+        "index": 29,
+        "name": "questions29",
+        "type": "text",
+        "question": "Would you rather talk it out with me so I can help you feel better, or would you prefer to be left alone to recover from a difficult day?",
+        "options": [
+            {
+                "id": 1,
+                "answer": "like to be left alone",
+                "ansType": "Positive"
+            },
+            {
+                "id": 2,
+                "answer": "prefer to talk about it.",
+                "ansType": "Negative"
+            },
+            {
+                "id": 3,
+                "answer": "In such scenario, I'll be satisfied with anything my partner does to make me happy.",
+                "ansType": "Neutral"
+            }
+        ]
+    },
+    {
+        "index": 30,
+        "name": "questions30",
+        "type": "text",
+        "question": "Which would you choose if you had to make a choice between living with your lover and living with your parents?",
+        "options": [
+            {
+                "id": 1,
+                "answer": "Parents",
+                "ansType": "Positive"
+            },
+            {
+                "id": 2,
+                "answer": "Patner",
+                "ansType": "Negative"
+            },
+            {
+                "id": 3,
+                "answer": "I wish this situation never arrive ",
+                "ansType": "Neutral"
+            }
+        ]
+    },
+    {
+        "index": 31,
+        "name": "questions31",
+        "type": "text",
+        "question": "Do you prefer an urban or rural setting to raise your family?",
+        "options": [
+            {
+                "id": 1,
+                "answer": "Urban living: safe ,affordable,mix of nationalities and get along and work together",
+                "ansType": "Positive"
+            },
+            {
+                "id": 2,
+                "answer": "Rural Life: Fresh air and food, physical activities(Farming, animal rearing), Free from the hustle",
+                "ansType": "Negative"
+            },
+            {
+                "id": 3,
+                "answer": "I would love to experience both",
+                "ansType": "Neutral"
+            }
+        ]
+    },
+    {
+        "index": 32,
+        "name": "questions32",
+        "type": "text",
+        "question": "How you will rate your partner's decision-making skills?",
+        "options": [
+            {
+                "id": 1,
+                "answer": "I always support my partner's choices",
+                "ansType": "Positive"
+            },
+            {
+                "id": 2,
+                "answer": "it is good but sometimes we are just stuck while making any decision",
+                "ansType": "Negative"
+            },
+            {
+                "id": 3,
+                "answer": "we both talk and undersatnd each other's priority and make decisions accordingly",
+                "ansType": "Neutral"
+            }
+        ]
+    },
+    {
+        "index": 33,
+        "name": "questions33",
+        "type": "text",
+        "question": "How willing are you to balance and make an effort to win over your partner?",
+        "options": [
+            {
+                "id": 1,
+                "answer": "We should Accept Disagreement  and respect each other's privacy",
+                "ansType": "Positive"
+            },
+            {
+                "id": 2,
+                "answer": "Commit but don't compromise",
+                "ansType": "Negative"
+            },
+            {
+                "id": 3,
+                "answer": "Relationship with no set bar, go with the flow",
+                "ansType": "Neutral"
+            }
+        ]
+    },
+    {
+        "index": 34,
+        "name": "questions34",
+        "type": "text",
+        "question": "Do you think you are spending enough Quality time with your partner",
+        "options": [
+            {
+                "id": 1,
+                "answer": "Yes",
+                "ansType": "Positive"
+            },
+            {
+                "id": 2,
+                "answer": "No",
+                "ansType": "Negative"
+            },
+            {
+                "id": 3,
+                "answer": "Neutral",
+                "ansType": "Neutral"
+            }
+        ]
+    },
+    {
+        "index": 35,
+        "name": "questions35",
+        "type": "text",
+        "question": "Do you partner shows emotional availability and maturity",
+        "options": [
+            {
+                "id": 1,
+                "answer": "Yes",
+                "ansType": "Positive"
+            },
+            {
+                "id": 2,
+                "answer": "No",
+                "ansType": "Negative"
+            },
+            {
+                "id": 3,
+                "answer": "Neutral",
+                "ansType": "Neutral"
+            }
+        ]
+    },
+    {
+        "index": 36,
+        "name": "questions36",
+        "type": "text",
+        "question": "Do you think couples finance should be together or separate?",
+        "options": [
+            {
+                "id": 1,
+                "answer": "Yes",
+                "ansType": "Positive"
+            },
+            {
+                "id": 2,
+                "answer": "No",
+                "ansType": "Negative"
+            },
+            {
+                "id": 3,
+                "answer": "Your funds are mine, and vice versa.",
+                "ansType": "Neutral"
+            }
+        ]
+    },
+    {
+        "index": 37,
+        "name": "questions37",
+        "type": "img",
+        "question": "Where do you believe you must go on holiday and travel?",
+        "options": [
+            {
+                "id": 1,
+                "answer": "../../../../assets/images/answers/question37/img1.webp",
+                "ansType": "img1"
+            },
+            {
+                "id": 2,
+                "answer": "../../../../assets/images/answers/question37/img2.webp",
+                "ansType": "img2"
+            },
+            {
+                "id": 3,
+                "answer": "../../../../assets/images/answers/question37/img3.webp",
+                "ansType": "img3"
+            }
+        ]
+    },
+    {
+        "index": 38,
+        "name": "questions38",
+        "type": "img",
+        "question": "What kind of cuisine do you prefer?",
+        "options": [
+            {
+                "id": 1,
+                "answer": "../../../../assets/images/answers/question38/img1.webp",
+                "ansType": "img1"
+            },
+            {
+                "id": 2,
+                "answer": "../../../../assets/images/answers/question38/img2.webp",
+                "ansType": "img2"
+            },
+            {
+                "id": 3,
+                "answer": "../../../../assets/images/answers/question38/img3.webp",
+                "ansType": "img3"
+            }
+        ]
+    },
+    {
+        "index": 39,
+        "name": "questions39",
+        "type": "img",
+        "question": "Do you have a pet that you adore?",
+        "options": [
+            {
+                "id": 1,
+                "answer": "../../../../assets/images/answers/question39/img1.webp",
+                "ansType": "img1"
+            },
+            {
+                "id": 2,
+                "answer": "../../../../assets/images/answers/question39/img2.webp",
+                "ansType": "img2"
+            },
+            {
+                "id": 3,
+                "answer": "../../../../assets/images/answers/question39/img3.webp",
+                "ansType": "img3"
+            }
+        ]
+    },
+    {
+        "index": 40,
+        "name": "questions40",
+        "type": "img",
+        "question": "What type of connection do you prefer?",
+        "options": [
+            {
+                "id": 1,
+                "answer": "../../../../assets/images/answers/question40/img1.webp",
+                "ansType": "img1",
+                "title": "It’s complicated to answer this"
+            },
+            {
+                "id": 2,
+                "answer": "../../../../assets/images/answers/question40/img2.webp",
+                "ansType": "img2",
+                "title": "Friendship"
+            },
+            {
+                "id": 3,
+                "answer": "../../../../assets/images/answers/question40/img3.webp",
+                "ansType": "img3",
+                "title": "Go with the flow and get married"
+            }
+        ]
+    },
+    {
+        "index": 41,
+        "name": "questions41",
+        "type": "img",
+        "question": "What kind of house you'd love to build together as your dream home?",
+        "options": [
+            {
+                "id": 1,
+                "answer": "../../../../assets/images/answers/question41/img1.webp",
+                "ansType": "img1"
+            },
+            {
+                "id": 2,
+                "answer": "../../../../assets/images/answers/question41/img2.webp",
+                "ansType": "img2"
+            },
+            {
+                "id": 3,
+                "answer": "../../../../assets/images/answers/question41/img3.webp",
+                "ansType": "img3"
+            }
+        ]
+    },
+    {
+        "index": 42,
+        "name": "questions42",
+        "type": "img",
+        "question": "What do you prefer to engage in when you are hanging out with your companion?",
+        "options": [
+            {
+                "id": 1,
+                "answer": "../../../../assets/images/answers/question42/img1.webp",
+                "ansType": "img1"
+            },
+            {
+                "id": 2,
+                "answer": "../../../../assets/images/answers/question42/img2.webp",
+                "ansType": "img2"
+            },
+            {
+                "id": 3,
+                "answer": "../../../../assets/images/answers/question42/img3.webp",
+                "ansType": "img3"
+            }
+        ]
+    }
+]

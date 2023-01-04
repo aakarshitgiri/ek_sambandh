@@ -5,6 +5,8 @@ import { ToastType } from '../../models/notification-model';
 import { ApiEkSambandhService } from '../../services/api-ek-sambandh.service';
 import { DataStorageService } from '../../services/data-storage.service';
 import { NotificationService } from '../../services/notifications.service';
+import { Route, Router } from '@angular/router';
+import { UrlCollection } from 'src/app/models/urlcollection';
 
 @Component({
   selector: 'app-footer',
@@ -23,11 +25,13 @@ export class FooterComponent implements OnInit, AfterViewInit {
     contact: new FormControl('', [Validators.required]),
     reason: new FormControl('', [Validators.required])
   });
+  isAdmin: boolean = false;
   constructor(
     private primengConfig: PrimeNGConfig,
     private formBuilder: FormBuilder,
     private apiService: ApiEkSambandhService,
     private datastorge: DataStorageService,
+    private router: Router,
     private notificationservice: NotificationService
   ) {
 
@@ -44,6 +48,12 @@ export class FooterComponent implements OnInit, AfterViewInit {
         this.helpSupport.controls['email'].reset();
         this.helpSupport.controls['contact'].reset();
         this.isUser = false;
+      }
+
+      if (this.userData?.userRole === "ADMIN") {
+        this.isAdmin = true;
+      } else {
+        this.isAdmin = false;
       }
     });
   }
@@ -63,7 +73,13 @@ export class FooterComponent implements OnInit, AfterViewInit {
 
   }
 
+  goToHome() {
+    this.router.navigate([UrlCollection.Home])
+  }
 
+  redirectToLogin() {
+    this.router.navigate([UrlCollection.adminlogin])
+  }
 
 
 

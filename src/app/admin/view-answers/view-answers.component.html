@@ -1,0 +1,91 @@
+<div class="answers-container">
+    <div class="answers-box">
+        <div class="title">
+            <h1>Relationship Answers</h1>
+        </div>
+        <div class="flex-box">
+            <div class="box">
+                <div class="user">
+                    <h1>{{answers.requestingPartnerId.fullname}}</h1>
+                    <h1>{{answers.requestingPartnerId.email}}</h1>
+                    <h1>{{answers.requestingPartnerId.mobile}}</h1>
+                    <h1 *ngIf="answers.requestingPartnerFormStatus && answers.requestedPartnerFormStatus">Relationship
+                        Score: {{(answers.relationshipScore | number:'1.0-0') + '%'}}</h1>
+                    <h1>Relationship Status: {{answers.relationshipStatus}}</h1>
+                    <h1>Form Filled: {{answers.requestingPartnerFormStatus}}</h1>
+                </div>
+                <div class="questions-container" *ngIf="answers.requestingPartnerFormStatus">
+                    <div class="question-box">
+                        <div class="questions-answer" [formGroup]="questionsPart1">
+                            <div class="question-form" *ngFor="let questions of questionsLevel1">
+                                <div class="question">
+                                    <label><span>{{questions.index}}.</span>{{questions.question}}</label>
+                                    <div *ngFor="let answers of questions.options">
+                                        <div class="btns" *ngIf="questions.type !== 'img'">
+                                            <p-radioButton name="{{questions.name}}" value="{{answers.ansType}}"
+                                                [label]="answers.answer" inputId="{{questions.name+answers.id}}"
+                                                [formControlName]="questions.name"></p-radioButton>
+                                        </div>
+                                        <div class="img-answers" *ngIf="questions.type === 'img'">
+                                            <p-radioButton name="{{questions.name}}" value="{{answers.ansType}}"
+                                                inputId="{{questions.name+answers.id}}"
+                                                [formControlName]="questions.name"></p-radioButton>
+                                            <div class="img">
+                                                <label for="{{questions.name}}"
+                                                    *ngIf="answers?.title">{{answers?.title}}</label>
+                                                <label for="{{questions.name+answers.id}}"><img [src]="answers.answer"
+                                                        alt="{{answers.answer}}"></label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="box">
+                <div class="user">
+                    <h1>{{answers.requestedPartnerId.fullname}}</h1>
+                    <h1>{{answers.requestedPartnerId.email}}</h1>
+                    <h1>{{answers.requestedPartnerId.mobile}}</h1>
+                    <h1 *ngIf="answers.requestingPartnerFormStatus && answers.requestedPartnerFormStatus">Relationship
+                        Score: {{(answers.relationshipScore | number:'1.0-0') + '%'}}</h1>
+                    <h1>Relationship Status: {{answers.relationshipStatus}}</h1>
+                    <h1>Form Filled: {{answers.requestedPartnerFormStatus}}</h1>
+                </div>
+                <div class="questions-container" *ngIf="answers.requestedPartnerFormStatus">
+                    <div class="question-box">
+                        <div class="questions-answer" [formGroup]="questionsPart2">
+                            <div class="question-form" *ngFor="let questions of questionsLevel1">
+                                <div class="question">
+                                    <label><span>{{questions.index}}.</span>{{questions.question}}</label>
+                                    <div *ngFor="let answers of questions.options">
+                                        <div class="btns" *ngIf="questions.type !== 'img'">
+                                            <p-radioButton name="{{questions.name}}" value="{{answers.ansType}}"
+                                                [label]="answers.answer" inputId="{{questions.name+answers.id}}"
+                                                [formControlName]="questions.name"></p-radioButton>
+                                        </div>
+                                        <div class="img-answers" *ngIf="questions.type === 'img'">
+                                            <p-radioButton name="{{questions.name}}" value="{{answers.ansType}}"
+                                                inputId="{{questions.name+answers.id}}"
+                                                [formControlName]="questions.name"></p-radioButton>
+                                            <div class="img">
+                                                <label for="{{questions.name}}"
+                                                    *ngIf="answers?.title">{{answers?.title}}</label>
+                                                <label for="{{questions.name+answers.id}}"><img [src]="answers.answer"
+                                                        alt="{{answers.answer}}"></label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

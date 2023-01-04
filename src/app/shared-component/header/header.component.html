@@ -1,6 +1,6 @@
 <div class="nav">
     <div class="nav-header">
-        <div class="nav-title">
+        <div class="nav-title" (click)="goToHome()">
             <img src="../../../assets/images/logo-2.png" alt="Ek Sambandh">
         </div>
     </div>
@@ -8,27 +8,35 @@
         <p-button type="button" class="mr-2" (click)="display = true" icon="pi pi-th-large"></p-button>
     </div>
 
-    <div class="nav-links">
+    <div class="nav-links" *ngIf="!isAdmin">
         <a class="link" routerLink="/home">Home</a>
         <a class="link" routerLink="/home" fragment="about" *ngIf="!userData?._id">About Us</a>
         <a class="link" routerLink="/home" fragment="howitworks" *ngIf="!userData?._id">How it works?</a>
         <a class="link" routerLink="/home" fragment="team" *ngIf="!userData?._id">Teams</a>
         <a class="link" routerLink="/home" fragment="faq" *ngIf="!userData?._id">FAQ</a>
-        <a class="link" href="../../../assets/pdf/eksambandh-vision.pdf" target="_blank" *ngIf="!userData?._id">Our
+        <a class="link" href="../../../assets/pdf/eksambandh.pdf" target="_blank" *ngIf="!userData?._id">Our
             Research</a>
         <a class="nav-btn" routerLink="/login" *ngIf="!userData?._id">Login</a>
 
         <a class="link" routerLink="/dashboard" *ngIf="userData?._id">Dashboard</a>
         <a class="link" routerLink="/profile" *ngIf="userData?._id">Profile</a>
         <a class="link" routerLink="/payments" *ngIf="userData?._id">Payments</a>
-        <a class="link" href="../../../assets/pdf/eksambandh-vision.pdf" target="_blank" *ngIf="userData?._id">Our
+        <a class="link" href="../../../assets/pdf/eksambandh.pdf" target="_blank" *ngIf="userData?._id">Our
             Research</a>
+        <a class="nav-btn" (click)="logout()" *ngIf="userData?._id">Logout</a>
+    </div>
+    <div class="nav-links" *ngIf="isAdmin">
+        <a class="link" routerLink="/admin/dashboard" *ngIf="userData?._id">Dashboard</a>
+        <a class="link" routerLink="/admin/users" *ngIf="userData?._id">Users</a>
+        <a class="link" routerLink="/admin/payments" *ngIf="userData?._id">Payments</a>
+        <a class="link" routerLink="/admin/relationship" *ngIf="userData?._id">Relationships</a>
+        <a class="link" routerLink="/admin/contact-us" *ngIf="userData?._id">Contact Us</a>
         <a class="nav-btn" (click)="logout()" *ngIf="userData?._id">Logout</a>
     </div>
 </div>
 
 <p-sidebar [(visible)]="display" position="right">
-    <div class="sidebar-nav-links">
+    <div class="sidebar-nav-links" *ngIf="!isAdmin">
         <a class="link" routerLink="/home" (click)="display = false">Home</a>
         <a class="link" routerLink="/home" (click)="display = false" fragment="about" *ngIf="!userData?._id">About
             Us</a>
@@ -36,15 +44,24 @@
             works?</a>
         <a class="link" routerLink="/home" (click)="display = false" fragment="team" *ngIf="!userData?._id">Teams</a>
         <a class="link" routerLink="/home" (click)="display = false" fragment="faq" *ngIf="!userData?._id">FAQ</a>
-        <a class="link" href="../../../assets/pdf/eksambandh-vision.pdf" target="_blank" *ngIf="!userData?._id">Our
+        <a class="link" href="../../../assets/pdf/eksambandh.pdf" target="_blank" *ngIf="!userData?._id">Our
             Research</a>
         <a class="nav-btn" routerLink="/login" (click)="display = false" *ngIf="!userData?._id">Login</a>
 
         <a class="link" routerLink="/dashboard" (click)="display = false" *ngIf="userData?._id">Dashboard</a>
         <a class="link" routerLink="/profile" (click)="display = false" *ngIf="userData?._id">Profile</a>
         <a class="link" routerLink="/payments" (click)="display = false" *ngIf="userData?._id">Payments</a>
-        <a class="link" href="../../../assets/pdf/eksambandh-vision.pdf" target="_blank" *ngIf="userData?._id">Our
+        <a class="link" href="../../../assets/pdf/eksambandh.pdf" target="_blank" *ngIf="userData?._id">Our
             Research</a>
         <a class="nav-btn" (click)="logout()" *ngIf="userData?._id">Logout</a>
+    </div>
+    <div class="sidebar-nav-links" *ngIf="isAdmin">
+        <a class="link" routerLink="/admin/dashboard" (click)="display = false" *ngIf="userData?._id">Dashboard</a>
+        <a class="link" routerLink="/admin/users" (click)="display = false" *ngIf="userData?._id">Users</a>
+        <a class="link" routerLink="/admin/payments" (click)="display = false" *ngIf="userData?._id">Payments</a>
+        <a class="link" routerLink="/admin/relationship" (click)="display = false"
+            *ngIf="userData?._id">Relationships</a>
+        <a class="link" routerLink="/admin/contact-us" (click)="display = false" *ngIf="userData?._id">Contact Us</a>
+        <a class="nav-btn" (click)="logout()" (click)="display = false" *ngIf="userData?._id">Logout</a>
     </div>
 </p-sidebar>

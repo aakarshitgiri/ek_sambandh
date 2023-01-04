@@ -13,6 +13,10 @@ import { SignupComponent } from './modules/signup/signup.component';
 import { TransactionsComponent } from './modules/transactions/transactions.component';
 import { RelationshipSuccessComponent } from './modules/relationship-success/relationship-success.component';
 import { AuthService } from './auth/auth.service';
+import { AdminloginComponent } from './modules/adminlogin/adminlogin.component';
+import { AdminAuthService } from './auth/admin-auth.service';
+import { NonAdminRouteService } from './auth/non-admin-route.service';
+import { DocsComponent } from './modules/docs/docs.component';
 const routerOptions: ExtraOptions = {
   scrollPositionRestoration: 'enabled',
   anchorScrolling: 'enabled',
@@ -24,28 +28,38 @@ const routes: Routes = [
   {
     path: '',
     pathMatch: 'full',
-    component: HomeComponent
+    component: HomeComponent,
+    canActivate: [NonAdminRouteService]
   },
   {
     path: UrlCollectionName.Home,
-    loadChildren: () => import('./modules/home/home.module').then(m => m.HomeModule)
+    loadChildren: () => import('./modules/home/home.module').then(m => m.HomeModule),
+    canActivate: [NonAdminRouteService]
   },
-  /*  {
-     path: "admin",
-     loadChildren: () => import('./admin/admin.module').then(m => m.AdminModule)
-   }, */
+  {
+    path: UrlCollectionName.admin,
+    loadChildren: () => import('./admin/admin.module').then(m => m.AdminModule),
+    canActivate: [AuthService, AdminAuthService]
+  },
   {
     path: UrlCollectionName.Login,
-    component: LoginComponent
+    component: LoginComponent,
+    canActivate: [NonAdminRouteService]
+  },
+  {
+    path: UrlCollectionName.adminlogin,
+    component: AdminloginComponent,
+    canActivate: [NonAdminRouteService]
   },
   {
     path: UrlCollectionName.Dashboard,
     component: DashboardComponent,
-    canActivate: [AuthService]
+    canActivate: [AuthService, NonAdminRouteService]
   },
   {
     path: UrlCollectionName.relationshipAccept,
-    component: RelationshipSuccessComponent
+    component: RelationshipSuccessComponent,
+    canActivate: [NonAdminRouteService]
   },
   {
     path: UrlCollectionName.Result,
@@ -55,30 +69,45 @@ const routes: Routes = [
   {
     path: UrlCollectionName.LoveTest,
     loadChildren: () => import('./modules/questions/questions.module').then(m => m.QuestionsModule),
-    canActivate: [AuthService]
+    canActivate: [AuthService, NonAdminRouteService]
   },
   {
     path: UrlCollectionName.Profile,
     component: ProfileComponent,
-    canActivate: [AuthService]
+    canActivate: [AuthService, NonAdminRouteService]
   },
   {
     path: UrlCollectionName.Payments,
     component: TransactionsComponent,
-    canActivate: [AuthService]
+    canActivate: [AuthService, NonAdminRouteService]
   },
   {
     path: UrlCollectionName.SignUp,
-    component: SignupComponent
+    component: SignupComponent,
+    canActivate: [NonAdminRouteService]
   },
   {
     path: UrlCollectionName.SetPass,
-    component: SetPasswordComponent
+    component: SetPasswordComponent,
+    canActivate: [NonAdminRouteService]
   },
   {
     path: UrlCollectionName.ForgotPass,
-    component: ForgotPasswordComponent
+    component: ForgotPasswordComponent,
+    canActivate: [NonAdminRouteService]
   },
+  /*  {
+     path: UrlCollectionName.termsCondition,
+     component: DocsComponent
+   },
+   {
+     path: UrlCollectionName.privacyPolicy,
+     component: DocsComponent
+   },
+   {
+     path: UrlCollectionName.refundPolicy,
+     component: DocsComponent
+   }, */
   {
     path: '**',
     redirectTo: UrlCollectionName.Home

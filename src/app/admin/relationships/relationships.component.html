@@ -1,1 +1,99 @@
-<p>relationships works!</p>
+<div class="transaction-container">
+
+    <div class="dashboard-table">
+        <div class="table-top-feature">
+            <div class="table-title">
+                <h1>Relationships</h1>
+            </div>
+            <div class="flex-box">
+                <div class="right">
+                    <div class="search-filter">
+                        <input type="text" (input)="dt.filterGlobal($any($event.target).value, 'contains')"
+                            placeholder="Search">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="table-relationship">
+            <p-table #dt [value]="relationships" [responsive]="true" [tableStyle]="{'min-width': '100%'}"
+                responsiveLayout="scroll" [paginator]="true" [responsive]="true" styleClass="p-datatable-gridlines"
+                [showCurrentPageReport]="true" [rows]="10"
+                currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries"
+                [rowsPerPageOptions]="[10,25,50]"
+                [globalFilterFields]="['readableId','requestingPartnerId.fullname', 'requestingPartnerId.email', 'requestingPartnerId.mobile', 'requestedPartnerId.fullname', 'requestedPartnerId.email', 'requestedPartnerId.mobile', 'feeStatus', 'relationshipStatus']">
+                <ng-template pTemplate="header">
+                    <tr>
+                        <th>Relationship Id</th>
+                        <th>Requesting Partner</th>
+                        <th>Requested Partner</th>
+                        <th>Payment Status</th>
+                        <th>Realtionship Status</th>
+                        <th>Actions</th>
+                    </tr>
+                </ng-template>
+                <ng-template pTemplate="body" let-relationships>
+                    <tr>
+                        <td>{{relationships.readableId}}</td>
+                        <td>
+                            <div class="flex">
+                                <h1>{{relationships?.requestingPartnerId?.fullname}}</h1>
+                                <h1>{{relationships?.requestingPartnerId?.email}}</h1>
+                                <h1>{{relationships?.requestingPartnerId?.mobile}}</h1>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="flex">
+                                <h1>{{relationships?.requestedPartnerId?.fullname}}</h1>
+                                <h1>{{relationships?.requestedPartnerId?.email}}</h1>
+                                <h1>{{relationships?.requestedPartnerId?.mobile}}</h1>
+                            </div>
+                        </td>
+
+                        <td>
+                            <div class="{{relationships.feeStatus ? 'Success':'Failed'}}">{{relationships.feeStatus ?
+                                'Success':'Pending'}}</div>
+                        </td>
+                        <td>
+                            <div>{{relationships.relationshipStatus}}</div>
+                        </td>
+
+                        <td>
+                            <div class="flex-box">
+                                <div class="status-btn">
+                                    <button
+                                        *ngIf="relationships.requestedPartnerFormStatus && relationships.requestingPartnerFormStatus"
+                                        (click)="viewResults(relationships)">View
+                                        Results</button>
+                                    <button
+                                        *ngIf="relationships.requestedPartnerFormStatus || relationships.requestingPartnerFormStatus"
+                                        (click)="goToAnswers(relationships)">View Answers</button>
+                                </div>
+                                <div class="delete-btn">
+                                    <button (click)="deleteModal(relationships)">Delete Relationship</button>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                </ng-template>
+                <ng-template pTemplate="emptymessage" style="width: 100%;">
+                    <tr>
+                        <td colspan="6">
+                            <p style="text-align: center; width: 100%;">No relationships found!</p>
+                        </td>
+
+                    </tr>
+                </ng-template>
+            </p-table>
+        </div>
+    </div>
+</div>
+
+
+<p-dialog header="Delete Relationship" [(visible)]="displayBasic" [style]="{width: '50vw'}">
+    <p>Are you sure you want to delete this relationship?</p>
+    <ng-template pTemplate="footer" class="dialog-btn">
+        <button (click)="displayBasic=false" class="btn-cancel">Cancel</button>
+        <button (click)="deleteRelationship()" class="btn">Delete</button>
+    </ng-template>
+</p-dialog>

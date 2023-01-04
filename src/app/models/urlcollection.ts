@@ -15,6 +15,21 @@ export enum UrlCollection {
     Level3 = "/love-test/level-3",
     Level4 = "/love-test/level-4",
     Level5 = "/love-test/level-5",
+    termsCondition = "/term-condition",
+    privacyPolicy = "/privacy-policy",
+    refundPolicy = "/refund-policy",
+
+
+
+    //admin Routes
+    adminlogin = "/admin-login",
+    admin = "/admin",
+    admindashboard = "/admin/dashboard",
+    adminusers = "/admin/users",
+    adminrelationship = "/admin/relationship",
+    adminpayments = "/admin/payments",
+    admincontactus = "/admin/contact-us",
+    adminviewanswer = "/admin/view-answer"
 }
 
 export enum UrlCollectionName {
@@ -34,4 +49,17 @@ export enum UrlCollectionName {
     Level3 = "level-3",
     Level4 = "level-4",
     Level5 = "level-5",
+    termsCondition = "term-condition",
+    privacyPolicy = "privacy-policy",
+    refundPolicy = "refund-policy",
+
+
+    adminlogin = "admin-login",
+    admin = "admin",
+    admindashboard = "dashboard",
+    adminusers = "users",
+    adminrelationship = "relationship",
+    adminpayments = "payments",
+    admincontactus = "contact-us",
+    adminviewanswer = "view-answer"
 }

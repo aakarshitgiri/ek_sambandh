@@ -9,7 +9,7 @@ import { DataStorageService } from './data-storage.service';
   providedIn: 'root'
 })
 export class ApiEkSambandhService {
-  token: string;
+
 
   constructor(
     private http: HttpClient,

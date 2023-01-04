@@ -1,0 +1,294 @@
+@import '../../../assets/scss/varibles.scss';
+
+.transaction-container {
+    margin: 2em 1em;
+    padding: 1em;
+    text-align: -webkit-center;
+    min-height: 80vh;
+
+    @include phone-landscape {
+        padding: 0em;
+    }
+
+    @include small-phone-landscape {
+        padding: 0em;
+    }
+
+    @include phone-portrait {
+        padding: 0em;
+    }
+
+    @include small-phone-portrait {
+        padding: 0em;
+    }
+
+    .dashboard-table {
+        background-color: #fff;
+        padding: 1em;
+        border-radius: 15px;
+        width: 99%;
+        box-shadow: 0 0 15px rgb(146, 140, 140);
+
+        @include tablet-landscape {
+            width: 99%;
+        }
+
+        @include phone-landscape {
+            width: 99%;
+        }
+
+        @include small-phone-landscape {
+            width: 99%;
+        }
+
+        @include tablet-portrait {
+            width: 99%;
+        }
+
+        @include phone-portrait {
+            width: 99%;
+        }
+
+        @include small-phone-portrait {
+            width: 99%;
+        }
+
+        .table-top-feature {
+            .table-title {
+                text-align: left;
+                margin: 0.5em 0em;
+
+                h1 {
+                    font-size: 1.5em;
+                    font-family: $cr-font;
+                    font-style: normal;
+                    letter-spacing: 0.08em;
+                    font-weight: bold;
+                    color: #ab1e43;
+                }
+            }
+
+            .flex-box {
+                width: 100%;
+
+                .right {
+                    margin: 1em 0em;
+                    width: 100%;
+                    text-align: end;
+
+                    @include phone-landscape {
+                        text-align: center;
+                    }
+
+                    @include small-phone-landscape {
+                        text-align: center;
+                    }
+
+                    @include phone-portrait {
+                        text-align: center;
+                    }
+
+                    @include small-phone-portrait {
+                        text-align: center;
+                    }
+
+                    .search-filter {
+                        input {
+                            font-family: $cr-font;
+                            font-style: normal;
+                            letter-spacing: 0.08em;
+                            padding: 0.5em;
+                            font-size: 0.75em;
+                            background-color: #fff;
+                            border-radius: 5px;
+                            border: none;
+                            margin: 0em 1em;
+                            width: 18em;
+                            box-shadow: 0 0 10px rgb(146, 140, 140);
+
+                            @include phone-landscape {
+                                width: 90%;
+                            }
+
+                            @include small-phone-landscape {
+                                width: 90%;
+                            }
+
+                            @include phone-portrait {
+                                width: 90%;
+                            }
+
+                            @include small-phone-portrait {
+                                width: 90%;
+                            }
+                        }
+
+                        input:focus-visible {
+                            outline: none;
+                            box-shadow: 0 0 5px #ab1e43;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.Success {
+    background-color: #2aa821;
+    color: #fff;
+    text-align: center;
+    width: 8em;
+    padding: 5px 10px;
+    border-radius: 6px;
+}
+
+.Failed {
+    background-color: #cc1344;
+    color: #fff;
+    text-align: center;
+    width: 8em;
+    padding: 5px 10px;
+    border-radius: 6px;
+}
+
+.flex {
+    display: flex;
+    flex-direction: column;
+
+    h1 {
+        font-family: $cr-font;
+        font-size: 1em;
+        font-weight: 400;
+        font-style: normal;
+        letter-spacing: 0.08em;
+    }
+}
+
+.btn-cancel {
+    font-family: $cr-font;
+    font-size: 1em;
+    font-weight: 400;
+    background: none;
+    color: #000;
+    font-style: normal;
+    letter-spacing: 0.08em;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.btn {
+    font-family: $cr-font;
+    background-color: #ab1e43;
+    font-size: 1em;
+    color: #fff;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: 0.08em;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.flex-box {
+    .status-btn {
+        margin: 0.5em;
+        width: 15em;
+
+        button {
+            border: none;
+            background-color: #ab1e43;
+            padding: 5px 5px;
+            border-radius: 10px;
+            color: white;
+            font-size: 0.85em;
+            font-family: $cr-font;
+            font-style: normal;
+            letter-spacing: 0.08em;
+            box-shadow: 0 0 5px #ab1e43;
+            border: 1px solid white;
+            font-weight: 600;
+            width: 15em;
+            margin: 0.5em;
+            cursor: pointer;
+        }
+
+        button:hover {
+            box-shadow: 0 0 10px #ab1e43;
+            border: 2px solid white;
+            background-color: #cc1344;
+        }
+    }
+
+    .delete-btn {
+        margin: 0.5em;
+        width: 15em;
+
+        button {
+            border: none;
+            background-color: #fff;
+            padding: 5px 5px;
+            border-radius: 10px;
+            color: #ab1e43;
+            font-size: 0.85em;
+            font-family: $cr-font;
+            font-style: normal;
+            letter-spacing: 0.08em;
+            margin: 0.5em;
+            font-weight: 600;
+            width: 15em;
+            cursor: pointer;
+        }
+
+        button:hover {
+
+            color: #fff;
+            background-color: #cc1344;
+        }
+    }
+}
+
+:host ::ng-deep {
+    .p-datatable .p-datatable-thead>tr>th {
+        font-family: $cr-font;
+        font-style: normal;
+        letter-spacing: 0.08em;
+    }
+
+    .p-datatable .p-datatable-tbody>tr>td {
+        font-family: $cr-font;
+        font-style: normal;
+        letter-spacing: 0.08em;
+    }
+
+    .p-paginator .p-paginator-pages .p-paginator-page.p-highlight {
+        color: #fff;
+        background: #ab1e43;
+        border: #cc1344;
+    }
+
+    .p-link:focus {
+        box-shadow: none;
+    }
+
+    .p-dropdown:not(.p-disabled):hover {
+        border-color: #ab1e43;
+    }
+
+    .p-dropdown:not(.p-disabled).p-focus {
+        box-shadow: none;
+        border-color: #ab1e43;
+    }
+
+    :focus-visible {
+        outline: none;
+    }
+
+    .p-dropdown-panel .p-dropdown-items .p-dropdown-item.p-highlight {
+        color: #fff;
+        background: #ab1e43;
+    }
+}

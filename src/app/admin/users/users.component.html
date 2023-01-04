@@ -1,8 +1,179 @@
-<div class="users-container">
-    <div class="users-box">
-        <div class="title">
-            <h1>Users</h1>
-        </div>
+<div class="transaction-container">
 
+    <div class="dashboard-table">
+        <div class="table-top-feature">
+            <div class="table-title">
+                <h1>Users</h1>
+            </div>
+            <div class="flex-box">
+                <div class="right">
+                    <div class="search-filter">
+                        <input type="text" (input)="dt.filterGlobal($any($event.target).value, 'contains')"
+                            placeholder="Search">
+                    </div>
+                    <div class="add-partner-btn">
+                        <button (click)="updateUserProfile=true">Add New User</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="table-relationship">
+            <p-table #dt [value]="users" [responsive]="true" responsiveLayout="scroll" [paginator]="true"
+                [responsive]="true" [showCurrentPageReport]="true" [rows]="10" styleClass="p-datatable-gridlines"
+                currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries"
+                [rowsPerPageOptions]="[10,25,50]"
+                [globalFilterFields]="['fullname','email', 'mobile', 'registrationDate']">
+                <ng-template pTemplate="header">
+                    <tr>
+                        <th>Fullname</th>
+                        <th>Email</th>
+                        <th>Registration Date</th>
+                        <th>Contact</th>
+                        <th>Actions</th>
+                    </tr>
+                </ng-template>
+                <ng-template pTemplate="body" let-users>
+                    <tr>
+                        <td>{{users.fullname}}</td>
+                        <td>{{users.email}}</td>
+                        <td>{{users.registrationDate | date: 'dd / MM / yyyy'}}</td>
+                        <td>{{users.mobile}}</td>
+                        <td>
+                            <div class="flex-box">
+                                <div class="status-btn">
+                                    <button (click)="updateModel(users)">Update User</button>
+                                    <button>View Payments</button>
+                                    <button>View Relationships</button>
+                                </div>
+                                <div class="delete-btn">
+                                    <button (click)="deleteModal(users)">Delete User</button>
+                                </div>
+                            </div>
+                        </td>
+
+                    </tr>
+                </ng-template>
+                <ng-template pTemplate="emptymessage" style="width: 100%;">
+                    <tr>
+                        <td colspan="5">
+                            <p style="text-align: center; width: 100%;">No users registered yet!</p>
+                        </td>
+
+                    </tr>
+                </ng-template>
+            </p-table>
+        </div>
     </div>
 </div>
+
+<p-dialog header="Add New User" [(visible)]="updateUserProfile" [breakpoints]="{'960px': '95vw'}"
+    [style]="{width: '50vw'}" [baseZIndex]="10000">
+    <div class="help-support">
+        <div class="form-help" [formGroup]="profile">
+            <div class="input-container">
+                <label for="fullname">Full Name*</label>
+                <input type="text" name="fullname" formControlName="fullname">
+                <span class="error-box"
+                    *ngIf="profileSubmit && this.profile.controls['fullname'].hasError('required')">Please
+                    enter your full name</span>
+            </div>
+            <div class="input-container">
+                <label for="mobile">Mobile*</label>
+                <input type="text" name="mobile" formControlName="mobile">
+                <span class="error-box"
+                    *ngIf="profileSubmit && this.profile.controls['mobile'].hasError('required')">Please
+                    enter contact number</span>
+            </div>
+            <div class="input-container">
+                <label for="email">Email*</label>
+                <input type="email" name="email" formControlName="email"
+                    pattern="^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$">
+                <span class="error-box"
+                    *ngIf="profileSubmit && this.profile.controls['email'].hasError('required')">Please
+                    enter
+                    email</span>
+                <span class="error-box"
+                    *ngIf="profileSubmit && this.profile.controls['email'].hasError('pattern')">Please
+                    enter
+                    valid
+                    email</span>
+            </div>
+            <div class="input-container">
+                <label for="password">Password*</label>
+                <input type="password" name="password" formControlName="password" minlength="8" maxlength="16"
+                    pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$">
+                <span class="error-box"
+                    *ngIf="profileSubmit && this.profile.controls['password'].hasError('required')">Please enter
+                    password</span>
+                <span class="error-box"
+                    *ngIf="profileSubmit && this.profile.controls['password'].hasError('minlength')">Password min
+                    length is 8</span>
+                <span class="error-box"
+                    *ngIf="profileSubmit && this.profile.controls['password'].hasError('pattern')">Password should
+                    contain at least one uppercase letter, one lowercase letter, one number and one special
+                    character</span>
+            </div>
+            <div class="input-container">
+                <label for="repassword">Re-Password*</label>
+                <input type="password" name="repassword" formControlName="repassword">
+                <span class="error-box"
+                    *ngIf="profileSubmit && this.profile.controls['repassword'].hasError('required')">Please enter
+                    password</span>
+                <span class="error-box"
+                    *ngIf="profileSubmit && this.profile.controls['repassword'].hasError('minlength')">Password min
+                    length is 8</span>
+                <span class="error-box"
+                    *ngIf="profileSubmit && !checkpasswordMatch() && this.profile.controls['repassword'].value">Password
+                    did not match</span>
+                <span class="error-box"
+                    *ngIf="profileSubmit && this.profile.controls['repassword'].hasError('pattern')">Password should
+                    contain at least one uppercase letter, one lowercase letter, one number and one special
+                    character</span>
+            </div>
+        </div>
+    </div>
+    <ng-template pTemplate="footer" class="footer-modal">
+        <button (click)="updateUserProfile=false" class="cancel">Cancel</button>
+        <button (click)="addUser()" class="btn">Add New User</button>
+    </ng-template>
+</p-dialog>
+
+
+
+<p-dialog header="Update User" [(visible)]="updateuser" [breakpoints]="{'960px': '95vw'}" [style]="{width: '50vw'}"
+    [baseZIndex]="10000">
+    <div class="help-support">
+        <div class="form-help" [formGroup]="userupdate">
+            <div class="input-container">
+                <label for="fullname">Full Name*</label>
+                <input type="text" name="fullname" formControlName="fullname">
+                <span class="error-box"
+                    *ngIf="updateSubmit && this.userupdate.controls['fullname'].hasError('required')">Please
+                    enter your full name</span>
+            </div>
+            <div class="input-container">
+                <label for="mobile">Mobile*</label>
+                <input type="text" name="mobile" formControlName="mobile">
+                <span class="error-box"
+                    *ngIf="updateSubmit && this.userupdate.controls['mobile'].hasError('required')">Please
+                    enter contact number</span>
+            </div>
+
+
+        </div>
+    </div>
+    <ng-template pTemplate="footer" class="footer-modal">
+        <button (click)="updateuser=false" class="cancel">Cancel</button>
+        <button (click)="update()" class="btn">Update User</button>
+    </ng-template>
+</p-dialog>
+
+
+<p-dialog header="Delete User" [(visible)]="displayBasic" [style]="{width: '50vw'}">
+    <p>Are you sure you want to delete this user?</p>
+    <ng-template pTemplate="footer" class="dialog-btn">
+        <button (click)="displayBasic=false" class="btn-cancel">Cancel</button>
+        <button (click)="deleteUser()" class="btn-submit">Delete</button>
+    </ng-template>
+</p-dialog>

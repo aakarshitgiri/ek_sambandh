@@ -1,0 +1,264 @@
+@import '../../../assets/scss/varibles.scss';
+
+.answers-container {
+
+    margin: 2em 1em;
+    padding: 1em;
+    text-align: -webkit-center;
+    min-height: 80vh;
+
+    @include phone-landscape {
+        padding: 0em;
+    }
+
+    @include small-phone-landscape {
+        padding: 0em;
+    }
+
+    @include phone-portrait {
+        padding: 0em;
+    }
+
+    @include small-phone-portrait {
+        padding: 0em;
+    }
+
+    .answers-box {
+        background-color: #fff;
+        padding: 1em;
+        border-radius: 15px;
+        width: 99%;
+        box-shadow: 0 0 15px rgb(146, 140, 140);
+
+        @include tablet-landscape {
+            width: 99%;
+        }
+
+        @include phone-landscape {
+            width: 99%;
+        }
+
+        @include small-phone-landscape {
+            width: 99%;
+        }
+
+        @include tablet-portrait {
+            width: 99%;
+        }
+
+        @include phone-portrait {
+            width: 99%;
+        }
+
+        @include small-phone-portrait {
+            width: 99%;
+        }
+
+        .title {
+            margin: 0.5em 0em;
+
+            h1 {
+                font-size: 1.5em;
+                font-family: $cr-font;
+                font-style: normal;
+                letter-spacing: 0.08em;
+                font-weight: bold;
+                color: #ab1e43;
+            }
+        }
+
+        .flex-box {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+
+            .box {
+                width: 50%;
+                border: 1px solid #ab1e43;
+                padding: 2em;
+
+                .user {
+                    background-color: #ab1e43;
+                    padding: 1em;
+                    border-radius: 10px;
+
+                    h1 {
+                        font-size: 1em;
+                        font-family: $cr-font;
+                        font-style: normal;
+                        letter-spacing: 0.08em;
+                        font-weight: bold;
+                        color: #fff;
+                        text-align: left;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.img-answers {
+    display: flex;
+    justify-content: left;
+    flex-direction: row;
+    margin: 1em;
+
+    .img {
+        width: 25em;
+
+        label {
+            color: #000000 !important;
+            margin: 1em !important;
+        }
+
+        img {
+            width: 100%;
+            margin: 1em;
+            border-radius: 15px;
+            height: 15em;
+        }
+    }
+}
+
+
+.questions-container {
+
+    margin-top: 4em;
+
+    .question-box {
+        .questions-answer {
+
+            margin-top: 1em;
+
+
+            .question-form {
+                margin: 3em 0em;
+
+                .question {
+                    text-align: left;
+                    display: flex;
+                    flex-direction: column;
+
+                    label {
+                        font-size: 1em;
+                        font-family: $cr-font;
+                        font-style: normal;
+                        letter-spacing: 0.08em;
+                        font-weight: bold;
+                        color: #ab1e43;
+                        margin: 0px;
+
+                        span {
+                            margin: 0px 5px;
+                        }
+                    }
+
+                    .btns {
+                        margin: 1em;
+                    }
+                }
+            }
+        }
+
+        .bottom {
+            width: 100%;
+            padding: 1em;
+            margin-top: 1em;
+            text-align: end;
+
+            @include phone-landscape {
+                text-align: center;
+            }
+
+            @include small-phone-landscape {
+                text-align: center;
+            }
+
+            @include phone-portrait {
+                text-align: center;
+            }
+
+            @include small-phone-portrait {
+                text-align: center;
+            }
+
+            .next-btn {
+                button {
+                    border: none;
+                    background-color: #ab1e43;
+                    padding: 5px 5px;
+                    border-radius: 10px;
+                    color: white;
+                    font-size: 0.85em;
+                    font-family: $cr-font;
+                    font-style: normal;
+                    letter-spacing: 0.08em;
+                    box-shadow: 0 0 5px #ab1e43;
+                    border: 1px solid white;
+                    font-weight: 600;
+                    width: 15em;
+                    cursor: pointer;
+
+                    @include phone-landscape {
+                        width: 90%;
+                    }
+
+                    @include small-phone-landscape {
+                        width: 90%;
+                    }
+
+                    @include phone-portrait {
+                        width: 90%;
+                    }
+
+                    @include small-phone-portrait {
+                        width: 90%;
+                    }
+                }
+
+                button:hover {
+                    box-shadow: 0 0 10px #ab1e43;
+                    border: 2px solid white;
+                    background-color: #cc1344;
+                }
+            }
+
+        }
+    }
+}
+
+:host ::ng-deep {
+    .p-radiobutton-label {
+        font-size: 1em;
+        font-family: $cr-font;
+        font-style: normal;
+        letter-spacing: 0.08em;
+        font-weight: bold;
+    }
+
+    .p-radiobutton .p-radiobutton-box:not(.p-disabled):not(.p-highlight):hover {
+        border-color: #ab1e43;
+    }
+
+    .p-radiobutton .p-radiobutton-box:not(.p-disabled).p-focus {
+        box-shadow: none;
+    }
+
+    .p-radiobutton .p-radiobutton-box.p-highlight:not(.p-disabled):hover {
+        border-color: #ab1e43;
+        background: #ab1e43;
+    }
+
+    .p-radiobutton .p-radiobutton-box.p-highlight {
+        border-color: #ab1e43;
+        background: #ab1e43;
+    }
+
+    .p-radiobutton-label-active {
+        color: #ab1e43;
+    }
+
+    .p-radiobutton-label-focus {
+        color: #ab1e43;
+    }
+}

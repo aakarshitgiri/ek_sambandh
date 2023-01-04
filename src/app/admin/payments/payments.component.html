@@ -1,1 +1,64 @@
-<p>payments works!</p>
+<div class="transaction-container">
+
+    <div class="dashboard-table">
+        <div class="table-top-feature">
+            <div class="table-title">
+                <h1>Payments</h1>
+            </div>
+            <div class="flex-box">
+                <div class="right">
+                    <div class="search-filter">
+                        <input type="text" (input)="dt.filterGlobal($any($event.target).value, 'contains')"
+                            placeholder="Search">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="table-relationship">
+            <p-table #dt [value]="payment" [responsive]="true" responsiveLayout="scroll"
+                [tableStyle]="{'min-width': '100%'}" styleClass="p-datatable-gridlines" [paginator]="true"
+                [responsive]="true" [showCurrentPageReport]="true" [rows]="10"
+                currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries"
+                [rowsPerPageOptions]="[10,25,50]"
+                [globalFilterFields]="['transactionId','payingUser.fullname', 'payingUser.email', 'payingUser.mobile', 'readableId', 'date', 'paymentStatus']">
+                <ng-template pTemplate="header">
+                    <tr>
+                        <th>Transaction ID</th>
+                        <th>Relationship ID</th>
+                        <th>User Details</th>
+                        <th>Date</th>
+                        <th>Amount</th>
+                        <th>Status</th>
+                    </tr>
+                </ng-template>
+                <ng-template pTemplate="body" let-payment>
+                    <tr>
+                        <td>{{payment?.transactionId ? payment?.transactionId: '-'}}</td>
+                        <td>{{payment.readableId}}</td>
+                        <td>
+                            <div class="flex">
+                                <h1>{{payment.payingUser.fullname}}</h1>
+                                <h1>{{payment.payingUser.email}}</h1>
+                                <h1>{{payment.payingUser.mobile}}</h1>
+                            </div>
+                        </td>
+                        <td>{{payment.date | date: 'dd / MM / yyyy'}}</td>
+                        <td>{{payment.amount | currency:'INR' }}</td>
+                        <td>
+                            <div class="{{payment.paymentStatus}}">{{payment.paymentStatus}}</div>
+                        </td>
+                    </tr>
+                </ng-template>
+                <ng-template pTemplate="emptymessage" style="width: 100%;">
+                    <tr>
+                        <td colspan="5">
+                            <p style="text-align: center; width: 100%;">You don't have any transactions yet!</p>
+                        </td>
+
+                    </tr>
+                </ng-template>
+            </p-table>
+        </div>
+    </div>
+</div>

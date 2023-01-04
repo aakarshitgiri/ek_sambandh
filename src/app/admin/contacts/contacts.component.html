@@ -1,1 +1,58 @@
-<p>contacts works!</p>
+<div class="transaction-container">
+
+    <div class="dashboard-table">
+        <div class="table-top-feature">
+            <div class="table-title">
+                <h1>Contact Us</h1>
+            </div>
+            <div class="flex-box">
+                <div class="right">
+                    <div class="search-filter">
+                        <input type="text" (input)="dt.filterGlobal($any($event.target).value, 'contains')"
+                            placeholder="Search">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="table-relationship">
+            <p-table #dt [value]="contactus" [responsive]="true" styleClass="p-datatable-gridlines"
+                responsiveLayout="scroll" [paginator]="true" [responsive]="true" [showCurrentPageReport]="true"
+                [rows]="10" currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries"
+                [rowsPerPageOptions]="[10,25,50]"
+                [globalFilterFields]="['fullname','email', 'mobile', 'reason', 'date']">
+                <ng-template pTemplate="header">
+                    <tr>
+                        <th>Full Name</th>
+                        <th>Email</th>
+                        <th>Contact</th>
+                        <th>Date</th>
+                        <th>Details</th>
+
+                    </tr>
+                </ng-template>
+                <ng-template pTemplate="body" let-contactus>
+                    <tr>
+                        <td>{{contactus.fullname}}</td>
+                        <td>{{contactus.email}}</td>
+                        <td>{{contactus.mobile}}</td>
+                        <td>{{contactus.date | date: 'dd / MM / yyyy'}}</td>
+                        <td>
+                            <div class="reason">
+                                {{contactus.reason}}
+                            </div>
+                        </td>
+                    </tr>
+                </ng-template>
+                <ng-template pTemplate="emptymessage" style="width: 100%;">
+                    <tr>
+                        <td colspan="4">
+                            <p style="text-align: center; width: 100%;">No data found!</p>
+                        </td>
+
+                    </tr>
+                </ng-template>
+            </p-table>
+        </div>
+    </div>
+</div>
