@@ -33,7 +33,7 @@ export class DashboardComponent implements OnInit {
         { "title": "Total Users", "number": res.dashboard.user, "route": "users", "button": "Users" },
         { "title": "Total Relationships", "number": res.dashboard.relationship, "route": "relationships", "button": "Relationships" },
         { "title": "Total Payments", "number": res.dashboard.payment, "route": "payments", "button": "Payments" },
-        { "title": "Help & Support", "number": res.dashboard.contact, "route": "contact", "button": "Payments" }
+        { "title": "Help & Support", "number": res.dashboard.contact, "route": "contact", "button": "Help & Support" }
       ]
 
     } catch (error: any) {
