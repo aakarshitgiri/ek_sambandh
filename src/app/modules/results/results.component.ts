@@ -3,6 +3,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import html2canvas from 'html2canvas';
 import { ToastType } from 'src/app/models/notification-model';
 import { UrlCollection } from 'src/app/models/urlcollection';
+import { AdminEksambandhService } from 'src/app/services/admin-eksambandh.service';
 import { ApiEkSambandhService } from 'src/app/services/api-ek-sambandh.service';
 import { DataStorageService } from 'src/app/services/data-storage.service';
 import { NotificationService } from 'src/app/services/notifications.service';
@@ -23,8 +24,10 @@ export class ResultsComponent implements OnInit {
   partner: string;
   id: string;
   showValue: boolean = false;
+  isAdmin: boolean = false;
   constructor(
     private datastorge: DataStorageService,
+    private adminApi: AdminEksambandhService,
     private router: Router,
     private apiService: ApiEkSambandhService,
     private notificationservice: NotificationService,
@@ -35,9 +38,13 @@ export class ResultsComponent implements OnInit {
     this.id = this.ActivateRoute.snapshot.queryParams['id'];
     this.user = this.ActivateRoute.snapshot.queryParams['user'];
     this.partner = this.ActivateRoute.snapshot.queryParams['partner'];
+    let view = this.ActivateRoute.snapshot.queryParams['view'];
 
     if (!this.id) {
       this.router.navigate([UrlCollection.Dashboard])
+    } else if (view === 'admin') {
+      this.isAdmin = true;
+      this.getAdminResult();
     } else {
       this.getResult();
     }
@@ -48,6 +55,21 @@ export class ResultsComponent implements OnInit {
     this.notificationservice.showLoader()
     try {
       this.apiService.getResults(this.id).subscribe((res: any) => {
+        this.apiResult = res.results;
+        this.showValue = true;
+        this.notificationservice.hideLoader()
+      })
+    } catch (error: any) {
+      this.notificationservice.hideLoader();
+      this.notificationservice.showToast({ type: ToastType.Error, message: error.error.error });
+    }
+
+  }
+
+  getAdminResult() {
+    this.notificationservice.showLoader()
+    try {
+      this.adminApi.getResults(this.id).subscribe((res: any) => {
         this.apiResult = res.results;
         this.showValue = true;
         this.notificationservice.hideLoader()

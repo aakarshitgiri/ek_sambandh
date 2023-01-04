@@ -72,21 +72,21 @@
         "index": 14,
         "name": "questions14",
         "type": "text",
-        "question": "Do they still possess the qualities that made you choose your partner?",
+        "question": "How firmly do you intend to change your actions so that they meet your partner's demands?",
         "options": [
             {
                 "id": 1,
-                "answer": "Yes, my partner is still the same.",
-                "ansType": "Negative"
-            },
-            {
-                "id": 2,
-                "answer": "No,I think that started fading.",
+                "answer": " I'll attempt to be more amiable and fulfill expectations.",
                 "ansType": "Positive"
             },
             {
+                "id": 2,
+                "answer": " I can't change, therefore you have to accept me as I am.",
+                "ansType": "Negative"
+            },
+            {
                 "id": 3,
-                "answer": "I don't think it at all.",
+                "answer": "Neutral",
                 "ansType": "Neutral"
             }
         ]

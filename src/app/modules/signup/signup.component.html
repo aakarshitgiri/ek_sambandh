@@ -27,7 +27,7 @@
             <div class="flex-box" *ngIf="hideSendBtn && !emailVerified">
                 <div class="input-container">
                     <label for="otp">Enter OTP*</label>
-                    <input type="number" name="otp" min="6" max="6" formControlName="otp">
+                    <input type="text" name="otp" formControlName="otp">
                 </div>
                 <div class="email-verify">
                     <button (click)="verifyOtp()">Verify Email</button>

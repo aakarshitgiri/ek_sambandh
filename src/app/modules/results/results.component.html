@@ -34,9 +34,14 @@
                         <h1 *ngIf="showValue">{{(makeAbsolute(apiResult?.score) | number:'1.0-0') + '%'}}</h1>
                     </div>
                 </div>
-                <div class="message">
+                <div class="message" *ngIf="!isAdmin">
                     <p>{{apiResult?.message}}</p>
                 </div>
+                <div class="message" *ngIf="isAdmin">
+                    <p>{{apiResult?.message1}}</p>
+                    <p>{{apiResult?.message2}}</p>
+                </div>
+
             </div>
         </div>
     </div>
@@ -71,8 +76,14 @@
                             <h1 style="font-size: 4em;">{{(makeAbsolute(apiResult?.score) | number:'1.0-0') + '%'}}</h1>
                         </div>
                     </div>
-                    <div class="message" style="width: 50%;  padding: 1em;  padding-top: 3em; z-index: 1;">
+                    <div class="message" style="width: 50%;  padding: 1em;  padding-top: 3em; z-index: 1;"
+                        *ngIf="!isAdmin">
                         <p style="z-index: 1; margin: 2em; font-size: 2em;">{{apiResult?.message}}</p>
+                    </div>
+                    <div class="message" style="width: 50%;  padding: 1em;  padding-top: 3em; z-index: 1;"
+                        *ngIf="isAdmin">
+                        <p style="z-index: 1; margin: 2em; font-size: 2em;">{{apiResult?.message1}}</p>
+                        <p style="z-index: 1; margin: 2em; font-size: 2em;">{{apiResult?.message2}}</p>
                     </div>
                 </div>
                 <div style="  display: flex; justify-content: space-between;">
