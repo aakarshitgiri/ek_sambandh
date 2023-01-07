@@ -4,6 +4,7 @@ import { Router } from '@angular/router';
 import { PrimeNGConfig } from 'primeng/api';
 import { firstValueFrom } from 'rxjs';
 import { ToastType } from 'src/app/models/notification-model';
+import { UrlCollection } from 'src/app/models/urlcollection';
 import { AdminEksambandhService } from 'src/app/services/admin-eksambandh.service';
 import { NotificationService } from 'src/app/services/notifications.service';
 
@@ -46,8 +47,16 @@ export class UsersComponent implements OnInit {
       mobile: new FormControl('', [Validators.required]),
     });
 
-
   }
+
+  viewPayment(id: string, name: string) {
+    this.router.navigate([UrlCollection.adminpayments], { queryParams: { id: id, name: name } })
+  }
+
+  viewRelationship(id: string, name: string) {
+    this.router.navigate([UrlCollection.adminrelationship], { queryParams: { id: id, name: name } })
+  }
+
 
   async deleteUser() {
     this.notificationservice.showLoader();
