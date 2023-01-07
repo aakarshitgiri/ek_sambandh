@@ -132,4 +132,24 @@ export class AdminEksambandhService {
     return httpResponse;
   }
 
+  public getUserPayments(id: string): Observable<any> {
+    const url: string = `${environment.apiUrl.ekSambandhUrl}/admin/user/payment/${id}`;
+    const headers = {
+      "Content-Type": "application/json",
+      "Authorization": "Bearer " + JSON.parse(sessionStorage?.getItem('token') as string),
+    }
+    const httpResponse: any = this.http.get<any>(url, { headers });
+    return httpResponse;
+  }
+
+  public getUserRelationships(id: string): Observable<any> {
+    const url: string = `${environment.apiUrl.ekSambandhUrl}/admin/user/relationship/${id}`;
+    const headers = {
+      "Content-Type": "application/json",
+      "Authorization": "Bearer " + JSON.parse(sessionStorage?.getItem('token') as string),
+    }
+    const httpResponse: any = this.http.get<any>(url, { headers });
+    return httpResponse;
+  }
+
 }

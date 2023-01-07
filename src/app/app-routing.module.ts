@@ -28,8 +28,7 @@ const routes: Routes = [
   {
     path: '',
     pathMatch: 'full',
-    component: HomeComponent,
-    canActivate: [NonAdminRouteService]
+    component: HomeComponent
   },
   {
     path: UrlCollectionName.Home,
@@ -96,18 +95,18 @@ const routes: Routes = [
     component: ForgotPasswordComponent,
     canActivate: [NonAdminRouteService]
   },
-  /*  {
-     path: UrlCollectionName.termsCondition,
-     component: DocsComponent
-   },
-   {
-     path: UrlCollectionName.privacyPolicy,
-     component: DocsComponent
-   },
-   {
-     path: UrlCollectionName.refundPolicy,
-     component: DocsComponent
-   }, */
+  {
+    path: UrlCollectionName.termsCondition,
+    component: DocsComponent
+  },
+  {
+    path: UrlCollectionName.privacyPolicy,
+    component: DocsComponent
+  },
+  {
+    path: UrlCollectionName.refundPolicy,
+    component: DocsComponent
+  },
   {
     path: '**',
     redirectTo: UrlCollectionName.Home

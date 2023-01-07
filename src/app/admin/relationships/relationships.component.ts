@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { firstValueFrom } from 'rxjs';
 import { ToastType } from 'src/app/models/notification-model';
 import { UrlCollection } from 'src/app/models/urlcollection';
@@ -15,14 +15,24 @@ export class RelationshipsComponent implements OnInit {
   relationships: any;
   displayBasic: boolean = false;
   relationshipsid: string;
+  user: string;
   constructor(
     private router: Router,
     private adminApi: AdminEksambandhService,
     private notificationservice: NotificationService,
+    private activateRouter: ActivatedRoute
   ) { }
 
   ngOnInit() {
-    this.getRelationship();
+    let id = this.activateRouter.snapshot.queryParams['id'];
+    let name = this.activateRouter.snapshot.queryParams['name'];
+    if (id) {
+      this.user = name;
+      this.getUserRelationship(id);
+    } else {
+      this.getRelationship();
+    }
+
   }
 
   viewResults(data: any) {
@@ -57,6 +67,18 @@ export class RelationshipsComponent implements OnInit {
     this.notificationservice.showLoader();
     try {
       let response = await firstValueFrom(this.adminApi.getRelationships());
+      this.notificationservice.hideLoader();
+      this.relationships = response.relationships;
+    } catch (error: any) {
+      this.notificationservice.hideLoader();
+      this.notificationservice.showToast({ type: ToastType.Error, message: error.error.error });
+    }
+  }
+
+  async getUserRelationship(id: string) {
+    this.notificationservice.showLoader();
+    try {
+      let response = await firstValueFrom(this.adminApi.getUserRelationships(id));
       this.notificationservice.hideLoader();
       this.relationships = response.relationships;
     } catch (error: any) {

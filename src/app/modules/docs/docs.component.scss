@@ -6,12 +6,60 @@
     padding: 1em;
     text-align: -webkit-center;
 
+    @include tablet-landscape {
+        padding: 0em;
+    }
+
+    @include phone-landscape {
+        padding: 0em;
+    }
+
+    @include small-phone-landscape {
+        padding: 0em;
+    }
+
+    @include tablet-portrait {
+        padding: 0em;
+    }
+
+    @include phone-portrait {
+        padding: 0em;
+    }
+
+    @include small-phone-portrait {
+        padding: 0em;
+    }
+
     .admin-box {
         background-color: #fff;
         padding: 1em;
         border-radius: 15px;
         width: 85%;
         box-shadow: 0 0 15px rgb(146, 140, 140);
+
+        @include tablet-landscape {
+            width: 100%;
+        }
+
+        @include phone-landscape {
+            width: 100%;
+        }
+
+        @include small-phone-landscape {
+            width: 100%;
+        }
+
+        @include tablet-portrait {
+            width: 100%;
+        }
+
+        @include phone-portrait {
+            width: 100%;
+        }
+
+        @include small-phone-portrait {
+            width: 100%;
+        }
 
         .title {
             text-align: center;
@@ -31,6 +79,14 @@
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
+
+            p {
+                text-align: left;
+                padding: 1em;
+                font-family: $cr-font;
+                font-style: normal;
+                letter-spacing: 0.08em;
+            }
 
             .box {
                 box-shadow: 0 0 5px rgb(146, 140, 140);

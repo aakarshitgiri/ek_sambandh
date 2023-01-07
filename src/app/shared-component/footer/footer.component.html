@@ -12,18 +12,15 @@
                 <div class="link left" (click)="showHelpModal()" *ngIf="!isAdmin"><a>Contact Us</a></div>
             </div>
             <div class="left-flex">
-                <div class="link right"><a href="../../../assets/pdf/TERMS-AND-CONDITIONS-Eksamabandh.pdf"
-                        target="_blank">Terms &
+                <div class="link right"><a routerLink="/term-condition" target="_blank">Terms &
                         Conditions</a></div>
             </div>
             <div class="left-flex ">
-                <div class="link left"><a href="../../../assets/pdf/PRIVACY-POLICY-eksambandh.pdf"
-                        target="_blank">Privacy
+                <div class="link left"><a routerLink="/privacy-policy" target="_blank">Privacy
                         Policy</a></div>
             </div>
             <div class="left-flex ">
-                <div class="link right"><a href="../../../assets/pdf/Refund_Policy - Ek Sambandh.pdf"
-                        target="_blank">Refund Policy</a></div>
+                <div class="link right"><a routerLink="/refund-policy" target="_blank">Refund Policy</a></div>
             </div>
             <div class="left-flex ">
                 <div class="link left" (click)="disclaimerModal = true"><a>Disclaimer</a></div>

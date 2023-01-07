@@ -43,8 +43,9 @@
                             <div class="flex-box">
                                 <div class="status-btn">
                                     <button (click)="updateModel(users)">Update User</button>
-                                    <button>View Payments</button>
-                                    <button>View Relationships</button>
+                                    <button (click)="viewPayment(users._id, users.fullname)">View Payments</button>
+                                    <button (click)="viewRelationship(users._id, users.fullname)">View
+                                        Relationships</button>
                                 </div>
                                 <div class="delete-btn">
                                     <button (click)="deleteModal(users)">Delete User</button>
