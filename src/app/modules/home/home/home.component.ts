@@ -24,7 +24,7 @@ export class HomeComponent implements OnInit {
       'name': 'Yamini Singh (Engineer)', 'about': "Skills in Business Development, Revenue Forecasting, Project Strategy, Operational Excellence, Sales & Marketing Operations."
     },
     {
-      'name': 'Vishesh Singh (Engineer)', 'about': "Possess strong presentation, communication, customer relationship management. Skilled in Generating new business with marketing initiatives and strategic plans."
+      'name': 'Dimpy Singh (Engineer)', 'about': "Possess strong presentation, communication, customer relationship management. Skilled in Generating new business with marketing initiatives and strategic plans."
     },
     {
       'name': 'Shubham Bhatia M.com(Hons.)', 'about': "Accounting and Finance. A working professional with commercial, branding, accounting, and investment banking expertise."
